@@ -1,0 +1,18 @@
+site_name: ThingPulse docs
+site_url: https://docs.thingpulse.com/
+site_description: ThingPulse docs
+site_author: Marcel Stör & Dani Eichhorn
+
+repo_url: https://github.com/thingpulse/docs
+
+strict: true
+theme: flatly
+#site_favicon: img/favicon.png
+copyright: Copyright &copy; 2018 <a href="https://thingpulse.com">ThingPulse</a>.
+
+markdown_extensions:
+#http://pythonhosted.org/Markdown/extensions/admonition.html
+- admonition:
+- toc:
+#    permalink: True # renders ¶ sign
+    permalink: '#'

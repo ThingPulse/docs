@@ -1,0 +1,3 @@
+![ThingPulse logo](img/ThingPulse.svg)
+
+## ThingPulse is soon coming to a store near you...
