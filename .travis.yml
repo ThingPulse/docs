@@ -2,10 +2,8 @@
 sudo: false
 language: python
 addons:
+  # this cannot be a secure env variable as it's evaluated before the variables are made available
   ssh_known_hosts: s10.server.hostpoint.ch
-install:
-- pip install -r requirements.txt
-- pip install git+https://github.com/mkdocs/mkdocs-bootswatch.git
 script:
 # generate site into ./site
 - mkdocs build --clean

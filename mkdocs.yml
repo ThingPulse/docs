@@ -1,18 +1,25 @@
-site_name: ThingPulse docs
+strict: true
+
+site_name: <img id="logo" src="https://thingpulse.com/assets/ThingPulse.svg" width="100">
 site_url: https://docs.thingpulse.com/
 site_description: ThingPulse docs
 site_author: Marcel Stör & Dani Eichhorn
-
 repo_url: https://github.com/thingpulse/docs
-
-strict: true
-theme: flatly
-#site_favicon: img/favicon.png
 copyright: Copyright &copy; 2018 <a href="https://thingpulse.com">ThingPulse</a>.
 
+#theme: cinder     # https://sourcefoundry.org/cinder/
+#theme: material   # https://github.com/squidfunk/mkdocs-material
+#theme: windmill   # https://github.com/gristlabs/mkdocs-windmill
+#theme option mkdocs-bootswatch master branch
+extra_css:
+  - css/thingpulse.css
+
 markdown_extensions:
-#http://pythonhosted.org/Markdown/extensions/admonition.html
-- admonition:
-- toc:
-#    permalink: True # renders ¶ sign
-    permalink: '#'
+  #http://pythonhosted.org/Markdown/extensions/admonition.html
+  - admonition:
+  - toc:
+      permalink: 
+  - def_list
+
+plugins:
+    - search

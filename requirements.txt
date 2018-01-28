@@ -1,1 +1,4 @@
 mkdocs>=0.17.2
+mkdocs-material>=2.5.2
+mkdocs-cinder>=0.10.0
+mkdocs-windmill>=0.1.2
