@@ -14,6 +14,13 @@ copyright: Copyright &copy; 2018 <a href="https://thingpulse.com">ThingPulse</a>
 extra_css:
   - css/thingpulse.css
 
+pages:
+  - Home: index.md
+  - Guides:
+    - 2.9″ ESPaper Plus Kit: guides/espaper-plus-kit.md
+  - How-tos:
+    - Create Wunderground API key: how-tos/wunderground-key.md
+
 markdown_extensions:
   # http://pythonhosted.org/Markdown/extensions/admonition.html
   - admonition:
