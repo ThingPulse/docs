@@ -635,3 +635,29 @@ button.alt:hover, input[type="button"].alt:hover, input[type="reset"].alt:hover,
   color:#ddd;
   background-color:transparent;
 }
+
+/*special header for documentation, copied from MkDocs extra.css*/
+
+div.col-md-9 h1:first-of-type {
+  text-align: center;
+  font-size: 60px;
+  font-weight: 300;
+}
+
+div.col-md-9>p:first-of-type {
+  text-align: center;
+}
+
+div.col-md-9 p.admonition-title:first-of-type {
+  text-align: left;
+}
+
+div.col-md-9 h1:first-of-type .headerlink {
+  display: none;
+}
+
+/*ensure the first item of the in-page navigation remains bold*/
+
+ul.nav .main a {
+  font-weight: bold;
+}

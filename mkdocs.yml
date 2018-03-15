@@ -18,11 +18,13 @@ pages:
   - Home: index.md
   - Guides:
     - 2.9″ ESPaper Plus Kit: guides/espaper-plus-kit.md
+    - WiFi Color Display Kit: guides/wifi-color-display-kit.md
   - How-tos:
     - Create Wunderground API key: how-tos/wunderground-key.md
 
 markdown_extensions:
   # http://pythonhosted.org/Markdown/extensions/admonition.html
+  # supported types by base MkDocs theme: note, warning, danger
   - admonition:
   - toc:
       permalink: 
