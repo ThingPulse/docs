@@ -11,6 +11,11 @@ copyright: Copyright &copy; 2018 <a href="https://thingpulse.com">ThingPulse</a>
 # theme: material   # https://github.com/squidfunk/mkdocs-material
 # theme: windmill   # https://github.com/gristlabs/mkdocs-windmill
 # theme option mkdocs-bootswatch master branch
+
+theme:
+  name: mkdocs
+  custom_dir: custom_theme
+
 extra_css:
   - css/thingpulse.css
 
@@ -18,9 +23,10 @@ pages:
   - Home: index.md
   - Guides:
     - 2.9″ ESPaper Plus Kit: guides/espaper-plus-kit.md
-    - WiFi Color Display Kit: guides/wifi-color-display-kit.md
+    - guides/wifi-color-display-kit.md
   - How-tos:
-    - Create Wunderground API key: how-tos/wunderground-key.md
+    - how-tos/wunderground-key.md
+    - how-tos/install-drivers.md
 
 markdown_extensions:
   # http://pythonhosted.org/Markdown/extensions/admonition.html
