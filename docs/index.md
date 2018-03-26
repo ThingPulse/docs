@@ -1,4 +1,6 @@
-<!--![ThingPulse logo](https://thingpulse.com/assets/ThingPulse.svg)-->
-<img alt="ThingPulse logo" src="https://thingpulse.com/assets/ThingPulse.svg" style="border: none;" width="300">
+# ThingPulse Documentation
 
-## ThingPulse is soon coming to a store near you...
+
+https://frightanic.com
+
+super duuper ==alphabet== is --> important as is ~~tilde~~

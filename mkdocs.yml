@@ -1,44 +1,70 @@
 strict: true
 
-site_name: <img id="logo" src="https://thingpulse.com/assets/ThingPulse.svg" width="100">
+site_name: '' # actual site name 'ThingPulse' is present in the logo and doesn't need to be repeated
 site_url: https://docs.thingpulse.com/
 site_description: ThingPulse docs
 site_author: Marcel Stör & Dani Eichhorn
+repo_name: thingpulse/docs
 repo_url: https://github.com/thingpulse/docs
 copyright: Copyright &copy; 2018 <a href="https://thingpulse.com">ThingPulse</a>.
 
-# theme: cinder     # https://sourcefoundry.org/cinder/
-# theme: material   # https://github.com/squidfunk/mkdocs-material
-# theme: windmill   # https://github.com/gristlabs/mkdocs-windmill
-# theme option mkdocs-bootswatch master branch
-
-theme:
-  name: mkdocs
-  custom_dir: custom_theme
-
 extra_css:
   - css/thingpulse.css
+
+# Configuration
+theme:
+  name: material
+  logo: ../img/logo.svg
+  favicon: ../img/favicon.ico
+
+  # Don't include MkDocs' JavaScript
+  include_search_page: false
+  search_index_only: true
+
+  # Default values, taken from mkdocs_theme.yml
+  language: en
+  feature:
+    tabs: true
+  palette:
+    primary: white
+    accent: orange
+
+extra:
+  # https://squidfunk.github.io/mkdocs-material/getting-started/#adding-social-links
+  social:
+    - type: facebook
+      link: https://facebook
+    - type: github-alt
+      link: https://github.com/thingpulse
+    - type: twitter
+      link: https://twitter.com/thingpulse
 
 pages:
   - Home: index.md
   - Guides:
     - 2.9″ ESPaper Plus Kit: guides/espaper-plus-kit.md
-    - guides/wifi-color-display-kit.md
+    - WiFi Color Display Kit: guides/wifi-color-display-kit.md
   - How-tos:
     - how-tos/wunderground-key.md
     - how-tos/install-drivers.md
+    - how-tos/Arduino-IDE-for-ESP8266.md
 
 markdown_extensions:
-  # http://pythonhosted.org/Markdown/extensions/admonition.html
-  # supported types by base MkDocs theme: note, warning, danger
-  - admonition:
+  # https://squidfunk.github.io/mkdocs-material/extensions/admonition/
+  - admonition
   - toc:
-      permalink: 
+      permalink: §
   # https://python-markdown.github.io/extensions/definition_lists/
-  - def_list:
+  - def_list
   # https://github.com/mkdocs/mkdocs/issues/777#issuecomment-308266201
   - markdown_include.include:
       base_path: docs
-
-plugins:
-  - search
+  # https://facelessuser.github.io/pymdown-extensions/
+  # https://squidfunk.github.io/mkdocs-material/extensions/pymdown/
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.tilde
+  - pymdownx.inlinehilite
+  - pymdownx.betterem:
+      smart_enable: all
