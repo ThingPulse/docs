@@ -1,6 +1,6 @@
 # WiFi Color Display Kit
 
-How to assemble and program the ThingPulse ESP8266 WiFi Color Display Kit. 
+How to assemble and program the [ThingPulse ESP8266 WiFi Color Display Kit](https://thingpulse.com/product/esp8266-wifi-color-display-kit-2-4/). 
 
 ---
 
