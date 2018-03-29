@@ -49,6 +49,10 @@ pages:
     - how-tos/install-drivers.md
     - how-tos/Arduino-IDE-for-ESP8266.md
 
+google_analytics:
+  - 'UA-112435176-4'
+  - 'auto'
+
 markdown_extensions:
   # https://squidfunk.github.io/mkdocs-material/extensions/admonition/
   - admonition
