@@ -9,7 +9,7 @@ Note that there is no harm done if you install both drivers even if you currentl
 
 #### Silicon Labs CP210x
 
-Silicon Labs maintains a [page in English](https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers) that list downloadable driver binaries that also contains installation instructions.
+Silicon Labs maintains a [page in English](https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers) that lists downloadable driver binaries that also contains installation instructions.
 
 #### Winchiphead CH340x / CH341x
 
