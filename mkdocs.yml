@@ -43,6 +43,7 @@ pages:
   - Home: index.md
   - Guides:
     - 2.9″ ESPaper Plus Kit: guides/espaper-plus-kit.md
+    - ESP8266 IoT Starter Kit: guides/iot-starter-kit.md
     - WiFi Color Display Kit: guides/wifi-color-display-kit.md
   - How-tos:
     - how-tos/wunderground-key.md
