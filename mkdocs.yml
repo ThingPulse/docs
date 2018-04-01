@@ -44,6 +44,7 @@ pages:
   - support.md
   - Guides:
     - 2.9″ ESPaper Plus Kit: guides/espaper-plus-kit.md
+    - 2.9″ ESPaper Lite Kit: guides/espaper-lite-kit.md
     - ESP8266 IoT Starter Kit: guides/iot-starter-kit.md
     - WiFi Color Display Kit: guides/wifi-color-display-kit.md
   - How-tos:
