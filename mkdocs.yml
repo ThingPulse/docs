@@ -33,7 +33,7 @@ extra:
   # https://squidfunk.github.io/mkdocs-material/getting-started/#adding-social-links
   social:
     - type: facebook
-      link: https://facebook
+      link: https://facebook/thingpulse
     - type: github-alt
       link: https://github.com/thingpulse
     - type: twitter
