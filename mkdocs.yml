@@ -41,6 +41,7 @@ extra:
 
 pages:
   - Home: index.md
+  - support.md
   - Guides:
     - 2.9″ ESPaper Plus Kit: guides/espaper-plus-kit.md
     - ESP8266 IoT Starter Kit: guides/iot-starter-kit.md
