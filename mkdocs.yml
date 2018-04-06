@@ -51,6 +51,8 @@ pages:
     - how-tos/wunderground-key.md
     - how-tos/install-drivers.md
     - how-tos/Arduino-IDE-for-ESP8266.md
+  - Hardware specs:
+    - WiFi Color Display Kit: specs/wifi-color-display-kit.md
 
 google_analytics:
   - 'UA-112435176-4'
