@@ -107,6 +107,7 @@ only have one version of each of the libraries installed.
 - [ESP8266 WeatherStation](https://github.com/ThingPulse/esp8266-weather-station) by Daniel Eichhorn
 - [Json Streaming Parser](https://github.com/squix78/json-streaming-parser) by Daniel Eichhorn
 - [simpleDSTadjust](https://github.com/neptune2/simpleDSTadjust) by neptune2
+- [XPT2046 TouchScreen](https://github.com/PaulStoffregen/XPT2046_Touchscreen) by Paul Stoffregen
 
 ## Create Wunderground API key
 
