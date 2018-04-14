@@ -14,3 +14,4 @@ after_success:
 - ssh-add /tmp/deploy-key
 # sync *content* of ./site to deploy path (but not the site directory itself)
 - rsync --recursive --delete-after --verbose $TRAVIS_BUILD_DIR/site/ "$SSH_USER"@"$DEPLOY_HOST":"$DEPLOY_PATH"
+- scp .htaccess "$SSH_USER"@"$DEPLOY_HOST":"$DEPLOY_PATH"
