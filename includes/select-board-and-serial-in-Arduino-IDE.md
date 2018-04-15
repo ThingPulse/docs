@@ -24,3 +24,7 @@ as a COM port labelled `COM#` (where # is some number).
 
 If you cannot see your device in the port list, try to unplug it and re-plug it after a few seconds. Also try a 
 different USB socket. If that does not help try restarting your computer and/or try with a different USB cable.
+
+!!! warning
+
+	Depending on what you had previously been working with in the Arduino IDE you need to adjust the UART baud rate. ==Tools== > ==Upload Speed== should be at least 115200. Depending on host OS and driver you can go all the way up to 921600. You need to experiment with this setting a bit; higher is better of course.
