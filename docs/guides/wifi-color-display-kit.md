@@ -40,9 +40,11 @@ soldered to the PCB. Otherwise the order is reversed.
 
 ### Prepare display module
 
-In order to have a stack which uses the least amount of space you will want to modify the display module a bit. The 
+*THIS IS OPTIONAL*
+
+In order to get a stack which uses the least amount of space you will want to modify the display module a bit. The 
 SD card holder has to go, sorry. Depending on your (de)soldering skills you can either use a desoldering braid or 
-just cut the SD card holder off of the module with pointy cutting pliers.
+just cut the SD card holder off with pointy cutting pliers.
 
 ![](../img/guides/wifi-color-display-kit/3-cut-off-sd-card-slot.jpg)
 
