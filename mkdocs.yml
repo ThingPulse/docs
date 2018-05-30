@@ -48,8 +48,8 @@ pages:
     - ESP8266 IoT Starter Kit: guides/iot-starter-kit.md
     - WiFi Color Display Kit: guides/wifi-color-display-kit.md
   - How-tos:
-    - how-tos/wunderground-key.md
-    - how-tos/openweathermap-key.md
+    - Create OpenWeatherMap API key: how-tos/openweathermap-key.md
+    - Create Wunderground API key: how-tos/wunderground-key.md
     - how-tos/install-drivers.md
     - how-tos/Arduino-IDE-for-ESP8266.md
   - Hardware specs:
