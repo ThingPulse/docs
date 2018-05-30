@@ -1,2 +1,2 @@
-# Create Wunderground API key
+# Create OpenWeatherMap API key
 {!../includes/openweathermap-key.md!}
