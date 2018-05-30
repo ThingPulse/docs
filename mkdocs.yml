@@ -54,6 +54,7 @@ pages:
     - how-tos/Arduino-IDE-for-ESP8266.md
   - Hardware specs:
     - WiFi Color Display Kit: specs/wifi-color-display-kit.md
+    - 2.9\" ESPaper Lite and Plus Kit: specs/2_9-espaper-kit-dimensions.md
 
 google_analytics:
   - 'UA-112435176-4'
