@@ -49,6 +49,7 @@ pages:
     - WiFi Color Display Kit: guides/wifi-color-display-kit.md
   - How-tos:
     - how-tos/wunderground-key.md
+    - how-tos/openweathermap-key.md
     - how-tos/install-drivers.md
     - how-tos/Arduino-IDE-for-ESP8266.md
   - Hardware specs:

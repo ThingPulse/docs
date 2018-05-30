@@ -2,6 +2,7 @@ RewriteEngine On
 
 RewriteCond %{HTTP_HOST} ^docs\.thingpulse\.com$
 RewriteRule ^go/create-wunderground-key$ https://www.wunderground.com/weather/api/d/pricing.html [R=301,L]
+RewriteRule ^go/create-openweathermap-key$ https://openweathermap.org/price [R=301,L]
 
 <IfModule mod_deflate.c>
 AddType x-font/woff .woff
@@ -47,4 +48,3 @@ Header set Connection keep-alive
 FileETag None
 </IfModule>
 </FilesMatch>
-
