@@ -8,4 +8,6 @@ Hardware specification for the [ThingPulse 2.9" ESPaper Lite Kit](https://thingp
 
 ## Dimensions
 
-The following document shows detailed dimensions of the 2.9" ESPaper Kit Module: [download as PDF](./2_9-espaper-kit-dimensions.md)
+![](../img/specs/2_9-espaper-kit-dimensions.png)
+
+For higher resolution [download this as PDF](./2_9-espaper-kit-dimensions.md).
