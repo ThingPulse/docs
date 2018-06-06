@@ -140,7 +140,7 @@ from the previous step.
 
 In one of the tabs the IDE opened [`settings.h`](https://github.com/ThingPulse/esp8266-weather-station-color/blob/master/settings.h).
 Go through the file and adjust the two handful of configuration parameters. They are all documented _inside_ the file
-directly. Everything should be self-explanatory. Most importantly you will need to set the Wunderground API key you
+directly. Everything should be self-explanatory. Most importantly you will need to set the OpenWeatherMap API key you
 obtained in a previous step.
 
 **Upload code to device**
