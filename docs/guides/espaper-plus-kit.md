@@ -33,6 +33,9 @@ the ESPaper as per the photos below.
 
 The programmer provides enough power to drive the ESPaper while you are programming it. However, it is more efficient
  to use the USB port to charge the battery than to use the programmer for this purpose.
+ 
+!!! note
+    Don't forget to connect host system and programmer with an USB cord and turn on the ESPaper module (on/off switch).
 
 #### Select board and serial port
 {!../includes/select-board-and-serial-in-Arduino-IDE.md!}

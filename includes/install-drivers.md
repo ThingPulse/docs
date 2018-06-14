@@ -14,3 +14,6 @@ Silicon Labs maintains a [page in English](https://www.silabs.com/products/devel
 #### Winchiphead CH340x / CH341x
 
 Winchihead (WCH) maintains its website only in Chinese. However, the [download page for the drivers](http://www.wch.cn/download/CH341SER_ZIP.html) is so simple that even non-Chinese speakers will find the right download link.
+
+!!! warning
+	Some systems require a reboot before the driver installation can be  successfully completed. The installer may or may not tell you about this! If you later connect the ThingPulse device and the system does not recognize it try rebooting as a first measure..
