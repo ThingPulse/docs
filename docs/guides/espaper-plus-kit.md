@@ -44,6 +44,15 @@ Now open the serial console in the Arduino IDE and see if there is output when y
 by using the ON/OFF switch). This can look like garbage, but if you see characters your computer is capable of
 talking to the device.
 
+#### Select flash mode and flash size
+
+The [ESP-WROOM-02 chip](https://www.espressif.com/en/products/hardware/esp-wroom-02/overview) used by the ESPaper Kits has an embedded 2 MB SPI flash memory. It hosts the SPIFFS file system the application will later write files to.
+
+- in ==Tools== > ==Flash Mode== select "QIO"
+- in ==Tools== > ==Flash Size== select "2M (1M SPIFFS)"
+
+The application might fail to transfer or fail to start if the flash options are not configured properly.
+
 #### Install libraries
 
 The ThingPulse ESPaper depends on a number of other libraries. They need to be made available to the Arduino IDE for
