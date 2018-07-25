@@ -122,6 +122,7 @@ the same:
 1. Press button ==S0==
 1. Hold it down while pressing ==RESET==
 1. Release ==RESET==
+1. Release ==S0==
 
 ![](../img/guides/espaper-plus-kit/put-ESPaper-into-programming-mode.jpg)
 
