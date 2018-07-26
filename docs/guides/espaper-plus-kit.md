@@ -104,8 +104,9 @@ Replace `WIFI_SSID` with the name of your WiFi network and `WIFI_PASS` with its 
 tools like the WifiManager which avoid storing the WiFi credentials in the firmware but they also take more time to
 connect to WiFi, which in turns reduces your battery life.
 
-Copy the OpenWeatherMap API key you got in the previous step and assign it to `OPEN_WEATHER_MAP_APP_ID`. The value for
-`OPEN_WEATHER_MAP_LOCATION` can be a bit tricky to get right. This is the city name and country code divided by comma, use [ISO country code](https://en.wikipedia.org/wiki/ISO_3166). A real challenge is the city as there are many constraints (no non-ASCII characters, '_' for space, etc.).
+Copy the OpenWeatherMap API key you got in the previous step and assign it to `OPEN_WEATHER_MAP_APP_ID`. 
+
+The value for `OPEN_WEATHER_MAP_LOCATION` is `<city-name>,<country-code>` e.g. `Paris,FR`. Use [ISO country codes](https://en.wikipedia.org/wiki/ISO_3166). You can search for [locations covered by OWM](https://openweathermap.org/find?q=) on their website.
 
 Change the `UTC_OFFSET` field according to your time zone. The value is the number of hours your timezone is ahead
 or behind UTC/GMT. If you are not sure about the DST rules [look them up](https://en.wikipedia.org/wiki/Daylight_saving_time_by_country).
