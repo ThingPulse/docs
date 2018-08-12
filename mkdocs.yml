@@ -39,7 +39,7 @@ extra:
     - type: twitter
       link: https://twitter.com/thingpulse
 
-pages:
+nav:
   - Home: index.md
   - support.md
   - Guides:

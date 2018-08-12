@@ -9,8 +9,3 @@ The content is split into two main sections:
 - **Guides**: a single self-contained guide for every product
 - **How-tos**: instructions for a single topic that is not tied to a specific product, they are included in the guides 
 where applicable
-
-!!! note
-  
-    This is work in progress as we continue to transfer and polish the scattered bits an pieces of documentation we 
-    haven been maintaining in various other places. 
