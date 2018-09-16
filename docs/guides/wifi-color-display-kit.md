@@ -127,7 +127,7 @@ are two options to download the code:
 
 - Clone the repository with Git: `git clone https://github.com/ThingPulse/esp8266-weather-station-color`
 - Download the sources from https://github.com/ThingPulse/esp8266-weather-station-color/archive/master.zip and unpack
- them somewhere to your local file system
+ them somewhere to your local file system as ==esp8266-weather-station-color== (erase '-master' in the folder name).
 
 **Open project in Arduino IDE**
 
