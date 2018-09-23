@@ -1,6 +1,9 @@
 # inspired by https://oncletom.io/2016/travis-ssh-deploy/
 sudo: false
 language: python
+branches:
+  only:
+  - master
 addons:
   # this cannot be a secure env variable as it's evaluated before the variables are made available
   ssh_known_hosts: s10.server.hostpoint.ch
