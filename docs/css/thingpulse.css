@@ -55,3 +55,16 @@ nav.md-header-nav.md-grid {
   max-width: 590px;
   margin-left: 90px;
 }
+
+/*****************************************************************************
+ * ESPaper Calendar guide
+ *****************************************************************************/
+div#espcal-config {
+  overflow: hidden;
+}
+
+div#espcal-config img {
+  width: 220px;
+  margin: 0 25px 20px 0;
+  float: left;
+}
