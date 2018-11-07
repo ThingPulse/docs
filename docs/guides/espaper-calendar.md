@@ -65,7 +65,7 @@ The programmer provides enough power to drive the ESPaper while you are programm
 
 ### Download ESPaper Calendar app
 
-[Download](https://calendar.espaper.com/releases/thingpulse-espaper-calendar-v1-rc1.bin) the latest version of the ESPaper Calendar app.
+[Download](https://calendar.espaper.com/releases/thingpulse-espaper-calendar-v1-rc2.bin) the latest version of the ESPaper Calendar app.
 
 ### ThingPulse App Fairy
 
@@ -97,9 +97,12 @@ Start the App Fairy and proceed as follows:
 	*  the device is empty, has no application installed
 1. Hit the install button.
 
+!!! warning
+    The device must not be in deep sleep mode when you start the transfer.
+
 ![](../img/guides/espaper-calendar/ThingPulse-ESPaper-Calendar-App-Fairy-settings.png)
 
-Now reset the device as instructed in the App Fairy.
+Now reset the device as instructed in the App Fairy console.
 
   
 ### Configure ESPaper Calendar app
