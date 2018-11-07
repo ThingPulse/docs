@@ -84,7 +84,7 @@ Unfortunately there are no pre-built binaries for Linux available yet. Customers
 In order to accept new software being transferred via the serial adapter the device has be in "flash mode":
 
 - Press and HOLD the center button
-- Press and RELEASE the left button
+- Press and RELEASE the right button
 - Release the center button
 
 Start the App Fairy and proceed as follows:
