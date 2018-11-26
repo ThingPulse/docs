@@ -1,5 +1,4 @@
 # inspired by https://oncletom.io/2016/travis-ssh-deploy/
-sudo: false
 language: python
 branches:
   only:
