@@ -61,6 +61,9 @@ The programmer provides enough power to drive the ESPaper while you are programm
 !!! note
     Don't forget to connect host system and programmer with an USB cord and turn on the ESPaper module (on/off switch).
 
+!!! danger
+    Do NOT power the device via USB port and programmer simultaneously.
+
 ## Software setup
 
 ### Download ESPaper Calendar app
