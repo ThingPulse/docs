@@ -95,6 +95,14 @@ allow="autoplay; encrypted-media" allowfullscreen></iframe>
 #### Select board and serial port
 {!../includes/select-board-and-serial-in-Arduino-IDE.md!}
 
+#### Select flash mode and flash size
+The WeMos D1 mini Pro module included in this kit has an embedded 16MB SPI flash memory. 15MB of that will be reserved to host a [SPIFFS file system](https://github.com/pellepl/spiffs). If you select the correct board in the IDE the flash mode and flash size settings should get auto-configured. Verify the settings are as follows:
+
+- in ==Tools== > ==Flash Mode== select "DIO"
+- in ==Tools== > ==Flash Size== select "16M (15M SPIFFS)"
+
+The application might fail to transfer or fail to start if the flash options are not configured properly.
+
 #### Install libraries
 
 The ThingPulse Weather Station Color depends on a number of other libraries. They need to be made available to the
