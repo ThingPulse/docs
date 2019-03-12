@@ -100,8 +100,6 @@ Start the App Fairy and proceed as follows:
 	*  the device is empty, has no application installed
 1. Hit the install button.
 
-!!! warning
-    The device must not be in deep sleep mode when you start the transfer.
 
 ![](../img/guides/espaper-calendar/ThingPulse-ESPaper-Calendar-App-Fairy-settings.png)
 
