@@ -68,7 +68,7 @@ The programmer provides enough power to drive the ESPaper while you are programm
 
 ### Download ESPaper Calendar app
 
-[Download](https://calendar.espaper.com/releases/thingpulse-espaper-calendar-v1-rc3.bin) the latest version of the ESPaper Calendar app.
+[Download](https://calendar.espaper.com/releases/thingpulse-espaper-calendar-v1-rc4.bin) the latest version of the ESPaper Calendar app.
 
 ### ThingPulse App Fairy
 
