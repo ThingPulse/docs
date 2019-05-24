@@ -9,3 +9,7 @@ Hardware specification for the [ThingPulse ESP8266 WiFi Color Display Kit](https
 ![](../img/specs/wifi-color-display-kit-dimensions.png)
 
 For higher resolution [download this as PDF](./wifi-color-display-kit-dimensions.pdf).
+
+## Wiring
+
+![](../img/specs/wifi-color-display-kit-wiring.png)
