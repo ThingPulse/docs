@@ -23,7 +23,7 @@ First, head over to [https://www.espaper.com](https://www.espaper.com) and creat
 - Push the right button (reset) on the device to restart it.
 
 ## Pairing Device with espaper.com Account
-If you have not created an account on espaper.com yet do so now.
+If you have not created an account on https://www.espaper.com yet do so now.
 
 - After restart the device will be showing a pairing screen with a one-time password
 - Now open your browser at [https://www.espaper.com](https://www.espaper.com) and login
@@ -37,3 +37,9 @@ If you have not created an account on espaper.com yet do so now.
 	- adding static elements like lines, rectangles, circles, icons or static text
 	- Using a predefined template from the "Widgets" tab. You can extend the available templates by adding applications, e.g. for iCal calendars or weather information.
 - Save the editor content. The device will show the content with the next update. You can trigger an update by either waiting for the update interval to finish or by pressing the reset button on the device.
+
+## Video
+
+The below video goes through the steps outlined above. You may use it as a visual reference.
+
+<iframe src="https://www.youtube.com/embed/4Ei7pPDt_iY" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
