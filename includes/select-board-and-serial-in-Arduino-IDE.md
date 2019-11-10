@@ -10,7 +10,7 @@ Not all ThingPulse kits come with the same ESP8266 chips/modules. We carefully s
  It's essential that you know which module you get with a specific kit so you can configure Arduino IDE correctly
 
 - [Starter Kit](https://thingpulse.com/product/esp8266-iot-electronics-starter-kit-weatherstation-planespotter-worldclock/) --> NodeMCU 1.0 aka v2
-- [Color Display Kit](https://thingpulse.com/product/esp8266-wifi-color-display-kit-2-4/) --> LOLIN(WEMOS) D1 mini Pro
+- [Color Display Kit](https://thingpulse.com/product/esp8266-wifi-color-display-kit-2-4/) --> LOLIN(WEMOS) D1 R2 & mini
 - [ESPaper Kits](https://thingpulse.com/product-category/espaper-epaper-kits/) --> Generic ESP8266
 
 In the Arduino IDE do as follows:

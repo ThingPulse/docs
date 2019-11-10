@@ -22,7 +22,7 @@ If you need help at any point with the following guide do not hesitate to reach 
 ## Preparation
 
 ### Material inspection
-Here is the list of parts: display module (left), custom PCB (bottom right), WeMos D1 mini Pro (top middle) and the
+Here is the list of parts: display module (left), custom PCB (bottom right), WeMos D1 mini (top middle) and the
 two pin header rows.
 
 ![](../img/guides/wifi-color-display-kit/1-components.jpg)
@@ -96,12 +96,12 @@ allow="autoplay; encrypted-media" allowfullscreen></iframe>
 {!../includes/select-board-and-serial-in-Arduino-IDE.md!}
 
 #### Select flash mode and flash size
-The WeMos D1 mini Pro module included in this kit has an embedded 16MB SPI flash memory. 15MB of that will be reserved to host a [SPIFFS file system](https://github.com/pellepl/spiffs). If you select the correct board in the IDE the flash mode and flash size settings should get auto-configured. Verify the settings are as follows:
+The WeMos D1 mini module included in this kit has an embedded 4MB SPI flash memory. 3MB of that will be reserved to host a [SPIFFS file system](https://github.com/pellepl/spiffs). If you select the correct board in the IDE the flash mode and flash size settings should get auto-configured. Verify the settings are as follows:
 
-- in ==Tools== > ==Flash Mode== select "DIO"
-- in ==Tools== > ==Flash Size== select "16M (15M SPIFFS)"
+- in ==Tools== > ==Flash Size== select "4M (3M SPIFFS)"
 
-The application might fail to transfer or fail to start if the flash options are not configured properly.
+The application might fail to transfer or fail to start if the flash options are not configured properly. Make sure the menu under ==Tools== looks like this:
+![](../img/guides/wifi-color-display-kit/7-arduino-ide-tool-menu.png)
 
 #### Install libraries
 
