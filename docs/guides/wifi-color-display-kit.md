@@ -101,6 +101,7 @@ The WeMos D1 mini module included in this kit has an embedded 4MB SPI flash memo
 - in ==Tools== > ==Flash Size== select "4M (3M SPIFFS)"
 
 The application might fail to transfer or fail to start if the flash options are not configured properly. Make sure the menu under ==Tools== looks like this:
+
 ![](../img/guides/wifi-color-display-kit/7-arduino-ide-tool-menu.png)
 
 #### Install libraries
