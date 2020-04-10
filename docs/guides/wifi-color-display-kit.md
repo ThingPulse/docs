@@ -118,7 +118,7 @@ only have one version of each of the libraries installed.
 - [ESP8266 WeatherStation](https://github.com/ThingPulse/esp8266-weather-station) by Daniel Eichhorn
 - [Json Streaming Parser](https://github.com/squix78/json-streaming-parser) by Daniel Eichhorn
 - [simpleDSTadjust](https://github.com/neptune2/simpleDSTadjust) by neptune2
-- [XPT2046 TouchScreen](https://github.com/PaulStoffregen/XPT2046_Touchscreen) by Paul Stoffregen
+- [ThingPulse XPT2046 Touch](https://github.com/ThingPulse/XPT2046_Touchscreen#xpt2046-touchscreen-arduino-library) by ThingPulse (forked from Paul Stoffregen), if you had previously installed the original `XPT2046_Touchscreen` then you need to [uninstall](https://github.com/arduino/Arduino/wiki/Library-Manager-FAQ#how-can-i-delete-a-library) that one!
 
 ## Create OpenWeatherMap API key
 
