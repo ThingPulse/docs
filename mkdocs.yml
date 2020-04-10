@@ -32,11 +32,11 @@ theme:
 extra:
   # https://squidfunk.github.io/mkdocs-material/getting-started/#adding-social-links
   social:
-    - type: facebook
+    - icon: fontawesome/brands/facebook
       link: https://facebook.com/thingpulse
-    - type: github-alt
+    - icon: fontawesome/brands/github
       link: https://github.com/thingpulse
-    - type: twitter
+    - icon: fontawesome/brands/twitter
       link: https://twitter.com/thingpulse
 
 nav:
