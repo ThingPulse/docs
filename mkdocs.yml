@@ -6,7 +6,7 @@ site_description: ThingPulse docs
 site_author: Marcel Stör & Dani Eichhorn
 repo_name: thingpulse/docs
 repo_url: https://github.com/thingpulse/docs
-copyright: Copyright &copy; 2018 <a href="https://thingpulse.com">ThingPulse</a>.
+copyright: Copyright &copy; 2020 <a href="https://thingpulse.com">ThingPulse</a>.
 
 extra_css:
   - css/thingpulse.css
@@ -14,8 +14,8 @@ extra_css:
 # Configuration
 theme:
   name: material
-  logo: ../img/logo.svg
-  favicon: ../img/favicon.ico
+  logo: img/logo.svg
+  favicon: img/favicon.ico
 
   # Don't include MkDocs' JavaScript
   include_search_page: false
