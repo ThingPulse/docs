@@ -43,12 +43,13 @@ nav:
   - Home: index.md
   - support.md
   - Guides:
+    - Icon64 - ESP32 with RBG LED & audio: guides/icon64-esp32-rgb-led-audio.md
+    - ESP8266 IoT Starter Kit: guides/iot-starter-kit.md
+    - WiFi Color Display Kit: guides/wifi-color-display-kit.md
     - 2.9″ ESPaper Plus Kit: guides/espaper-plus-kit.md
     - 2.9″ ESPaper Lite Kit: guides/espaper-lite-kit.md
     - 4.2″ ESPaper Plus Kit: guides/42-espaper-plus-kit.md
     - ESPaper Calendar: guides/espaper-calendar.md
-    - ESP8266 IoT Starter Kit: guides/iot-starter-kit.md
-    - WiFi Color Display Kit: guides/wifi-color-display-kit.md
   - How-tos:
     - Create OpenWeatherMap API key: how-tos/openweathermap-key.md
     - how-tos/install-drivers.md
