@@ -7,14 +7,15 @@ Popular modules that use the CP210x are:
 
 - NodeMCU v1.0 (i.e. V2) module
 - WeMos D1 mini Pro (some revisions)
-- ThingPulse Icon64
+- [ThingPulse ePulse ESP32 dev board](https://thingpulse.com/product/epulse-low-power-esp32-development-board/)
+- [ThingPulse Icon64](https://thingpulse.com/product/icon64/)
 
 Examples of modules that use the CH340G chip are:
 
 - WeMos D1 mini
-- D1 mini Lite.
+- D1 mini Lite
 
-Note that there is no harm done if you install both drivers even if you currently just use one! If you are not sure which adapter your ESP8266 module uses then just install both.
+Note that there is no harm done if you install both drivers even if you currently just use one! If you are not sure which adapter your ESP8266/ESP32 module uses then just install both.
 
 #### Silicon Labs CP210x
 
@@ -22,7 +23,7 @@ Silicon Labs maintains a [page in English](https://www.silabs.com/products/devel
 
 #### Winchiphead CH340x / CH341x
 
-Winchihead (WCH) maintains its website only in Chinese. However, the [download page for the drivers](http://www.wch.cn/download/CH341SER_ZIP.html) is so simple that even non-Chinese speakers will find the right download link.
+Winchiphead (WCH) maintains its website only in Chinese. However, the [download page for the drivers](http://www.wch.cn/download/CH341SER_ZIP.html) is so simple that even non-Chinese speakers will find the right download link.
 
 !!! warning
 	Some systems require a reboot before the driver installation can be  successfully completed. The installer may or may not tell you about this! If you later connect the ThingPulse device and the system does not recognize it try rebooting as a first measure..
