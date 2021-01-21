@@ -5,6 +5,6 @@
 2. Search for official PlatformIO IDE extension
 3. Install PlatformIO IDE.
 
-![VSCode Extensions Manager and PlatformIO IDE auto-installer](../guides/img/how-tos/platformio-install.png)
+![VSCode Extensions Manager and PlatformIO IDE auto-installer](../img/how-tos/platformio-install.png)
 
 Check [Platformio Quick Start guide](https://docs.platformio.org/page/ide/vscode.html#quick-start) (highly recommended).
