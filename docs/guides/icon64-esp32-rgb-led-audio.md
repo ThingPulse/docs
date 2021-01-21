@@ -1,64 +1,65 @@
 # Icon64 - ESP32 with RBG LED & audio
 
-How to configure and hack the [ThingPulse Icon64](https://thingpulse.com/product/icon64-esp32-with-rgb-matrix-and-audio/).
+How to configure and hack the [ThingPulse Icon64](https://thingpulse.com/product/icon64/).
 
 ![](../img/products/ThingPulse-Icon64-ESP32-RGB-LED-audio.jpg)
 
-# Using the stock firmware
+## Using the Stock Firmware
 
-The firmware pre-installed on the Icon64 is a bluetooth speaker with integrated 8 band spectrum analyzer. Connect the device
-with a power source over USB. Then use the power switch on the side to turn the device on. You should see a pulsing heart now.
-Now open the bluetooth settings on your smartphone or computer and connect to the device called "ThingPulse-Icon64" and play
-some music. Watch the following video to see the hole process: 
+Icon64 ships with stock firmware pre-installed. It turns the Icon64 into a Bluetooth speaker with integrated 8 band spectrum analyzer.
+
+To get started simply connect the device to a USB power source. Then use the power switch on the side to turn the device on. The device will display a pulsing heart like shown above. Now open the Bluetooth settings on your smartphone or computer and connect to the device called "ThingPulse-Icon64" and play some music. Watch the following video to see the hole process: 
 
 <iframe width="1280" height="560" src="https://www.youtube.com/embed/1UpbtE98OBA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
-# Programming the Icon64
+## Programming the Icon64
 
-## Install drivers
+### Install Drivers
 {!../includes/install-drivers.md!}
 
-## Platformio IDE
-All Icon64 projects made for using the Platformio IDE
+### PlatformIO IDE
+All ThingPulse Icon64 sample projects are built with PlatformIO. Hence, to use those samples as-is it is required you create a PlatformIO setup.
 
 {!../includes/platformio.md!}
 
-## Get Stock Firmware
+### Get the Stock Firmware
 
-Now that the driver is installed and Visual Studio Code runs with the Platformio plugin let's try if we can compile and install the stock firmware.
-Get the stock firmware repository either with git:
+Now that the driver is installed and Visual Studio Code runs with the PlatformIO plugin you can compile and install the stock firmware.
+Get the stock firmware repository either with Git:
 
 ```
-git clone  https://github.com/ThingPulse/esp32-icon64-a2dp
+$ git clone  https://github.com/ThingPulse/esp32-icon64-a2dp
 ```
 or by downloading and extracting the zip file.
 
-Once done open the esp32-icon64-a2dp folder in Visual Studio Code.
+Once done open the `esp32-icon64-a2dp` folder in Visual Studio Code.
 
-## Uploading Stock Firmware
+### Upload the Stock Firmware
 
 Please connect now your Icon64 to your PC by using a USB data cable and turn the device
 on by sliding the power switch into the "ON" position.
 
-Have a look at the platformio.ini. Before we can upload we have to check two lines:
+Have a look at the `platformio.ini`. Before you can upload we need to verify and likely adjust the following two lines:
+
 ```
 upload_port = /dev/cu.SLAB_USBtoUART
 monitor_port = /dev/cu.SLAB_USBtoUART
 ```
-which devines how to Icon64 is connected with your computer. The example above works fine on my Mac
-but it might require a change for your computer. On Windows this might be something like COMX with
+
+They name the USB serial port through which the Icon64 is connected to your computer. The example above works as-is on macOS. On Windows this might be something like COMX with
 X being a number between 1 and 9. To figure out what you should place here have a look at the 
-[Platformio Documentation](https://docs.platformio.org/en/latest/projectconf/section_env_upload.html)
+[PlatformIO documentation](https://docs.platformio.org/en/latest/projectconf/section_env_upload.html)
 
 Now look for an arrow on the lower left of your Visual Studio Code IDE:
 ![](../img/how-tos/platformio-upload.png)
 
 Click this button to download all libraries, to compile the code and to upload the binary to the device.
-The first time this process might take a bit longer since the IDE needs to download the ESP32
-tool chain as well as all libraries used. 
+The first time this process might take a bit longer since PlatformIO needs to download the ESP32
+tool chain as well as all required libraries. 
 
 If everything was succesfull you should see an output similar to this one:
+
 ``` 
 Writing at 0x000a4000... (100 %)
 Wrote 1051168 bytes (619238 compressed) at 0x00010000 in 10.9 seconds (effective 768.2 kbit/s)...
@@ -69,34 +70,42 @@ Hard resetting via RTS pin...
 =========================== [SUCCESS] Took 18.40 seconds ===============================
 ```
 
-## Hardware Specifications
+## Hardware Specification
 
-Before we start our first project let's have a look at the hardware. [Here](/specs/ICON64%20V1.0.3.pdf) you can 
-find the schematic of the board.
+Before you start building your own projects it might make sense you first familiarize yourself with the hardware components. To tinker with the hardware take a look at the [schematic of the board](/specs/Icon64-specification-v1.0.3.pdf).
 
-For programming the Icon64 you should know about the modules:
+In order to develop for the Icon64, learn about the following building blocks.
 
-### RGB Leds
+### RGB LEDs
 
-The Icon64 comes with 64 WS2812B in a 3030 package. They are individually addressable over the GPIO32 pin.
+The Icon64 contains 64 WS2812B RGB LEDs in a 3030 package. They are individually addressable over the GPIO32 pin.
 
-The indices of the LEDs is as depicted in the following diagram:
+The LEDs indexes are as depicted in the following diagram:
 ![](../img/how-tos/Icon64_Front_Schematic.png)
+
+To drive the LEDs we recommend either of the following two libraries: [roboticsbrno/SmartLeds](https://github.com/RoboticsBrno/SmartLeds), [fastled/FastLED](https://github.com/fastled/FastLED).
 
 ### Audio 
 
-The ESP32 is connect over I2S protocol with the [MAX98357a](https://datasheets.maximintegrated.com/en/ds/MAX98357A-MAX98357B.pdf) chip.
-The I2S bus requires 3 pins, DOUT, BCLK and LRC. The mode pin is used to enable audio output with an active high on GPIO33
+The ESP32 is connect over [I²S](https://en.wikipedia.org/wiki/I%C2%B2S) to a [MAX98357a](https://datasheets.maximintegrated.com/en/ds/MAX98357A-MAX98357B.pdf) chip.
+The I²S bus requires 3 pins: DOUT, BCLK, and LRC. The mode pin is used to enable audio output with an active high on GPIO33.
 
-- I2S DOUT: GPIO25
-- I2S BCLK: GPIO26
-- I2S LRC: GPIO22
-- MODE PIN: GPIO33
+| MAX98357a| ESP32  |
+| ---      | ---    |
+| DOUT     | GPIO25 |
+| BCLK     | GPIO26 |
+| LRC      | GPIO22 |
+| MODE PIN | GPIO33 |
 
-*Note*: Don't forget to pull GPIO33 high or you won't hear any sound.
+!!! important
+    If you do not pull GPIO33 high you won't hear any sound.
+    
+We recommend either of the following two audio libraries: [schreibfaul1/ESP32-audioI2S](https://github.com/schreibfaul1/ESP32-audioI2S), [earlephilhower/ESP8266Audio](https://github.com/earlephilhower/ESP8266Audio).
 
 ### Tactile Switch
 
 The Icon64 also offers a button to control the device. The state of this pin can be read
-out on GPIO39. GPIO39 is connected with a 470Ohm pull-up resistor
+out on GPIO39. GPIO39 is connected with a 470Ohm pull-up resistor.
+
+A simple but powerful library to handle button presses, long presses, interval presses etc. is [evert-arias/EasyButton](https://github.com/evert-arias/EasyButton). EasyButton allows you to attach callback functions to certain button events. Use callback functions to run specific code when the event gets triggered.
 
