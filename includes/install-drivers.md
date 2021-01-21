@@ -1,9 +1,16 @@
-A prerequisite to program ESP8266-based modules usually is to establish a communications channel from your development platform (PC, Mac, Linux) to the device *over USB*. This in turn requires your system to detect the USB-to-Serial (aka USB-to-TTL, aka USB-to-UART) adapter on the ESP8266 module. There are two commonly used adapters in the wild these days:
+A prerequisite to program ESP*-based modules usually is to establish a communications channel from your development platform (PC, Mac, Linux) to the device *over USB*. This in turn requires your system to detect the USB-to-Serial (aka USB-to-TTL, aka USB-to-UART) adapter on the ESP8266 or ESP32 module. There are two commonly used adapters in the wild these days:
 
 - Silicon Labs CP210x
 - Winchiphead CH340x / CH341x 
 
-Popular modules that use the former are the NodeMCU v1.0 (i.e. V2) module and some revisions of the WeMos D1 mini Pro. Examples of modules that use the CH340G chip are the WeMos D1 mini and the D1 mini Lite.
+Popular modules that use the CP210x are:
+- NodeMCU v1.0 (i.e. V2) module
+- WeMos D1 mini Pro (some revisions)
+- ThingPulse Icon64
+
+Examples of modules that use the CH340G chip are:
+- WeMos D1 mini
+- D1 mini Lite.
 
 Note that there is no harm done if you install both drivers even if you currently just use one! If you are not sure which adapter your ESP8266 module uses then just install both.
 
