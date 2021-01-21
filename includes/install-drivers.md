@@ -4,11 +4,13 @@ A prerequisite to program ESP*-based modules usually is to establish a communica
 - Winchiphead CH340x / CH341x 
 
 Popular modules that use the CP210x are:
+
 - NodeMCU v1.0 (i.e. V2) module
 - WeMos D1 mini Pro (some revisions)
 - ThingPulse Icon64
 
 Examples of modules that use the CH340G chip are:
+
 - WeMos D1 mini
 - D1 mini Lite.
 
