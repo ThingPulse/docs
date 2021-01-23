@@ -83,7 +83,50 @@ The Icon64 contains 64 WS2812B RGB LEDs in a 3030 package. They are individually
 The LEDs indexes are as depicted in the following diagram:
 ![](../img/how-tos/Icon64_Front_Schematic.png)
 
+The following function lets you use a x-y coordinate system:
+```c
+uint8_t getLedIndex(uint8_t x, uint8_t y) {
+  if (x % 2 == 1) {
+    return 63 - (y + x * 8);
+  } else {
+    return 63 - (7 - y + x * 8);
+  }
+}
+```
+This function converts x and y coordinates between (0..7, 0..7) to the index 0..63:
+![](../img/how-tos/Icon64_XYSystem.png)
+
+
 To drive the LEDs we recommend either of the following two libraries: [roboticsbrno/SmartLeds](https://github.com/RoboticsBrno/SmartLeds), [fastled/FastLED](https://github.com/fastled/FastLED).
+
+Let's have a look at how to use the FastLED library:
+```c
+#include <Arduino.h>
+#include <FastLED.h>
+
+// LED Settings
+#define NUM_LEDS          64
+#define DATA_PIN          32 
+
+// Define the led chain
+CRGB leds[NUM_LEDS];
+uint8_t counter = 0;
+
+void setup() {
+    Serial.begin(115200);                                    
+    FastLED.addLeds<WS2812B, DATA_PIN, GRB>(leds, NUM_LEDS);
+}
+
+void loop() {
+  FastLED.clear();
+  // Activate one pixel after the other 
+  // and cycle through the color wheel in HSV
+  leds[counter % 64] = CHSV(counter, 255, 100);
+  counter = (counter + 1) % 256;
+  FastLED.show();
+  delay(100);
+}
+```
 
 ### Audio 
 
