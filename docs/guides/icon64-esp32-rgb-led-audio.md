@@ -28,7 +28,7 @@ All ThingPulse Icon64 sample projects are built with PlatformIO. Hence, to use t
 Now that the driver is installed and Visual Studio Code runs with the PlatformIO plugin you can compile and install the stock firmware.
 Get the stock firmware repository either with Git:
 
-```
+```sh
 $ git clone  https://github.com/ThingPulse/esp32-icon64-a2dp
 ```
 or by downloading and extracting the zip file.
@@ -100,7 +100,8 @@ This function converts x and y coordinates between (0..7, 0..7) to the index 0..
 To drive the LEDs we recommend either of the following two libraries: [roboticsbrno/SmartLeds](https://github.com/RoboticsBrno/SmartLeds), [fastled/FastLED](https://github.com/fastled/FastLED).
 
 Let's have a look at how to use the FastLED library:
-```c
+
+``` c
 #include <Arduino.h>
 #include <FastLED.h>
 

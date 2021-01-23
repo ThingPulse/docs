@@ -69,6 +69,7 @@ markdown_extensions:
       permalink: §
   # https://python-markdown.github.io/extensions/definition_lists/
   - def_list
+  - codehilite
   # https://github.com/mkdocs/mkdocs/issues/777#issuecomment-308266201
   - markdown_include.include:
       base_path: docs
@@ -81,3 +82,4 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.betterem:
       smart_enable: all
+
