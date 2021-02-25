@@ -153,7 +153,9 @@ out on GPIO39. GPIO39 is connected with a 470Ohm pull-up resistor.
 
 A simple but powerful library to handle button presses, long presses, interval presses etc. is [evert-arias/EasyButton](https://github.com/evert-arias/EasyButton). EasyButton allows you to attach callback functions to certain button events. Use callback functions to run specific code when the event gets triggered.
 
-## More projects
+## Icon64 projects
 
-[CO2 Monitor](https://github.com/ThingPulse/esp32-icon64-co2)
+* [Bluetooth Speaker/ Stock Firmware](https://github.com/ThingPulse/esp32-icon64-a2dp)
+* [Tooth Fairy](https://github.com/ThingPulse/esp32-icon64-toothfairy)
+* [CO2 Monitor](https://github.com/ThingPulse/esp32-icon64-co2)
 
