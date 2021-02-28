@@ -4,6 +4,8 @@ How to configure and hack the [ThingPulse Icon64](https://thingpulse.com/product
 
 ![](../img/products/ThingPulse-Icon64-ESP32-RGB-LED-audio.jpg)
 
+See [Icon64 projects](#icon64-projects) for a list of applications provided by ThingPulse.
+
 ## Using the Stock Firmware
 
 Icon64 ships with stock firmware pre-installed. It turns the Icon64 into a Bluetooth speaker with integrated 8 band spectrum analyzer.
@@ -15,32 +17,36 @@ To get started simply connect the device to a USB power source. Then use the pow
 
 ## Programming the Icon64
 
+The following chapters describe how you can compile and install applications onto the Icon64. We use the stock firmware as an example but the process is exactly the same for any other application.
+
+For a list of apps provided by ThingPulse see [Icon64 projects](#icon64-projects).
+
 ### Install Drivers
 {!../includes/install-drivers.md!}
 
-### PlatformIO IDE
-All ThingPulse Icon64 sample projects are built with PlatformIO. Hence, to use those samples as-is it is required you create a PlatformIO setup.
+### Install PlatformIO IDE
+All ThingPulse Icon64 sample projects are built with PlatformIO. Hence, to use those samples as-is it is required you create a local PlatformIO setup.
 
 {!../includes/platformio.md!}
 
 ### Get the Stock Firmware
 
 Now that the driver is installed and Visual Studio Code runs with the PlatformIO plugin you can compile and install the stock firmware.
+
 Get the stock firmware repository either with Git:
 
 ```sh
 $ git clone  https://github.com/ThingPulse/esp32-icon64-a2dp
 ```
-or by downloading and extracting the zip file.
+or by downloading and extracting the ZIP file from that URL.
 
 Once done open the `esp32-icon64-a2dp` folder in Visual Studio Code.
 
 ### Upload the Stock Firmware
 
-Please connect now your Icon64 to your PC by using a USB data cable and turn the device
-on by sliding the power switch into the "ON" position.
+Please connect your Icon64 to your computer with a USB data cable and turn the device on by sliding the power switch into the "ON" position.
 
-Have a look at the `platformio.ini`. Before you can upload we need to verify and likely adjust the following two lines:
+Have a look at the `platformio.ini`. Before you can upload you need to verify and likely adjust the following two lines:
 
 ```
 upload_port = /dev/cu.SLAB_USBtoUART
@@ -155,7 +161,11 @@ A simple but powerful library to handle button presses, long presses, interval p
 
 ## Icon64 projects
 
-* [Bluetooth Speaker/ Stock Firmware](https://github.com/ThingPulse/esp32-icon64-a2dp)
-* [Tooth Fairy](https://github.com/ThingPulse/esp32-icon64-toothfairy)
-* [CO2 Monitor](https://github.com/ThingPulse/esp32-icon64-co2)
+###  Bluetooth speaker
+The [Bluetooth speaker](https://github.com/ThingPulse/esp32-icon64-a2dp) is the Icon64 stock firmware. It uses the LEDs to display the output of the integrated 8 band spectrum analyzer.
+
+### Tooth Fairy
+The [Tooth Fairy](https://github.com/ThingPulse/esp32-icon64-toothfairy) - make brushing teeth more fun for you and/or your kids. It is a coloful webradio countdown.
+### CO₂ Monitor
+The [CO₂ Monitor](https://github.com/ThingPulse/esp32-icon64-co2) application requires a [MH-Z19C CO₂ sensor](https://thingpulse.com/product/mh-z19-co2-sensor/) (plug'n play). Displays the current ambient CO₂ level and audiably alerts when defined warn/alert threshholds are reached.
 
