@@ -148,9 +148,12 @@ The I²S bus requires 3 pins: DOUT, BCLK, and LRC. The mode pin is used to enabl
 | MODE PIN | GPIO33 |
 
 !!! important
-    If you do not pull GPIO33 high you won't hear any sound.
+    Unless you pull GPIO33 high the speaker will remain quiet.
     
-We recommend either of the following two audio libraries: [schreibfaul1/ESP32-audioI2S](https://github.com/schreibfaul1/ESP32-audioI2S), [earlephilhower/ESP8266Audio](https://github.com/earlephilhower/ESP8266Audio).
+There are two audio libraries we use ourselves and can thus recommend
+
+- [schreibfaul1/ESP32-audioI2S](https://github.com/schreibfaul1/ESP32-audioI2S), used in our [tooth fairy app](#tooth-fairy)
+- [earlephilhower/ESP8266Audio](https://github.com/earlephilhower/ESP8266Audio), used in our [stock firmware](#bluetooth-speaker)
 
 ### Tactile Switch
 
