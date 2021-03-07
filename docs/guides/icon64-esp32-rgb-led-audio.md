@@ -171,4 +171,7 @@ The [Bluetooth speaker](https://github.com/ThingPulse/esp32-icon64-a2dp) is the 
 The [Tooth Fairy](https://github.com/ThingPulse/esp32-icon64-toothfairy) makes brushing teeth more fun for you and/or your kids. It is a coloful webradio countdown.
 ### CO₂ Monitor
 The [CO₂ Monitor](https://github.com/ThingPulse/esp32-icon64-co2) application requires a [MH-Z19C CO₂ sensor](https://thingpulse.com/product/mh-z19-co2-sensor/) (plug'n play). Displays the current ambient CO₂ level and audiably alerts when defined warn/alert threshholds are reached.
+### Word Clock
+The [Word Clock](https://github.com/ThingPulse/icon64-word-clock) uses a stencil behind to front plate
+to display the current time.
 
