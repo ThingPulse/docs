@@ -4,7 +4,7 @@ How to configure and hack the [ThingPulse Icon64](https://thingpulse.com/product
 
 ![](../img/products/ThingPulse-Icon64-ESP32-RGB-LED-audio.jpg)
 
-See [Icon64 projects](#icon64-projects) for a list of applications provided by ThingPulse.
+You can either [install pre-built apps](#installing-apps-on-the-icon64) to the Icon64 or [program the device](#programming-the-icon64) yourself. See [Icon64 projects](#icon64-projects) for a list of applications provided by ThingPulse.
 
 ## Using the Stock Firmware
 
@@ -14,6 +14,23 @@ To get started simply connect the device to a USB power source. Then use the pow
 
 <iframe width="1280" height="560" src="https://www.youtube.com/embed/1UpbtE98OBA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+## Installing Apps on the Icon64
+
+ThingPulse offers an app store like application for your computer to install apps on the Icon64: the [App Fairy](https://github.com/ThingPulse/app-fairy). The App Fairy comes as a single executable for macOS and Windows that does not require installation - just download and run it. The only prerequisite is the installation of USB-to-Serial driver for communication between your computer and the device.
+
+![](https://raw.githubusercontent.com/ThingPulse/app-fairy/master/images/ThingPulse-App-Store.gif)
+
+- Install drivers as [documented below](#install-drivers)
+- Download the latest App Fairy for your platform from [https://github.com/ThingPulse/app-fairy/releases](https://github.com/ThingPulse/app-fairy/releases)
+- Connect the Icon64 to your computer using a USB *data* cable
+- Turn on the Icon64
+- Run the App Fairy
+- Select application
+- Enter configuration values
+- Press the "Install Application" button
+
+!!! tip
+    If new apps or updates to existing apps become available they will automatically load the next time you run the App Fairy. Hence, you do not need to update the App Fairy to use the new apps.
 
 ## Programming the Icon64
 
@@ -84,12 +101,13 @@ In order to develop for the Icon64, learn about the following building blocks.
 
 ### RGB LEDs
 
-The Icon64 contains 64 WS2812B RGB LEDs in a 3030 package. They are individually addressable over the GPIO32 pin.
+The Icon64 contains 64 WS2812B RGB LEDs in a 3030 package. They are individually addressable over GPIO32.
 
 The LEDs indexes are as depicted in the following diagram:
 ![](../img/how-tos/Icon64_Front_Schematic.png)
 
-The following function lets you use a x-y coordinate system:
+The following function converts x/y coordinates in the range {0..7}/{0..7} as shown below to a LED index in the range {0..63} as seen above.
+
 ```c
 uint8_t getLedIndex(uint8_t x, uint8_t y) {
   if (x % 2 == 1) {
@@ -99,7 +117,7 @@ uint8_t getLedIndex(uint8_t x, uint8_t y) {
   }
 }
 ```
-This function converts x and y coordinates between (0..7, 0..7) to the index 0..63:
+
 ![](../img/how-tos/Icon64_XYSystem.png)
 
 
@@ -170,8 +188,8 @@ The [Bluetooth speaker](https://github.com/ThingPulse/esp32-icon64-a2dp) is the 
 ### Tooth Fairy
 The [Tooth Fairy](https://github.com/ThingPulse/esp32-icon64-toothfairy) makes brushing teeth more fun for you and/or your kids. It is a coloful webradio countdown.
 ### CO₂ Monitor
-The [CO₂ Monitor](https://github.com/ThingPulse/esp32-icon64-co2) application requires a [MH-Z19C CO₂ sensor](https://thingpulse.com/product/mh-z19-co2-sensor/) (plug'n play). Displays the current ambient CO₂ level and audiably alerts when defined warn/alert threshholds are reached.
+The [CO₂ Monitor](https://github.com/ThingPulse/esp32-icon64-co2) application requires a [MH-Z19C CO₂ sensor](https://thingpulse.com/product/mh-z19-co2-sensor/) (plug'n play). Displays the current ambient CO₂ level and acoustically alerts when defined warn/alert threshholds are reached.
 ### Word Clock
-The [Word Clock](https://github.com/ThingPulse/icon64-word-clock) uses a stencil behind to front plate
+The [Word Clock](https://github.com/ThingPulse/icon64-word-clock) uses a stencil behind the front plate
 to display the current time.
 
