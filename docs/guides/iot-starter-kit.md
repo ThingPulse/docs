@@ -4,6 +4,6 @@ How to assemble and program the [ThingPulse ESP8266 IoT Starter Kit](https://thi
 
 ---
 
-For now we are keeping this documented in a [45+ page PDF](https://blog.squix.org/weatherstation-guide).
+For now we are keeping this documented in a [60+ page PDF](https://blog.squix.org/weatherstation-guide).
 
 ![](../img/products/ThingPulse-ESP8266-IoT-starter-kit.jpg)
