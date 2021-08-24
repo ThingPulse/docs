@@ -116,10 +116,10 @@ text field to have its metadata pulled from the internet and displayed below. Se
 it. Make sure to come back to this dialog from time to time to keep each library up to date. Also make sure that you
 only have one version of each of the libraries installed.
 
-- [Mini Grafx](https://github.com/ThingPulse/minigrafx) by Daniel Eichhorn
-- [ESP8266 WeatherStation](https://github.com/ThingPulse/esp8266-weather-station) by Daniel Eichhorn
+- [Mini Grafx](https://github.com/ThingPulse/minigrafx) by ThingPulse
+- [ESP8266 WeatherStation](https://github.com/ThingPulse/esp8266-weather-station) by ThingPulse
 - [Json Streaming Parser](https://github.com/squix78/json-streaming-parser) by Daniel Eichhorn
-- [ThingPulse XPT2046 Touch](https://github.com/ThingPulse/XPT2046_Touchscreen#xpt2046-touchscreen-arduino-library) by ThingPulse (forked from Paul Stoffregen), if you had previously installed the original `XPT2046_Touchscreen` then you need to [uninstall](https://github.com/arduino/Arduino/wiki/Library-Manager-FAQ#how-can-i-delete-a-library) that one!
+- [XPT2046 Touchscreen](https://www.arduinolibraries.info/libraries/xpt2046_touchscreen) >=1.4 by Paul Stoffregen
 
 ## Create OpenWeatherMap API key
 
