@@ -6,7 +6,7 @@ site_description: ThingPulse docs
 site_author: Marcel Stör & Dani Eichhorn
 repo_name: thingpulse/docs
 repo_url: https://github.com/thingpulse/docs
-copyright: Copyright &copy; 2020 <a href="https://thingpulse.com">ThingPulse</a>.
+copyright: Copyright &copy; 2021 <a href="https://thingpulse.com">ThingPulse</a>.
 
 extra_css:
   - css/thingpulse.css
@@ -38,6 +38,9 @@ extra:
       link: https://github.com/thingpulse
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/thingpulse
+  analytics:
+    provider: google
+    property: G-V8ZHG66YBG
 
 nav:
   - Home: index.md
@@ -57,10 +60,6 @@ nav:
   - Hardware specs:
     - WiFi Color Display Kit: specs/wifi-color-display-kit.md
     - 2.9" ESPaper Lite and Plus Kit: specs/2_9-espaper-kit-dimensions.md
-
-google_analytics:
-  - 'UA-112435176-4'
-  - 'auto'
 
 markdown_extensions:
   # https://squidfunk.github.io/mkdocs-material/extensions/admonition/

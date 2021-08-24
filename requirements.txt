@@ -1,4 +1,4 @@
-mkdocs>=1.0
-mkdocs-material>=5.0
+mkdocs==1.2.2
+mkdocs-material==7.2.4
 markdown-include>=0.5.1
 pymdown-extensions>=7.0
