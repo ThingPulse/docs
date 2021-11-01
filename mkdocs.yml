@@ -46,6 +46,7 @@ nav:
   - Home: index.md
   - support.md
   - Guides:
+    - AMo - CO<sub>2</sub> Monitor: guides/amo-co2-monitor.md
     - Icon64 - ESP32 with RBG LED & audio: guides/icon64-esp32-rgb-led-audio.md
     - ESP8266 IoT Starter Kit: guides/iot-starter-kit.md
     - WiFi Color Display Kit: guides/wifi-color-display-kit.md
