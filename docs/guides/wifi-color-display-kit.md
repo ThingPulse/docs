@@ -157,3 +157,20 @@ obtained in a previous step.
 
 The very last step really is to upload the code and all its dependencies to the device from the Arduino IDE. You do
 this through CTRL + U (⌘ + U on macOS) or ==Sketch== > ==Upload== or the right-arrow icon in the toolbar.
+
+## Operation
+
+### Touch calibration
+
+After a restart press and hold on first screen will force a touch screen re-calibration.
+
+### Navigation
+
+A touch in one of the four quadrants changes the display. Tapping the
+
+ - Top part (date & time) toggles the 12 or 24 hour time format.
+ - Middle left cycles one screen left.
+ - Middle right cycles one screen right.
+ - Bottom part (sun/moon information) jumps to page 0.
+ 
+![Operation](../img/guides/wifi-color-display-kit/screen-quadrants.jpg)
