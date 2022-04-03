@@ -183,13 +183,18 @@ A simple but powerful library to handle button presses, long presses, interval p
 ## Icon64 projects
 
 ###  Bluetooth speaker
-The [Bluetooth speaker](https://github.com/ThingPulse/esp32-icon64-a2dp) is the Icon64 stock firmware. It uses the LEDs to display the output of the integrated 8 band spectrum analyzer.
+The [Bluetooth speaker](https://github.com/ThingPulse/esp32-icon64-a2dp) is the Icon64 stock firmware. 
+It uses the LEDs to display the output of the integrated 8 band spectrum analyzer.
 
 ### Tooth Fairy
-The [Tooth Fairy](https://github.com/ThingPulse/esp32-icon64-toothfairy) makes brushing teeth more fun for you and/or your kids. It is a coloful webradio countdown.
+The [Tooth Fairy](https://github.com/ThingPulse/esp32-icon64-toothfairy) makes brushing teeth more fun 
+for you and/or your kids. It is a coloful webradio countdown.
 ### CO₂ Monitor
-The [CO₂ Monitor](https://github.com/ThingPulse/esp32-icon64-co2) application requires a MH-Z19C or Sensirion SCD4x CO₂ sensor (plugged or soldered to the PCB). Displays the current ambient CO₂ level and acoustically alerts when defined warn/alert threshholds are reached.
+The [CO₂ Monitor](https://github.com/ThingPulse/esp32-icon64-co2) application requires 
+an MH-Z19C or Sensirion SCD4x CO₂ sensor (plugged or soldered to the PCB). 
+Displays the current ambient CO₂ level and acoustically alerts when defined warn/alert thresholds are reached.
 ### Word Clock
-The [Word Clock](https://github.com/ThingPulse/icon64-word-clock) uses a stencil behind the front plate
-to display the current time.
+The [Word Clock](https://github.com/ThingPulse/icon64-word-clock) uses a stencil 
+behind the front plate to display the current time.
+We have [a video](https://youtu.be/p8oyx-fEvpg) documenting how to turn a stock Icon64 into a Word Clock.
 
