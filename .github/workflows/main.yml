@@ -1,0 +1,26 @@
+# inspired by https://matthias-andrasch.eu/blog/2021/tutorial-webseite-mittels-github-actions-deployment-zu-uberspace-uebertragen-rsync/
+on:
+  push:
+    branches:
+      - master
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+          cache: 'pip' # caching pip dependencies
+      - run: pip install -r requirements.txt
+      - name: MkDocs
+        run: mkdocs build --clean
+      - name: rsync deployment
+        uses: easingthemes/ssh-deploy@main
+        env:
+          ARGS: "-avzr"
+          SOURCE: "site/"
+          SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_KEY_PRIVATE }}
+          REMOTE_HOST: ${{ secrets.DEPLOY_HOST }}
+          REMOTE_USER: ${{ secrets.DEPLOY_USER }}
+          TARGET: ${{ secrets.DEPLOY_REMOTE_PATH }}
