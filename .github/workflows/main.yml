@@ -1,0 +1,21 @@
+# inspired by https://matthias-andrasch.eu/blog/2021/tutorial-webseite-mittels-github-actions-deployment-zu-uberspace-uebertragen-rsync/
+on:
+  push:
+    branches:
+      - master
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: MkDocs
+        run: mkdocs build --clean
+      - name: rsync deployment
+        uses: burnett01/rsync-deployments@4.1
+        with:
+          switches: -avzr
+          path: /site
+          remote_host: ${{ secrets.DEPLOY_HOST }}
+          remote_user: ${{ secrets.DEPLOY_USER }}
+          remote_path: ${{ secrets.DEPLOY_REMOTE_PATH }}
+          remote_key: ${{ secrets.DEPLOY_KEY_PRIVATE }}
