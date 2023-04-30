@@ -6,10 +6,7 @@ site_description: ThingPulse docs
 site_author: Marcel Stör & Dani Eichhorn
 repo_name: thingpulse/docs
 repo_url: https://github.com/thingpulse/docs
-copyright: Copyright &copy; 2021 <a href="https://thingpulse.com">ThingPulse</a>.
-
-extra_css:
-  - css/thingpulse.css
+copyright: Copyright &copy; 2023 <a href="https://thingpulse.com">ThingPulse</a>.
 
 # Configuration
 theme:
@@ -26,8 +23,26 @@ theme:
   feature:
     tabs: true
   palette:
-    primary: white
-    accent: orange
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: white
+      accent: orange
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: orange
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to light mode
+
+  features:
+    # https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#code-copy-button
+    - content.code.copy
 
 extra:
   # https://squidfunk.github.io/mkdocs-material/getting-started/#adding-social-links
@@ -70,17 +85,22 @@ markdown_extensions:
       permalink: §
   # https://python-markdown.github.io/extensions/definition_lists/
   - def_list
-  - codehilite
   # https://github.com/mkdocs/mkdocs/issues/777#issuecomment-308266201
   - markdown_include.include:
       base_path: docs
   # https://facelessuser.github.io/pymdown-extensions/
   # https://squidfunk.github.io/mkdocs-material/extensions/pymdown/
+  - pymdownx.betterem:
+      smart_enable: all
   - pymdownx.magiclink
   - pymdownx.mark
   - pymdownx.smartsymbols
   - pymdownx.tilde
   - pymdownx.inlinehilite
-  - pymdownx.betterem:
-      smart_enable: all
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
 
