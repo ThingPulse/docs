@@ -79,7 +79,7 @@ nav:
     - 2.9" ESPaper Lite and Plus Kit: specs/2_9-espaper-kit-dimensions.md
 
 markdown_extensions:
-  # https://squidfunk.github.io/mkdocs-material/extensions/admonition/
+  # https://squidfunk.github.io/mkdocs-material/reference/admonitions/
   - admonition
   - toc:
       permalink: §
@@ -89,7 +89,7 @@ markdown_extensions:
   - markdown_include.include:
       base_path: docs
   # https://facelessuser.github.io/pymdown-extensions/
-  # https://squidfunk.github.io/mkdocs-material/extensions/pymdown/
+  # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/
   - pymdownx.betterem:
       smart_enable: all
   - pymdownx.magiclink
