@@ -26,6 +26,10 @@ We are working on a fully functional sample project to get you started in no tim
 Until that is ready please see the `platformio.ini` file below for reference.
 Furthermore, the touch module pin definitions are SDA=23, SCL=22.
 
+!!! tip
+
+    If you want to follow the development of said sample project, take a look at the `dev` branch on GitHub at https://github.com/ThingPulse/esp32-weather-station-touch/tree/dev
+
 ```ini
 ; PlatformIO Project Configuration File for ThingPulse Color Kit Grande
 ;
