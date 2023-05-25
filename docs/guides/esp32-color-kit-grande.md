@@ -48,6 +48,9 @@ Do not insert the cables into the sockets yet.
 10. Remove the remaining protective film from the foam stickers.
 11. Feed the FPC cables of the display module through the PCB and attach the display module such that it aligns with the markings on the PCB (while silk screen).
 
+Assembly video
+<iframe width="480" height="300" src="https://www.youtube.com/embed/VhBRtyJvOQ0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 General introduction to working with pin headers incl. how to solder them.
 [![YouTube pin headers video](https://i.ytimg.com/vi/qz9Ryos1_GY/hqdefault.jpg)](https://youtu.be/qz9Ryos1_GY "Pin Headers - soldering, cutting, male, female, etc.")
 
