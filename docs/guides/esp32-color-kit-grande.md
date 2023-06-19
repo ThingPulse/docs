@@ -28,6 +28,10 @@ As seen on our product page in the shop the intention is for the ESP32 microcont
 If you are concerned about the little extra height this adds to the whole assembly, you may of course solder the ESP32 board directly to the connector PCB using the male pin headers.
 You might need to cut off the pin headers on the other side of the connector PCB such that they will not touch the display module.
 
+!!! note
+
+    See the [dedicated chapter below](#operating-the-fpc-connectors) about how to open & close the FPC connectors.
+
 1. Cut the female pin headers strips to length (12 & 16 pins) and solder them to the connector PCB.
 See video tutorial below.
 2. OPTIONAL but recommended: solder on/off switch to PCB.
@@ -54,6 +58,22 @@ General introduction to working with pin headers incl. how to solder them.
 Detailed instructions how to solder SMD components.
 Recommended for soldering the Grove connector if you have never done any SMD soldering before.
 [![YouTube SMD soldering video](https://i.ytimg.com/vi/EW9Y8rDm4kE/hqdefault.jpg)](https://youtu.be/EW9Y8rDm4kE "How To Solder SMD Correctly - Part 1 /SMD Soldering Tutorial")
+
+### Operating the FPC connectors
+
+The connectors for the two FPC cables (for display and touch module) can be a bit tricky to operate for the inexperienced.
+The fact that the two types required here don't work the same does not help.
+
+- The small one for the touch module has a black latch that opens if you gently lift it such that it will protrude from its base in a 90° angle.
+- The large one for the display has a locking bar that runs along the full length of the connector.
+It needs to be pulled away from its base parallel to the PCB.
+*Use two fingers* to pull at the knobs on either end of the bar.
+
+The following pictures indicate the open/closed positions.
+
+| [![](../img/guides/color-kit-grande/FPC-connectors-open-empty.jpg)](../img/guides/color-kit-grande/FPC-connectors-open-empty.jpg) | [![](../img/guides/color-kit-grande/FPC-connectors-closed-empty.jpg)](../img/guides/color-kit-grande/FPC-connectors-closed-empty.jpg) |
+|-----------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
+| [![](../img/guides/color-kit-grande/FPC-connectors-open.jpg)](../img/guides/color-kit-grande/FPC-connectors-open.jpg)             | [![](../img/guides/color-kit-grande/FPC-connectors-closed.jpg)](../img/guides/color-kit-grande/FPC-connectors-closed.jpg)             |
 
 ## Development environment
 We will be working with a **PlatformIO** development environment in **Visual Studio Code**.
