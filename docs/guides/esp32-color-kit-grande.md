@@ -112,3 +112,14 @@ Most importantly you will need to set the OpenWeatherMap API key ([how to get ke
 - Hit the PlatformIO icon on the navigation bar on the left side (alien face).
 - Select the ==Platform== > ==Upload Filesystem Image== task. You only need to do this once.
 - Select the ==General== > ==Upload and Monitor== task. You do this **every time you change code or configuration**.
+
+## Writing your own application
+
+Use the code in our sample project as a starting point or reference to build your own application.
+In particular, see the configuration in `platformio.ini` and `src/settings.h` for pin assignments.
+
+### Touch interface
+
+The sample application does not currently make use of the touch interface.
+However, the code does initialize it to ensure it is wired up correctly (`display.h#initTouchScreen`).
+Furthermore, there is a commented out snippet at the end of `loop()` that shows how to obtain touch coordinates.
