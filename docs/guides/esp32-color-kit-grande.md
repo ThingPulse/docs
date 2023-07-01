@@ -34,9 +34,9 @@ You might need to cut off the pin headers on the other side of the connector PCB
 
 1. Cut the female pin headers strips to length (12 & 16 pins) and solder them to the connector PCB.
 See video tutorial below.
-2. OPTIONAL but recommended: solder on/off switch to PCB.
+2. OPTIONAL but recommended: solder the on/off switch to PCB.
 Will be tricky to add later after the display module is attached to the PCB.
-3. OPTIONAL: solder Grove connector to PCB.
+3. OPTIONAL: solder the Grove connector to the PCB.
 See "SMD soldering" video tutorial below.
 Can easily be added later anytime.
 4. Cut the male pin headers strips to length (12 & 16 pins) and solder them to the ESP32 board.
@@ -48,6 +48,7 @@ Do not insert the cables into the sockets yet.
 9. Remove the display module again.
 10. Remove the remaining protective film from the foam stickers.
 11. Feed the FPC cables of the display module through the PCB and attach the display module such that it aligns with the markings on the PCB (while silk screen).
+See the [dedicated chapter below](#operating-the-fpc-connectors) on how to correctly open & close the FPC connectors.
 
 <iframe width="480" height="300" src="https://www.youtube.com/embed/AL6-BsUyV6k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -77,8 +78,8 @@ The following pictures indicate the open/closed positions.
 | [![](../img/guides/color-kit-grande/FPC-connectors-open.jpg)](../img/guides/color-kit-grande/FPC-connectors-open.jpg)             | [![](../img/guides/color-kit-grande/FPC-connectors-closed.jpg)](../img/guides/color-kit-grande/FPC-connectors-closed.jpg)             |
 
 ## Development environment
-We will be working with a **PlatformIO** development environment in **Visual Studio Code**.
-If you have never worked with PlatformIO please install it as per their [installation instructions](https://platformio.org/install/ide?install=vscode).
+We will be working with a **PlatformIO** (PIO) development environment in **Visual Studio Code** (VS Code).
+If you have never worked with PlatformIO, please install it as per their [installation instructions](https://platformio.org/install/ide?install=vscode).
 Once done, walk through their minial "Getting Started" section.
 
 ## Sample project
@@ -87,7 +88,7 @@ With all the soldering done we will turn to the Weather Station Touch project.
 
 ### Obtain the code
 
-The WiFi Color Kit project is, as all of ThingPulse's open-source code, publicly accessible on GitHub.
+The Weather Station sample project is, as all of ThingPulse's open-source code, publicly accessible on GitHub.
 Hence, there are two options to download the code:
 
 - Clone the repository with Git: `git clone https://github.com/ThingPulse/esp32-weather-station-touch`
@@ -96,9 +97,9 @@ Hence, there are two options to download the code:
 
 ### Open project in Visual Studio Code
 
-- Start the Arduino IDE
+- Start VS Code
 - ==File== > ==Open Folder...==
-- find and select the `esp32-weather-station-touch` folder from the previous step.
+- Find and select the `esp32-weather-station-touch` folder from the previous step.
 
 ### Configuration & customization
 
@@ -110,8 +111,12 @@ Most importantly you will need to set the OpenWeatherMap API key ([how to get ke
 ### Upload code to device
 
 - Hit the PlatformIO icon on the navigation bar on the left side (alien face).
-- Select the ==Platform== > ==Upload Filesystem Image== task. You only need to do this once.
-- Select the ==General== > ==Upload and Monitor== task. You do this **every time you change code or configuration**.
+- Select the ==Platform== > ==Upload Filesystem Image== task.
+You only need to do this once if it succeeds.
+Pay attention to the output in the VS Code console that opens.
+If it reports any errors like e.g. if it cannot connect to the board or if stops midway, then repeat the process.
+- Select the ==General== > ==Upload and Monitor== task.
+You do this **every time you change code or configuration**.
 
 ## Writing your own application
 
