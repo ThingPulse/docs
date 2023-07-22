@@ -32,12 +32,17 @@ You might need to cut off the pin headers on the other side of the connector PCB
 
     See the [dedicated chapter below](#operating-the-fpc-connectors) about how to open & close the FPC connectors.
 
+!!! danger
+
+    Handle the delicate display unit and its FPC ribbons with extra care.
+    Be sure to NOT sharply bend (i.e. fold), pull or otherwise apply stress to the ribbon cables and their connection to the unit.
+
 1. Cut the female pin headers strips to length (12 & 16 pins) and solder them to the connector PCB.
-See video tutorial below.
+See video tutorial below (collapsible section).
 2. OPTIONAL but recommended: solder the on/off switch to PCB.
 Will be tricky to add later after the display module is attached to the PCB.
 3. OPTIONAL: solder the Grove connector to the PCB.
-See "SMD soldering" video tutorial below.
+See "SMD soldering" video tutorial below (collapsible section).
 Can easily be added later anytime.
 4. Cut the male pin headers strips to length (12 & 16 pins) and solder them to the ESP32 board.
 5. Peel off the protective film on one side of the four foam stickers and attach them to the front of the connector PCB in the designated areas ("TAPE").
@@ -52,14 +57,16 @@ See the [dedicated chapter below](#operating-the-fpc-connectors) on how to corre
 
 <iframe width="480" height="300" src="https://www.youtube.com/embed/AL6-BsUyV6k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-<iframe width="480" height="300" src="https://www.youtube.com/embed/VhBRtyJvOQ0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+??? tip "Expand to show soldering tutorials"
 
-General introduction to working with pin headers incl. how to solder them.
-[![YouTube pin headers video](https://i.ytimg.com/vi/qz9Ryos1_GY/hqdefault.jpg)](https://youtu.be/qz9Ryos1_GY "Pin Headers - soldering, cutting, male, female, etc.")
+    === "Working with pin headers"
+        General introduction to working with pin headers incl. how to solder them.
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/qz9Ryos1_GY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-Detailed instructions how to solder SMD components.
-Recommended for soldering the Grove connector if you have never done any SMD soldering before.
-[![YouTube SMD soldering video](https://i.ytimg.com/vi/EW9Y8rDm4kE/hqdefault.jpg)](https://youtu.be/EW9Y8rDm4kE "How To Solder SMD Correctly - Part 1 /SMD Soldering Tutorial")
+    === "Soldering SMD components"
+        Detailed instructions how to solder SMD components.
+        Recommended for soldering the Grove connector if you have never done any SMD soldering before.
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/EW9Y8rDm4kE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ### Operating the FPC connectors
 
