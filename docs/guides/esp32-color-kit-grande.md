@@ -48,12 +48,14 @@ Can easily be added later anytime.
 5. Peel off the protective film on one side of the four foam stickers and attach them to the front of the connector PCB in the designated areas ("TAPE").
 6. Place the display on a clean surface upside down (as to not scratch it).
 7. Feed the two FPC cables of the display module through the cut-outs of the PCB.
-Do not insert the cables into the sockets yet.
-8. Flip the two pieces over to verify everything fits.
-9. Remove the display module again.
-10. Remove the remaining protective film from the foam stickers.
-11. Feed the FPC cables of the display module through the PCB and attach the display module such that it aligns with the markings on the PCB (while silk screen).
+Insert the cables into the sockets.
 See the [dedicated chapter below](#operating-the-fpc-connectors) on how to correctly open & close the FPC connectors.
+8. Carefully(!) fold the display over such that it rests on the (still protected) foam pads and flip the two pieces over to verify everything fits.
+9. Now would be a good time to proceed with the [software](#development-environment)/[firmware](#sample-project) installation as per the chapters below.
+You will want to do this now - rather than at the very end - to verify everything works *before* you attach the display.
+It will be hard to remove from the foam stickers once attached.
+10. Remove the remaining protective film from the foam stickers.
+11. Attach the display module such that it aligns with the markings on the PCB (while silk screen).
 
 <iframe width="480" height="300" src="https://www.youtube.com/embed/AL6-BsUyV6k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
