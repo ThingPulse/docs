@@ -127,6 +127,11 @@ If it reports any errors like e.g. if it cannot connect to the board or if stops
 - Select the ==General== > ==Upload and Monitor== task.
 You do this **every time you change code or configuration**.
 
+!!! note
+
+    Should the upload fail, please ensure your system has the necessary drivers for the CH9102 USB to serial converter installed.
+    The best place for details and instructions is over at [Adafruit](https://learn.adafruit.com/how-to-install-drivers-for-wch-usb-to-serial-chips-ch9102f-ch9102).
+
 ## Writing your own application
 
 Use the code in our sample project as a starting point or reference to build your own application.
