@@ -37,25 +37,22 @@ You might need to cut off the pin headers on the other side of the connector PCB
     Handle the delicate display unit and its FPC ribbons with extra care.
     Be sure to NOT sharply bend (i.e. fold), pull or otherwise apply stress to the ribbon cables and their connection to the unit.
 
-1. Cut the female pin headers strips to length (12 & 16 pins) and solder them to the connector PCB.
-See video tutorial below (collapsible section).
-2. OPTIONAL but recommended: solder the on/off switch to PCB.
-Will be tricky to add later after the display module is attached to the PCB.
-3. OPTIONAL: solder the Grove connector to the PCB.
-See "SMD soldering" video tutorial below (collapsible section).
-Can easily be added later anytime.
-4. Cut the male pin headers strips to length (12 & 16 pins) and solder them to the ESP32 board.
-5. Peel off the protective film on one side of the four foam stickers and attach them to the front of the connector PCB in the designated areas ("TAPE").
-6. Place the display on a clean surface upside down (as to not scratch it).
-7. Feed the two FPC cables of the display module through the cut-outs of the PCB.
-Insert the cables into the sockets.
-See the [dedicated chapter below](#operating-the-fpc-connectors) on how to correctly open & close the FPC connectors.
-8. Carefully(!) fold the display over such that it rests on the (still protected) foam pads and flip the two pieces over to verify everything fits.
-9. Now would be a good time to proceed with the [software](#development-environment)/[firmware](#sample-project) installation as per the chapters below.
-You will want to do this now - rather than at the very end - to verify everything works *before* you attach the display.
-It will be hard to remove from the foam stickers once attached.
-10. Remove the remaining protective film from the foam stickers.
-11. Attach the display module such that it aligns with the markings on the PCB (while silk screen).
+
+
+| [![](../img/guides/color-kit-grande/1_40female_split.png)](../img/guides/color-kit-grande/1_40female_split.png) | Cut the female pin headers strips to length (12 & 16 pins) and solder them to the connector PCB. |
+|-----------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
+| [![](../img/guides/color-kit-grande/2_power_switch_1.png)](../img/guides/color-kit-grande/2_power_switch_1.png) | OPTIONAL but recommended: solder the on/off switch to PCB. |
+| [![](../img/guides/color-kit-grande/3_grove_connector.png)](../img/guides/color-kit-grande/3_grove_connector.png) | OPTIONAL: solder the Grove connector to the PCB. See "SMD soldering" video tutorial below (collapsible section). Can easily be added later anytime. |
+| [![](../img/guides/color-kit-grande/4_male_pin_1.png)](../img/guides/color-kit-grande/4_male_pin_1.png) |  Cut the male pin headers strips to length (12 & 16 pins) |
+|[![](../img/guides/color-kit-grande/4_male_pins_in_pos.png)](../img/guides/color-kit-grande/4_male_pins_in_pos.png) | Place the male into the already soldered female header pins for better stability |
+|[![](../img/guides/color-kit-grande/4_male_pin_esp32_epulse.png)](../img/guides/color-kit-grande/4_male_pin_esp32_epulse.png) | Solder the headers to the ESP32 board. |
+| [![](../img/guides/color-kit-grande/5_tapes.png)](../img/guides/color-kit-grande/5_tapes.png) |  Peel off the protective film on one side of the four foam stickers and attach them to the front of the connector PCB in the designated areas ("TAPE"). |
+| [![](../img/guides/color-kit-grande/6_display.png)](../img/guides/color-kit-grande/6_display.png) |  Place the display on a clean surface upside down (as to not scratch it). |
+| [![](../img/guides/color-kit-grande/7_FPC.png)](../img/guides/color-kit-grande/7_FPC.png)  |  Feed the two FPC cables of the display module through the cut-outs of the PCB. Insert the cables into the sockets. See the [dedicated chapter below](#operating-the-fpc-connectors) on how to correctly open & close the FPC connectors. Carefully(!) fold the display over such that it rests on the (still protected) foam pads and flip the two pieces over to verify everything fits. |
+| [![](../img/guides/color-kit-grande/8_programm.png)](../img/guides/color-kit-grande/8_programm.png) |  Now would be a good time to proceed with the [software](#development-environment)/[firmware](#sample-project) installation as per the chapters below. You will want to do this now - rather than at the very end - to verify everything works *before* you attach the display. It will be hard to remove from the foam stickers once attached. |
+| [![](../img/guides/color-kit-grande/10_protective.png)](../img/guides/color-kit-grande/10_protective.png)  |  Remove the remaining protective film from the foam stickers. |
+| [![](../img/guides/color-kit-grande/11_align.png)](../img/guides/color-kit-grande/11_align.png)  |  Attach the display module such that it aligns with the markings on the PCB (white silk screen). |
+
 
 <iframe width="480" height="300" src="https://www.youtube.com/embed/AL6-BsUyV6k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
