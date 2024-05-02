@@ -62,6 +62,7 @@ nav:
   - support.md
   - Guides:
     - ESP32 Color Kit Grande: guides/esp32-color-kit-grande.md
+    - ESP32-S3 Pendrive: guides/esp32-s3-pendrive.md
     - AMo - CO2 Monitor: guides/amo-co2-monitor.md
     - Icon64 - ESP32 with RBG LED & audio: guides/icon64-esp32-rgb-led-audio.md
     - ESP8266 IoT Starter Kit: guides/iot-starter-kit.md
