@@ -1,3 +1,12 @@
-How to assemble and program the [ThingPulse ESP32-S3-Pendrive](https://thingpulse.com/product/).
+# ThingPulse Pendrive S3
 
-TBD
+![ThingPulse Pendrive S3](../img/products/ThingPulse_PendriveS3_M.jpeg)
+
+## Product Page 
+
+[ThingPulse Pendrive S3](https://thingpulse.com/product/esp32-s3-pendrive-s3-128mb/).
+
+## Technical Documentation
+
+[Documentation on Github](https://github.com/ThingPulse/thingpulse-devices/tree/master/pendrive-s3)
+
