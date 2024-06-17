@@ -13,7 +13,7 @@ Install VS Studio Code and Platformio [Instructions](https://platformio.org/inst
 
 ## Building & Flashing Sample projects
 1. Get the sample projects with a `git clone https://github.com/ThingPulse/esp32-s3-pendrive-samples`
-2. Choose a sample project by selecting a target from the footer: ![Pendrive Targets](../img/guides/pendrive-sample-targets.png)
+2. Choose a sample project by selecting a target from the footer: ![Pendrive Targets](../img/guides/pendrive-s3/pendrive-sample-targets.png)
 3. Press the Build & Flash button from the footer of VS Code
 
 For some samples it might be necessary to get the device into bootloader mode:
