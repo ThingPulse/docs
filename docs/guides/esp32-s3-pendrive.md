@@ -10,3 +10,7 @@
 
 [Documentation on Github](https://github.com/ThingPulse/thingpulse-devices/tree/master/pendrive-s3)
 
+## Sample Projects
+
+[Examples on Github](https://github.com/ThingPulse/esp32-s3-pendrive-samples)
+
