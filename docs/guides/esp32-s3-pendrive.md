@@ -13,7 +13,7 @@ Install VS Studio Code and Platformio [Instructions](https://platformio.org/inst
 
 ## Building & Flashing Sample projects
 1. Get the sample projects with a `git clone https://github.com/ThingPulse/esp32-s3-pendrive-samples`
-2. Choose a sample project by selecting a target from the footer: ![Pendrive Targets]()../img/guides/pendrive-sample-targets.png)
+2. Choose a sample project by selecting a target from the footer: ![Pendrive Targets](../img/guides/pendrive-sample-targets.png)
 3. Press the Build & Flash button from the footer of VS Code
 
 For some samples it might be necessary to get the device into bootloader mode:
@@ -27,7 +27,7 @@ After flashing the firmware it might be necessary to press reset to get out of b
 1. Get the SuperWiFiDuck project: `git clone https://github.com/ThingPulse/SuperWifiDuck`
 2. Press the build & flash button in VS Code's footer
 
-To use SuperWiFiDuck follow the instructions in the (repository)[https://github.com/ThingPulse/SuperWifiDuck]
+To use SuperWiFiDuck follow the instructions in the [repository](https://github.com/ThingPulse/SuperWifiDuck)
 
 ## Flashing Circuit Python
 Use the web flasher (here)[https://circuitpython.org/board/ThingPulse_PendriveS3/]
