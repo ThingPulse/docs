@@ -30,7 +30,7 @@ After flashing the firmware it might be necessary to press reset to get out of b
 To use SuperWiFiDuck follow the instructions in the [repository](https://github.com/ThingPulse/SuperWifiDuck)
 
 ## Flashing Circuit Python
-Use the web flasher (here)[https://circuitpython.org/board/ThingPulse_PendriveS3/]
+Use the web flasher [here](https://circuitpython.org/board/ThingPulse_PendriveS3/)
 Please note: at the moment the web flasher does not work yet, but will be fixed soon.
 
 ## Links
