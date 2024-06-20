@@ -28,6 +28,7 @@ After flashing the firmware it might be necessary to press reset to get out of b
 2. Press the build & flash button in VS Code's footer
 
 Alternatively you can also use the Web Flasher:
+
 1. Put the Pendrive S3 into your USB slot
 2. Open the [SuperWiFiDuck Flasher](https://app-market.thingpulse.com/device/tp-pendrive-s3/app/tp-pendrive-s3-super-wifi-duck)
 3. Click `Flash App` and check the Serial Console for success
@@ -35,7 +36,8 @@ Alternatively you can also use the Web Flasher:
 To use SuperWiFiDuck follow the instructions in the [repository](https://github.com/ThingPulse/SuperWifiDuck)
 
 ## Flashing & Programming with Circuit Python
-Use the web flasher [here](https://app-market.thingpulse.com/device/tp-pendrive-s3/app/tp-pendrive-s3-circuit-python)
+Use the web flasher [here](https://app-market.thingpulse.com/device/tp-pendrive-s3/app/tp-pendrive-s3-circuit-python);
+
 1. Put the Pendrive S3 into your USB slot
 2. Open the [Circuit Python for Pendrive S3 Flasher](https://app-market.thingpulse.com/device/tp-pendrive-s3/app/tp-pendrive-s3-circuit-python)
 3. Click `Flash App` and check the Serial Console for success
