@@ -44,6 +44,16 @@ Use the web flasher [here](https://app-market.thingpulse.com/device/tp-pendrive-
 4. If a "CIRCUITPY" drive does not show up by itself press the reset button on the Pendrive S3
 5. Follow these [instructions](https://learn.adafruit.com/welcome-to-circuitpython/overview)
 
+## Enclosure
+The Pendrive S3 kit includes an injection molded enclosure. It consists of 3 parts (bottom, top, cap).
+The enclosure makes the Pendrive S3 look like any regular USB-C memory stick. To use the Pendrive S3
+with the enclosure place the PCB with the spring pointing up into the bottom part. This is the part
+with holes, not pins. Then add the top part by aligning the pins with the holes. Please be aware:
+this is a very tight fit and it might be hard to open the enclosure once the two parts are pressed together
+completely. 
+
+[Enclosure](../img/guides/pendrive-s3/pendrive-s3-enclosure.png)
+
 ## Links
 [Documentation on Github](https://github.com/ThingPulse/thingpulse-devices/tree/master/pendrive-s3)
 
