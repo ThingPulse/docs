@@ -52,7 +52,7 @@ with holes, not pins. Then add the top part by aligning the pins with the holes.
 this is a very tight fit and it might be hard to open the enclosure once the two parts are pressed together
 completely. 
 
-[Enclosure](../img/guides/pendrive-s3/pendrive-s3-enclosure.png)
+![Enclosure](../img/guides/pendrive-s3/pendrive-s3-enclosure.png)
  
 ## Links
 [Documentation on Github](https://github.com/ThingPulse/thingpulse-devices/tree/master/pendrive-s3)
