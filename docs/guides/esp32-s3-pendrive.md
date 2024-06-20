@@ -53,7 +53,7 @@ this is a very tight fit and it might be hard to open the enclosure once the two
 completely. 
 
 [Enclosure](../img/guides/pendrive-s3/pendrive-s3-enclosure.png)
-
+ 
 ## Links
 [Documentation on Github](https://github.com/ThingPulse/thingpulse-devices/tree/master/pendrive-s3)
 
