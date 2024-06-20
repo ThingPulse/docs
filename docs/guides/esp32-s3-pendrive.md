@@ -29,9 +29,13 @@ After flashing the firmware it might be necessary to press reset to get out of b
 
 To use SuperWiFiDuck follow the instructions in the [repository](https://github.com/ThingPulse/SuperWifiDuck)
 
-## Flashing Circuit Python
-Use the web flasher [here](https://circuitpython.org/board/ThingPulse_PendriveS3/)
-Please note: at the moment the web flasher does not work yet, but will be fixed soon.
+## Flashing & Programming with Circuit Python
+Use the web flasher [here](https://app-market.thingpulse.com/device/tp-pendrive-s3/app/tp-pendrive-s3-circuit-python)
+1. Put the Pendrive S3 into your USB slot
+2. Open the [Circuit Python for Pendrive S3 Flasher](https://app-market.thingpulse.com/device/tp-pendrive-s3/app/tp-pendrive-s3-circuit-python)
+3. Click `Flash App` and check the Serial Console for success
+4. If a "CIRCUITPY" drive does not show up by itself press the reset button on the Pendrive S3
+5. Follow these [instructions](https://learn.adafruit.com/welcome-to-circuitpython/overview)
 
 ## Links
 [Documentation on Github](https://github.com/ThingPulse/thingpulse-devices/tree/master/pendrive-s3)
