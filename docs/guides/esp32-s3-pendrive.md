@@ -44,6 +44,13 @@ Use the web flasher [here](https://app-market.thingpulse.com/device/tp-pendrive-
 4. If a "CIRCUITPY" drive does not show up by itself press the reset button on the Pendrive S3
 5. Follow these [instructions](https://learn.adafruit.com/welcome-to-circuitpython/overview)
 
+## App Market
+The ThingPulse App market facilitates installation of new firmware. You can find it here: https://app-market.thingpulse.com/device/tp-pendrive-s3/ 
+
+Pick an application from the list and then `Flash App`
+
+![type:video](../video/app-market/AppMarket.mov)
+
 ## Enclosure
 The Pendrive S3 kit includes an injection molded enclosure. It consists of 3 parts (bottom, top, cap).
 The enclosure makes the Pendrive S3 look like any regular USB-C memory stick. To use the Pendrive S3

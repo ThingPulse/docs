@@ -108,3 +108,14 @@ markdown_extensions:
       alternate_style: true
   - pymdownx.tilde
 
+plugins:
+  - mkdocs-video:
+      is_video: True
+      video_muted: True
+      video_controls: True
+      video_loop: True 
+      video_autoplay: True
+      css_style:
+        width: "90%"
+
+

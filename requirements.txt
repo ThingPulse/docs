@@ -2,3 +2,4 @@ mkdocs==1.5.3
 mkdocs-material==9.5.13
 markdown-include>=0.5.1
 pymdown-extensions>=7.0
+mkdocs_video>=1.5.0
