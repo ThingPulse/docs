@@ -94,6 +94,9 @@ If you have never worked with PlatformIO, please install it as per their [instal
 
 ![../img/how-tos/platformio-install.png](../img/how-tos/platformio-install.png)
 
+Now please look at their [quick-start guide](https://docs.platformio.org/en/latest/integration/ide/vscode.html#quick-start):
+
+[![](../img/how-tos/platformio-quickstart.png)](https://docs.platformio.org/en/latest/integration/ide/vscode.html#quick-start)
 
 ## The Weather Station Sample Project
 
@@ -121,15 +124,25 @@ They are all documented _inside_ the file directly.
 Everything should be self-explanatory.
 Most importantly you will need to set the OpenWeatherMap API key ([how to get key](../how-tos/openweathermap-key.md)).
 
-### Upload code to device
-
+### Upload the file system to device
 - Hit the PlatformIO icon on the navigation bar on the left side (alien face).
 - Select the ==Platform== > ==Upload Filesystem Image== task.
 You only need to do this once if it succeeds.
 Pay attention to the output in the VS Code console that opens.
 If it reports any errors like e.g. if it cannot connect to the board or if stops midway, then repeat the process.
+
+![../img/how-tos/platformio-filesystem.png](../img/how-tos/platformio-filesystem.png)
+
+### Upload code to device
+
 - Select the ==General== > ==Upload and Monitor== task.
-You do this **every time you change code or configuration**.
+You do this **every time you change code or configuration**. 
+
+![../img/how-tos/platformio-task-upload.png](../img/how-tos/platformio-task-upload.png)
+
+Alternatively you can also use the quick buttons from the footer:
+
+![../img/how-tos/platformio-upload.png](../img/how-tos/platformio-upload.png)
 
 !!! note
 
