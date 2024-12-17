@@ -149,6 +149,14 @@ Alternatively you can also use the quick buttons from the footer:
     Should the upload fail, please ensure your system has the necessary drivers for the CH9102 USB to serial converter installed.
     The best place for details and instructions is over at [Adafruit](https://learn.adafruit.com/how-to-install-drivers-for-wch-usb-to-serial-chips-ch9102f-ch9102).
 
+### Trouble Shooting
+
+| Symptom | Suggested Solution |
+|-----------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
+| After uploading filesystem and firmware the display flickers but stays dark  | This problem could often be resolved by redoing cold solder joints. If you own a multimeter you can check connections between the ePulse Feather board and the bigger connector board, pin by pin. The ground pin (GND) allows you to do an even better test: check if the metal housing of the USB-C plug is electrically connected to the GND pin on the big board. If there is no connection you should try to heat the solder joint again to properly connect the pin to the pad ![../img/guides/color-kit-grande/trouble1.jpg](../img/guides/color-kit-grande/trouble1.jpg) |
+| The display shows text but now icons  | This probably means that the filesystem upload was not succesful, as the icons are load from there. Make sure that you have followed [this step](/guides/esp32-color-kit-grande/#upload-the-file-system-to-device)  |
+
+
 ## Writing your own application
 
 Use the code in our sample project as a starting point or reference to build your own application.
