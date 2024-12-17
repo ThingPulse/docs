@@ -85,10 +85,17 @@ The following pictures indicate the open/closed positions.
 
 ## Development environment
 We will be working with a **PlatformIO** (PIO) development environment in **Visual Studio Code** (VS Code).
-If you have never worked with PlatformIO, please install it as per their [installation instructions](https://platformio.org/install/ide?install=vscode).
-Once done, walk through their minial "Getting Started" section.
+If you have never worked with PlatformIO, please install it as per their [installation instructions](https://docs.platformio.org/en/latest/integration/ide/vscode.html#installation).
 
-## Sample project
+0. [Download](https://code.visualstudio.com/) and install official Microsoft Visual Studio Code. PlatformIO IDE is built on top of it
+1. Open VSCode Package Manager
+2. Search for the official platformio ide extension
+3. Install PlatformIO IDE.
+
+![../img/how-tos/platformio-install.png](../img/how-tos/platformio-install.png)
+
+
+## The Weather Station Sample Project
 
 With all the soldering done we will turn to the Weather Station Touch project.
 
