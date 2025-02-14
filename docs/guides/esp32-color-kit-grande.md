@@ -37,7 +37,17 @@ You might need to cut off the pin headers on the other side of the connector PCB
     Handle the delicate display unit and its FPC ribbons with extra care.
     Be sure to NOT sharply bend (i.e. fold), pull or otherwise apply stress to the ribbon cables and their connection to the unit.
 
+<iframe width="480" height="300" src="https://www.youtube.com/embed/AL6-BsUyV6k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
+
+=== "Working with pin headers"
+    General introduction to working with pin headers incl. how to solder them.
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/qz9Ryos1_GY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+=== "Soldering SMD components"
+    Detailed instructions how to solder SMD components.
+    Recommended for soldering the Grove connector if you have never done any SMD soldering before.
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/EW9Y8rDm4kE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 | [![](../img/guides/color-kit-grande/1_40female_split.png)](../img/guides/color-kit-grande/1_40female_split.png) | Cut the female pin headers strips to length (12 & 16 pins) and solder them to the connector PCB. |
 |-----------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
@@ -46,30 +56,18 @@ You might need to cut off the pin headers on the other side of the connector PCB
 | [![](../img/guides/color-kit-grande/4_male_pin_1.png)](../img/guides/color-kit-grande/4_male_pin_1.png) |  Cut the male pin headers strips to length (12 & 16 pins) |
 |[![](../img/guides/color-kit-grande/4_male_pins_in_pos.png)](../img/guides/color-kit-grande/4_male_pins_in_pos.png) | Place the male into the already soldered female header pins for better stability |
 |[![](../img/guides/color-kit-grande/4_male_pin_esp32_epulse.png)](../img/guides/color-kit-grande/4_male_pin_esp32_epulse.png) | Solder the headers to the ESP32 board. |
-| [![](../img/guides/color-kit-grande/5_tapes.png)](../img/guides/color-kit-grande/5_tapes.png) |  Peel off the protective film on one side of the four foam stickers and attach them to the front of the connector PCB in the designated areas ("TAPE"). |
 | [![](../img/guides/color-kit-grande/6_display.png)](../img/guides/color-kit-grande/6_display.png) |  Place the display on a clean surface upside down (as to not scratch it). |
 | [![](../img/guides/color-kit-grande/7_FPC.png)](../img/guides/color-kit-grande/7_FPC.png)  |  Feed the two FPC cables of the display module through the cut-outs of the PCB. Insert the cables into the sockets. See the [dedicated chapter below](#operating-the-fpc-connectors) on how to correctly open & close the FPC connectors. Carefully(!) fold the display over such that it rests on the (still protected) foam pads and flip the two pieces over to verify everything fits. |
-| [![](../img/guides/color-kit-grande/app-market-1.png)](../img/guides/color-kit-grande/app-market-1.png) |  Now is a good time to test the hardware with a simple programm. You will want to do this now - rather than at the very end - to verify everything works *before* you permanently tape the display with the stickers to the connector board. It will be hard to remove from the foam stickers once attached. Open the (flasher web application)[https://app-market.thingpulse.com/device/tp-color-kit-grande/app/tp-color-kit-grande-screen-test] |
+| [![](../img/guides/color-kit-grande/CH9102F-driver.png)](../img/guides/color-kit-grande/CH9102F-driver.png) |  Now is a good time to test the hardware with a simple programm. You will want to do this now - rather than at the very end - to verify everything works *before* you permanently tape the display with the stickers to the connector board. It will be hard to remove from the foam stickers once attached. If this is the first time working with an ESP32 ePulse Feather on your current machine you might want to install the driver for the CH9102F serial chip now. Head over to [Adafruit's driver page](https://learn.adafruit.com/how-to-install-drivers-for-wch-usb-to-serial-chips-ch9102f-ch9102) and follow their instructions for installing the CH9102F driver. |
+| [![](../img/guides/color-kit-grande/app-market-1.png)](../img/guides/color-kit-grande/app-market-1.png) |  Now is a good time to test the hardware with a simple programm. You will want to do this now - rather than at the very end - to verify everything works *before* you permanently tape the display with the stickers to the connector board. It will be hard to remove from the foam stickers once attached. Open the [flasher web application](https://app-market.thingpulse.com/device/tp-color-kit-grande/app/tp-color-kit-grande-screen-test) |
 | [![](../img/guides/color-kit-grande/8_programm.png)](../img/guides/color-kit-grande/8_programm.png) |  Connect your Color Kit Grande with a USB-C cable to your computer. Move the power switch to the on-position. |
 | [![](../img/guides/color-kit-grande/app-market-2.png)](../img/guides/color-kit-grande/app-market-2.png) |  Press the "Flash App" button and select the port of your your device. On Mac OS X it is the cu.wch* device. The name of the device might be different on your operating system  |
 | [![](../img/guides/color-kit-grande/app-market-3.png)](../img/guides/color-kit-grande/app-market-3.png) |  Now the browser will flash the test program. This should only take a few seconds and at the end there should be four progress bars at 100%  |
 | [![](../img/guides/color-kit-grande/testbed.jpg)](../img/guides/color-kit-grande/testbed.jpg) |  After the firmware was flashed you should see four colorful boxes and some text. By touching the display you can draw  |
+| [![](../img/guides/color-kit-grande/5_tapes.png)](../img/guides/color-kit-grande/5_tapes.png) |  Peel off the protective film on one side of the four foam stickers and attach them to the front of the connector PCB in the designated areas ("TAPE"). |
 | [![](../img/guides/color-kit-grande/10_protective.png)](../img/guides/color-kit-grande/10_protective.png)  |  Remove the remaining protective film from the foam stickers. |
 | [![](../img/guides/color-kit-grande/11_align.png)](../img/guides/color-kit-grande/11_align.png)  |  Attach the display module such that it aligns with the markings on the PCB (white silk screen). |
 
-
-<iframe width="480" height="300" src="https://www.youtube.com/embed/AL6-BsUyV6k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-??? tip "Expand to show soldering tutorials"
-
-    === "Working with pin headers"
-        General introduction to working with pin headers incl. how to solder them.
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/qz9Ryos1_GY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-    === "Soldering SMD components"
-        Detailed instructions how to solder SMD components.
-        Recommended for soldering the Grove connector if you have never done any SMD soldering before.
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/EW9Y8rDm4kE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ### Operating the FPC connectors
 
