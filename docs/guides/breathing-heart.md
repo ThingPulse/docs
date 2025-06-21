@@ -97,5 +97,5 @@ Each LED slot on the PCB shows a diode symbol like this:
 
 ---
 
-
+ 
 
