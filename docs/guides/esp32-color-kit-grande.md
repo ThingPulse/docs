@@ -13,7 +13,7 @@ How to assemble and program the [ThingPulse ESP32 WiFi Color Display Kit Grande]
 
 In addition to the components in the kit you will need:
 
-- [soldering iron](https://thingpulse.com/go/soldering-iron/)
+- [soldering iron](https://thingpulse.com/product/portable-mini-soldering-kit-with-usb-charging/)
 - solder
 - tweezers
 
