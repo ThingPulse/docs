@@ -151,7 +151,7 @@ Alternatively you can also use the quick buttons from the footer:
     Should the upload fail, please ensure your system has the necessary drivers for the CH9102 USB to serial converter installed.
     The best place for details and instructions is over at [Adafruit](https://learn.adafruit.com/how-to-install-drivers-for-wch-usb-to-serial-chips-ch9102f-ch9102).
 
-### Trouble Shooting
+### Troubleshooting
 
 | Symptom | Suggested Solution |
 |-----------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
