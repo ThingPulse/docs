@@ -66,6 +66,7 @@ nav:
     - Breathing Heart: guides/breathing-heart.md
     - AMo - CO2 Monitor: guides/amo-co2-monitor.md
     - Icon64 - ESP32 with RBG LED & audio: guides/icon64-esp32-rgb-led-audio.md
+    - Icon256 - Word Clock: guides/icon256-word-clock.md
     - ESP8266 IoT Starter Kit: guides/iot-starter-kit.md
     - WiFi Color Display Kit: guides/wifi-color-display-kit.md
     - 2.9″ ESPaper Plus Kit: guides/espaper-plus-kit.md
@@ -79,6 +80,10 @@ nav:
   - Hardware specs:
     - WiFi Color Display Kit: specs/wifi-color-display-kit.md
     - 2.9" ESPaper Lite and Plus Kit: specs/2_9-espaper-kit-dimensions.md
+
+watch:
+  - docs/guides
+  - mkdocs.yml
 
 markdown_extensions:
   # https://squidfunk.github.io/mkdocs-material/reference/admonitions/
