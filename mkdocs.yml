@@ -88,6 +88,8 @@ watch:
 markdown_extensions:
   # https://squidfunk.github.io/mkdocs-material/reference/admonitions/
   - admonition
+  - attr_list
+  - md_in_html
   - toc:
       permalink: §
   # https://python-markdown.github.io/extensions/definition_lists/
@@ -115,6 +117,19 @@ markdown_extensions:
   - pymdownx.tilde
 
 plugins:
+  - glightbox:
+      touchNavigation: true
+      loop: false
+      effect: zoom
+      slide_effect: slide
+      width: 100%
+      height: auto
+      zoomable: true
+      draggable: true
+      skip_classes:
+        - custom-skip-class-name
+      auto_caption: false
+      caption_position: bottom
   - mkdocs-video:
       is_video: True
       video_muted: True

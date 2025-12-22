@@ -16,7 +16,7 @@ Connect the Icon256 - Word Clock to a USB-C power source (5V, at least 1A recomm
 
 ### Connect to WiFi
 
-When powered on for the first time, the Icon256 creates its own WiFi access point for easy configuration.
+When powered on for the first time, the Icon256 creates its own WiFi access point for easy configuration. Follow these steps:
 
 1. **Quick connect with QR code**: Scan this QR code with your smartphone to connect automatically to the access point:
 
@@ -24,20 +24,17 @@ When powered on for the first time, the Icon256 creates its own WiFi access poin
 
    *Alternatively, if the QR code doesn't work:* Manually find and connect to the WiFi network named `WLED-AP` (or similar, may include the device's chip ID) using the password `wled1234`
 
-2. **Open the configuration page**: 
-   - Your device should automatically open a captive portal
-   - If not, open a web browser and navigate to `http://4.3.2.1`
+2. **Follow the visual setup guide**: Click on any image below to view the setup steps in a carousel. Use arrow keys or click the arrows to navigate between steps.
 
-   ![WLED settings interface](../img/guides/icon256-word-clock/setup/0-settings.webp)
+![Step 1: Open Settings](../img/guides/icon256-word-clock/setup/01-settings.webp){ data-title="Step 1: Open Settings" data-description="Your device should automatically open a captive portal. If not, navigate to http://4.3.2.1" }
 
-3. **Configure WiFi settings**:
-   - Click on the "WIFI SETUP" button
-   - Select your home WiFi network from the list
-   - Enter your WiFi password
-   - Click "Save & Connect"
-4. **Reconnect to your home WiFi**: After a few seconds, the Icon256 will restart and connect to your home network
-   - Reconnect your phone/computer to your regular WiFi network
-   - The web interface will display the IP address assigned to your Icon256
+![Step 2: WiFi Setup](../img/guides/icon256-word-clock/setup/02-wifi-ap.webp){ data-title="Step 2: WiFi Setup" data-description="Click on the WIFI SETUP button to access network settings" }
+
+![Step 3: Configure WiFi](../img/guides/icon256-word-clock/setup/03-wifi-settings.webp){ data-title="Step 3: Configure WiFi" data-description="Select your home WiFi network, enter password, and click Save & Connect" }
+
+![Step 4: Connected](../img/guides/icon256-word-clock/setup/04-wled-main.webp){ data-title="Step 4: Connected" data-description="The Icon256 will restart and connect to your network" }
+
+![Step 5: WiFi Selection](../img/guides/icon256-word-clock/setup/05-wifi-selection.webp){ data-title="Step 5: WiFi Selection" data-description="Reconnect your phone to your regular WiFi network" }
 
 !!! tip
     Write down the IP address shown on the configuration page. You can access the WLED interface anytime by entering this IP address in your browser while connected to the same WiFi network.
