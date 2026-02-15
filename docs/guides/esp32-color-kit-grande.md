@@ -49,6 +49,9 @@ You might need to cut off the pin headers on the other side of the connector PCB
     Recommended for soldering the Grove connector if you have never done any SMD soldering before.
     <iframe width="560" height="315" src="https://www.youtube.com/embed/EW9Y8rDm4kE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
+Many thanks to Edy from DevHackMod for creating this instructional video:
+<iframe width="480" height="300" src="https://www.youtube.com/embed/QGqHcjWsM20?si=5oXgXDdsvQEBNOX7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 | [![](../img/guides/color-kit-grande/1_40female_split.png)](../img/guides/color-kit-grande/1_40female_split.png) | Cut the female pin headers strips to length (12 & 16 pins) and solder them to the connector PCB. |
 |-----------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
 | [![](../img/guides/color-kit-grande/4_male_pin_1.png)](../img/guides/color-kit-grande/4_male_pin_1.png) |  Cut the male pin headers strips to length (12 & 16 pins) |
@@ -86,6 +89,11 @@ The following pictures indicate the open/closed positions.
 | [![](../img/guides/color-kit-grande/FPC-connectors-open.jpg)](../img/guides/color-kit-grande/FPC-connectors-open.jpg)             | [![](../img/guides/color-kit-grande/FPC-connectors-closed.jpg)](../img/guides/color-kit-grande/FPC-connectors-closed.jpg)             |
 
 ## Development environment
+
+Many thanks to Edy from DevHackMod for creating this instructional video:
+
+<iframe width="480" height="300" src="https://www.youtube.com/embed/CWgp0Joec6E?si=zkf5lTtlW1YP59dX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 We will be working with a **PlatformIO** (PIO) development environment in **Visual Studio Code** (VS Code).
 If you have never worked with PlatformIO, please install it as per their [installation instructions](https://docs.platformio.org/en/latest/integration/ide/vscode.html#installation).
 
