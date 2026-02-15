@@ -76,6 +76,11 @@ Each LED slot on the PCB shows a diode symbol like this:
 
 ⚠️ If inserted backwards, the LED will not light up. Always verify orientation before soldering!
 
+## Instruction Video by DevHackMod
+
+<iframe width="688" height="387" src="https://www.youtube.com/embed/3GQW5VFc7fk?si=BbdgI1Cdumdd-kd5" frameborder="0"
+allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
 ## Step-by-step Instructions
 
 | Image | Description |
