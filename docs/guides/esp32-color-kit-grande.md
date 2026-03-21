@@ -52,8 +52,10 @@ You might need to cut off the pin headers on the other side of the connector PCB
 Many thanks to Edy from DevHackMod for creating this instructional video:
 <iframe width="480" height="300" src="https://www.youtube.com/embed/QGqHcjWsM20?si=5oXgXDdsvQEBNOX7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-| [![](../img/guides/color-kit-grande/1_40female_split.png)](../img/guides/color-kit-grande/1_40female_split.png) | Cut the female pin headers strips to length (12 & 16 pins) and solder them to the connector PCB. |
+| [![](../img/guides/color-kit-grande/0_clean_pads.png)](../img/guides/color-kit-grande/0_clean_pads.png) | First, clean all soldering pads with Isopropyl Alcohol (IPA) – 90% or Higher
+ and a cotton swab or a cloth. Fat on the pads can make it really hard to solder. |
 |-----------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
+| [![](../img/guides/color-kit-grande/1_40female_split.png)](../img/guides/color-kit-grande/1_40female_split.png) | Cut the female pin headers strips to length (12 & 16 pins) and solder them to the connector PCB. |
 | [![](../img/guides/color-kit-grande/4_male_pin_1.png)](../img/guides/color-kit-grande/4_male_pin_1.png) |  Cut the male pin headers strips to length (12 & 16 pins) |
 |[![](../img/guides/color-kit-grande/4_male_pins_in_pos.png)](../img/guides/color-kit-grande/4_male_pins_in_pos.png) | Place the male into the already soldered female header pins for better stability |
 |[![](../img/guides/color-kit-grande/4_male_pin_esp32_epulse.png)](../img/guides/color-kit-grande/4_male_pin_esp32_epulse.png) | Solder the headers to the ESP32 board. |
