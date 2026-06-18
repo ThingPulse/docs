@@ -61,7 +61,15 @@ nav:
   - Home: index.md
   - support.md
   - Guides:
-    - ESP32 Color Kit Grande: guides/esp32-color-kit-grande.md
+    - ESP32 Color Kit Grande:
+      - Overview: guides/color-kit-grande/index.md
+      - Video Tutorials: guides/color-kit-grande/video-tutorials.md
+      - Assembly: guides/color-kit-grande/assembly.md
+      - Development Environment: guides/color-kit-grande/development-environment.md
+      - Weather Station Project: guides/color-kit-grande/weather-station.md
+      - Troubleshooting: guides/color-kit-grande/troubleshooting.md
+      - Writing Your Own Application: guides/color-kit-grande/writing-own-application.md
+      - Battery & Enclosure: guides/color-kit-grande/battery-enclosure.md
     - ESP32-S3 Pendrive: guides/esp32-s3-pendrive.md
     - Breathing Heart: guides/breathing-heart.md
     - AMo - CO2 Monitor: guides/amo-co2-monitor.md
