@@ -17,7 +17,7 @@ If `pip` points to a Python/pip 3 version you can of course also use that execut
 Then run
 
 ```
-$ mkdocs serve
+$ mkdocs serve --livereload
 ```
 
 and open [http://127.0.0.1:8000]() in the browser of your choice.
