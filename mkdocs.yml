@@ -43,6 +43,8 @@ theme:
   features:
     # https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#code-copy-button
     - content.code.copy
+    - navigation.footer
+    - navigation.indexes
 
 extra:
   # https://squidfunk.github.io/mkdocs-material/getting-started/#adding-social-links
