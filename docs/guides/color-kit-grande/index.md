@@ -26,5 +26,6 @@ Follow these guides to assemble and program your Color Kit Grande:
 | [Development Environment](development-environment.md) | Set up PlatformIO in Visual Studio Code |
 | [Weather Station Project](weather-station.md) | Build the sample weather station application |
 | [Troubleshooting](troubleshooting.md) | Common issues and how to resolve them |
+| [Replacement Parts](replacement-parts.md) | Find replacement parts and upgrades for your kit |
 | [Writing Your Own Application](writing-own-application.md) | Create custom applications for your kit |
 | [Battery & Enclosure](battery-enclosure.md) | Information about battery usage and enclosures |

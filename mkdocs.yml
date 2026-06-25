@@ -71,6 +71,7 @@ nav:
       - Development Environment: guides/color-kit-grande/development-environment.md
       - Weather Station Project: guides/color-kit-grande/weather-station.md
       - Troubleshooting: guides/color-kit-grande/troubleshooting.md
+      - Replacement Parts: guides/color-kit-grande/replacement-parts.md
       - Writing Your Own Application: guides/color-kit-grande/writing-own-application.md
       - Battery & Enclosure: guides/color-kit-grande/battery-enclosure.md
     - ESP32-S3 Pendrive: guides/esp32-s3-pendrive.md
@@ -149,5 +150,4 @@ plugins:
       video_autoplay: True
       css_style:
         width: "90%"
-
 
