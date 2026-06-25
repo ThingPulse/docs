@@ -18,6 +18,10 @@ You might need to cut off the pin headers on the other side of the connector PCB
     Handle the delicate display unit and its FPC ribbons with extra care.
     Be sure to NOT sharply bend (i.e. fold), pull or otherwise apply stress to the ribbon cables and their connection to the unit.
 
+!!! tip
+
+    If a part gets lost or damaged during assembly, you can order [replacement parts](replacement-parts.md) without buying a complete new kit.
+
 ## Step-by-Step Instructions
 
 | [![](../../img/guides/color-kit-grande/0_clean_pads.png)](../../img/guides/color-kit-grande/0_clean_pads.png) | First, clean all soldering pads with alcohol and a cotton swab. |

@@ -31,6 +31,10 @@ All boards are flashed with a self-test firmware and the displays are verified i
 
 When in doubt, carefully inspect all solder joints on both the top and bottom of the boards, and reheat any that look dull, lumpy, or don't have a proper cone shape.
 
+!!! tip
+
+    If a part is damaged beyond repair, check the [replacement parts](replacement-parts.md) page before buying a complete new kit.
+
 ## Contact Support
 
 If none of the above measures resolved your issue, please contact us at **info AT thingpulse.com**. 
