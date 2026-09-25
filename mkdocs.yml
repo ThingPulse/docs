@@ -75,6 +75,7 @@ nav:
       - Writing Your Own Application: guides/color-kit-grande/writing-own-application.md
       - Battery & Enclosure: guides/color-kit-grande/battery-enclosure.md
     - ESP32-S3 Pendrive: guides/esp32-s3-pendrive.md
+    - ESPGateway Ethernet LTE: guides/espgateway-ethernet-lte.md
     - Breathing Heart: guides/breathing-heart.md
     - AMo - CO2 Monitor: guides/amo-co2-monitor.md
     - Icon64 - ESP32 with RBG LED & audio: guides/icon64-esp32-rgb-led-audio.md
