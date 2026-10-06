@@ -47,6 +47,9 @@ theme:
     - navigation.footer
     - navigation.indexes
 
+extra_css:
+  - stylesheets/extra.css
+
 extra:
   # https://squidfunk.github.io/mkdocs-material/getting-started/#adding-social-links
   social:
@@ -75,6 +78,7 @@ nav:
       - Writing Your Own Application: guides/color-kit-grande/writing-own-application.md
       - Battery & Enclosure: guides/color-kit-grande/battery-enclosure.md
     - ESP32-S3 Pendrive: guides/esp32-s3-pendrive.md
+    - ESPGateway Ethernet LTE: guides/espgateway-ethernet-lte.md
     - Breathing Heart: guides/breathing-heart.md
     - AMo - CO2 Monitor: guides/amo-co2-monitor.md
     - Icon64 - ESP32 with RBG LED & audio: guides/icon64-esp32-rgb-led-audio.md
@@ -129,6 +133,32 @@ markdown_extensions:
   - pymdownx.tilde
 
 plugins:
+  - i18n:
+      docs_structure: suffix
+      fallback_to_default: true
+      reconfigure_material: true
+      languages:
+        - locale: en
+          default: true
+          name: English
+          build: true
+        - locale: de
+          name: Deutsch
+          build: true
+          nav_translations:
+            Home: Startseite
+            Guides: Anleitungen
+            How-tos: Schritt-für-Schritt-Hilfen
+            Hardware specs: Technische Daten
+            Overview: Überblick
+            Video Tutorials: Videoanleitungen
+            Assembly: Zusammenbau
+            Development Environment: Entwicklungsumgebung
+            Weather Station Project: Wetterstationsprojekt
+            Troubleshooting: Fehlerbehebung
+            Replacement Parts: Ersatzteile
+            Writing Your Own Application: Eigene Anwendung schreiben
+            Battery & Enclosure: Akku und Gehäuse
   - glightbox:
       touchNavigation: true
       loop: false
@@ -150,4 +180,3 @@ plugins:
       video_autoplay: True
       css_style:
         width: "90%"
-

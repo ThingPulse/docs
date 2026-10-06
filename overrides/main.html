@@ -1,5 +1,17 @@
 {% extends "base.html" %}
 
+{% block content %}
+  {% if i18n_page_locale == "de" and i18n_file_locale != "de" %}
+    <div class="admonition note" lang="de">
+      <p class="admonition-title">Übersetzung noch nicht verfügbar</p>
+      <p>Diese Seite ist noch nicht auf Deutsch verfügbar. Du siehst deshalb die englische Originalfassung.</p>
+    </div>
+    <div lang="en">{{ super() }}</div>
+  {% else %}
+    {{ super() }}
+  {% endif %}
+{% endblock %}
+
 {% block extrahead %}
   <!-- Microsoft Clarity -->
   <script type="text/javascript">
