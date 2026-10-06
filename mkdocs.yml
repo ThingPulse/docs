@@ -99,6 +99,7 @@ nav:
 
 watch:
   - docs/guides
+  - includes
   - mkdocs.yml
 
 markdown_extensions:
@@ -145,6 +146,23 @@ plugins:
         - locale: de
           name: Deutsch
           build: true
+          site_description: ThingPulse-Dokumentation
+          theme:
+            palette:
+              - media: "(prefers-color-scheme: light)"
+                scheme: default
+                primary: white
+                accent: orange
+                toggle:
+                  icon: material/toggle-switch
+                  name: Zum dunklen Farbschema wechseln
+              - media: "(prefers-color-scheme: dark)"
+                scheme: slate
+                primary: indigo
+                accent: orange
+                toggle:
+                  icon: material/toggle-switch-off-outline
+                  name: Zum hellen Farbschema wechseln
           nav_translations:
             Home: Startseite
             Guides: Anleitungen
@@ -159,6 +177,11 @@ plugins:
             Replacement Parts: Ersatzteile
             Writing Your Own Application: Eigene Anwendung schreiben
             Battery & Enclosure: Akku und Gehäuse
+            Icon64 - ESP32 with RBG LED & audio: Icon64 – ESP32 mit RGB-LEDs und Audio
+            Icon256 - Word Clock: Icon256 – Wortuhr
+            ESPaper Calendar: ESPaper-Kalender
+            Create OpenWeatherMap API key: OpenWeatherMap-API-Schlüssel erstellen
+            2.9" ESPaper Lite and Plus Kit: 2.9" ESPaper Lite und Plus Kit
   - glightbox:
       touchNavigation: true
       loop: false
