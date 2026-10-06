@@ -1,0 +1,12 @@
+.md-header__button.language-selector {
+  align-items: center;
+  display: inline-flex;
+  font-size: 0.7rem;
+  gap: 0.15rem;
+  white-space: nowrap;
+}
+
+.language-selector .md-icon svg {
+  height: 0.8rem;
+  width: 0.8rem;
+}

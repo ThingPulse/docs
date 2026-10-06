@@ -1,0 +1,30 @@
+{# Keep Material's dropdown behavior while showing the active language. #}
+{% set active_locale = i18n_page_locale | default(config.theme.language, true) %}
+{% set active = namespace(name=active_locale) %}
+{% for alt in config.extra.alternate %}
+  {% if alt.lang == active_locale %}
+    {% set active.name = alt.name %}
+  {% endif %}
+{% endfor %}
+<div class="md-header__option">
+  <div class="md-select">
+    <button type="button" class="md-header__button language-selector"
+            aria-label="{{ active.name }}: {{ lang.t('select.language') }}">
+      <span>{{ active.name }}</span>
+      <span class="md-icon" aria-hidden="true">
+        {% include ".icons/material/chevron-down.svg" %}
+      </span>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        {% for alt in config.extra.alternate %}
+          <li class="md-select__item">
+            <a href="{{ alt.link | url }}" hreflang="{{ alt.lang }}" class="md-select__link">
+              {{ alt.name }}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>
