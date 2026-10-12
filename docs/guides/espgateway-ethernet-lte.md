@@ -148,12 +148,4 @@ Collect electrical and electronic equipment separately from household waste. Use
 
 | Revision | Date | Scope |
 | --- | --- | --- |
-| 0.1 | 2026-10-12 | Initial pre-release manual; production data and regulatory review pending |
-| 0.2 | 2026-10-12 | Added supplied enclosure/antennas, USB-C input and schematic component identification; production ratings and approvals still pending |
-| 0.3 | 2026-10-12 | Updated LTE identity from user-confirmed supplier selection; schematic/BOM reconciliation pending |
-| 0.4 | 2026-10-12 | Recorded supplied PCB marking and date; distinguished board-family identification from fitted modem and finished-device model |
-| 0.5 | 2026-10-12 | Added box product designation, GTIN-13, contents and stated hardware origin |
-| 0.6 | 2026-10-12 | Added LLSE-specific cellular capabilities and confirmed GTIN as SKU; final RF powers and enabled bands remain pending |
-| 0.7 | 2026-10-12 | Added confirmed manufacturer legal entity and postal address |
-| 0.8 | 2026-10-12 | Confirmed self-test-only delivery and user-developed Wi-Fi/BLE-to-LTE applications; revised setup and firmware scope |
-| 0.9 | 2026-10-12 | Confirmed firmware-defined LED meanings; retained separate self-test indication follow-up |
+| 0.9 | 2026-10-12 | Pre-release manual covering product identification, hardware and radio information, intended use, user-developed firmware and safety; remaining production details and regulatory review pending |

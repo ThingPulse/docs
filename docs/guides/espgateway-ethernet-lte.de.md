@@ -148,12 +148,4 @@ Sammle Elektro- und Elektronikgeräte getrennt vom Hausmüll. Nutze geeignete ö
 
 | Version | Datum | Umfang |
 | --- | --- | --- |
-| 0.1 | 2026-10-12 | Erste vorläufige Anleitung; Seriendaten und regulatorische Prüfung offen |
-| 0.2 | 2026-10-12 | Mitgeliefertes Gehäuse/Antennen, USB-C-Versorgung und Bauteilbezeichnungen aus Schaltplan ergänzt; Seriennenndaten und Zulassungen weiterhin offen |
-| 0.3 | 2026-10-12 | LTE-Identität gemäss bestätigter Lieferantenauswahl aktualisiert; Abgleich mit Schaltplan/BOM offen |
-| 0.4 | 2026-10-12 | Platinenbeschriftung und Datumsaufdruck erfasst; Platinenfamilie, bestücktes Modem und Modell des fertigen Geräts unterschieden |
-| 0.5 | 2026-10-12 | Produktbezeichnung, GTIN-13, Inhalt und angegebene Hardwareherkunft der Verpackung ergänzt |
-| 0.6 | 2026-10-12 | LLSE-spezifische Mobilfunkfähigkeiten ergänzt und GTIN als SKU bestätigt; endgültige HF-Leistungen und aktivierte Bänder weiterhin offen |
-| 0.7 | 2026-10-12 | Bestätigte juristische Person und Postadresse des Herstellers ergänzt |
-| 0.8 | 2026-10-12 | Lieferung nur mit Selbsttest-Firmware und nutzerentwickelte WLAN-/BLE-zu-LTE-Anwendungen bestätigt; Einrichtung und Firmwareumfang angepasst |
-| 0.9 | 2026-10-12 | Firmwareabhängige LED-Bedeutungen bestätigt; Selbsttestanzeigen separat weiterhin offen |
+| 0.9 | 2026-10-12 | Vorläufige Anleitung mit Produktidentifikation, Hardware- und Funkangaben, bestimmungsgemässer Verwendung, nutzerentwickelter Firmware und Sicherheit; weitere Seriendaten und regulatorische Prüfung offen |
