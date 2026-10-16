@@ -1,5 +1,9 @@
 # Development Environment
 
+!!! tip "Prefer to use your kit without coding?"
+
+    [Install Gadget OS directly from your browser](gadget-os.md) and configure it on the touchscreen. The development tools below are only needed for the Weather Station coding path.
+
 This page prepares your computer to configure and upload the [Weather Station project](weather-station.md). You only need to do this setup once.
 
 You will install three tools: **Visual Studio Code** (VS Code), the editor; **Git**, which downloads a required project library; and **PlatformIO IDE**, the VS Code extension that builds and uploads the firmware. Keep your computer connected to the internet during setup.

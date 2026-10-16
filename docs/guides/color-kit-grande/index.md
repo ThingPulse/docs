@@ -1,6 +1,17 @@
 # ESP32 Color Kit Grande
 
-How to assemble and program the [ThingPulse ESP32 WiFi Color Display Kit Grande](https://thingpulse.com/product/esp32-wifi-color-display-kit-grande/).
+How to assemble and set up the [ThingPulse ESP32 WiFi Color Display Kit Grande](https://thingpulse.com/product/esp32-wifi-color-display-kit-grande/).
+
+## Choose your software
+
+Both paths start with the same [assembly and hardware test](assembly.md). After assembly, choose **one**:
+
+| Path | Best for | Next step |
+|------|----------|-----------|
+| **Gadget OS — no coding required** | Start using your kit with weather and touchscreen tools. Install in the browser and configure on the device. **Recommended if you do not want to code.** | [Set up Gadget OS](gadget-os.md) |
+| **Weather Station — build from source** | Edit and customize the sample code. Set up VS Code, Git, and PlatformIO, then configure and upload the project. | [Set up the development environment](development-environment.md), then follow [Weather Station Project](weather-station.md) |
+
+These are alternative applications, not consecutive setup steps.
 
 [![Color Kit Grande with sample application: weather station](https://thingpulse.com/wp-content/uploads/2022/10/ThingPulse-Color-Kit-Grand-with-sample-application.jpg)](https://thingpulse.com/product/esp32-wifi-color-display-kit-grande/)
 
@@ -23,8 +34,9 @@ Follow these guides to assemble and program your Color Kit Grande:
 |-------|-------------|
 | [Video Tutorials](video-tutorials.md) | Watch video tutorials for assembly and setup |
 | [Assembly Instructions](assembly.md) | Step-by-step instructions to assemble the hardware |
-| [Development Environment](development-environment.md) | Set up PlatformIO in Visual Studio Code |
-| [Weather Station Project](weather-station.md) | Build the sample weather station application |
+| [Gadget OS Setup](gadget-os.md) | Install from the browser without coding |
+| [Development Environment (coding)](development-environment.md) | Coding path: set up PlatformIO in Visual Studio Code |
+| [Weather Station Project](weather-station.md) | Coding path: build and upload the sample weather station application |
 | [Troubleshooting](troubleshooting.md) | Common issues and how to resolve them |
 | [Replacement Parts](replacement-parts.md) | Find replacement parts and upgrades for your kit |
 | [Writing Your Own Application](writing-own-application.md) | Create custom applications for your kit |

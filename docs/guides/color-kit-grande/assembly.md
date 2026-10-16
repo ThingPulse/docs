@@ -46,6 +46,17 @@ You might need to cut off the pin headers on the other side of the connector PCB
 | [![](../../img/guides/color-kit-grande/11_align.png)](../../img/guides/color-kit-grande/11_align.png)  |  Attach the display module such that it aligns with the markings on the PCB (white silk screen). |
 
 
+## Choose your software
+
+Both paths start with the same [assembly and hardware test](assembly.md). After assembly, choose **one**:
+
+| Path | Best for | Next step |
+|------|----------|-----------|
+| **Gadget OS — no coding required** | Start using your kit with weather and touchscreen tools. Install in the browser and configure on the device. **Recommended if you do not want to code.** | [Set up Gadget OS](gadget-os.md) |
+| **Weather Station — build from source** | Edit and customize the sample code. Set up VS Code, Git, and PlatformIO, then configure and upload the project. | [Set up the development environment](development-environment.md), then follow [Weather Station Project](weather-station.md) |
+
+These are alternative applications, not consecutive setup steps.
+
 ## Operating the FPC connectors
 
 The connectors for the two FPC cables (for display and touch module) can be a bit tricky to operate for the inexperienced.

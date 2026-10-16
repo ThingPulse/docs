@@ -71,8 +71,9 @@ nav:
       - Overview: guides/color-kit-grande/index.md
       - Video Tutorials: guides/color-kit-grande/video-tutorials.md
       - Assembly: guides/color-kit-grande/assembly.md
-      - Development Environment: guides/color-kit-grande/development-environment.md
-      - Weather Station Project: guides/color-kit-grande/weather-station.md
+      - Gadget OS Setup: guides/color-kit-grande/gadget-os.md
+      - Development Environment (coding): guides/color-kit-grande/development-environment.md
+      - Weather Station Project (coding): guides/color-kit-grande/weather-station.md
       - Troubleshooting: guides/color-kit-grande/troubleshooting.md
       - Replacement Parts: guides/color-kit-grande/replacement-parts.md
       - Writing Your Own Application: guides/color-kit-grande/writing-own-application.md
@@ -171,8 +172,9 @@ plugins:
             Overview: Überblick
             Video Tutorials: Videoanleitungen
             Assembly: Zusammenbau
-            Development Environment: Entwicklungsumgebung
-            Weather Station Project: Wetterstationsprojekt
+            Gadget OS Setup: Gadget OS einrichten
+            Development Environment (coding): Entwicklungsumgebung (Programmieren)
+            Weather Station Project (coding): Wetterstationsprojekt (Programmieren)
             Troubleshooting: Fehlerbehebung
             Replacement Parts: Ersatzteile
             Writing Your Own Application: Eigene Anwendung schreiben

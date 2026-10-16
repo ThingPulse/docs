@@ -1,5 +1,9 @@
 # Entwicklungsumgebung
 
+!!! tip "Möchtest du dein Kit ohne Programmieren nutzen?"
+
+    [Installiere Gadget OS direkt im Browser](gadget-os.md) und richte es auf dem Touchscreen ein. Die Entwicklungswerkzeuge unten brauchst du nur für den Wetterstations-Programmierweg.
+
 Auf dieser Seite richtest du deinen Computer ein, um das [Wetterstationsprojekt](weather-station.md) zu konfigurieren und auf das Gerät zu übertragen. Diese Einrichtung ist nur einmal nötig.
 
 Du installierst drei Werkzeuge: **Visual Studio Code** (VS Code) als Editor, **Git** zum Herunterladen einer benötigten Projektbibliothek und **PlatformIO IDE**, die VS-Code-Erweiterung zum Kompilieren und Übertragen der Firmware. Dein Computer benötigt während der Einrichtung eine Internetverbindung.

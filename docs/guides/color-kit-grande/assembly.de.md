@@ -45,6 +45,17 @@ Möglicherweise musst du dann die überstehenden Stifte auf der anderen Seite de
 | [![](../../img/guides/color-kit-grande/10_protective.png)](../../img/guides/color-kit-grande/10_protective.png)  | Entferne die verbleibende Schutzfolie von den Schaumstoff-Klebepads. |
 | [![](../../img/guides/color-kit-grande/11_align.png)](../../img/guides/color-kit-grande/11_align.png)  | Befestige das Displaymodul so, dass es an den weissen Markierungen auf der Platine ausgerichtet ist. |
 
+## Software auswählen
+
+Beide Wege beginnen mit demselben [Zusammenbau und Hardwaretest](assembly.md). Wähle nach der Montage **einen** Weg:
+
+| Weg | Geeignet für | Nächster Schritt |
+|-----|--------------|------------------|
+| **Gadget OS — ohne Programmieren** | Nutze dein Kit mit Wetteranzeige und Touchscreen-Werkzeugen. Installation im Browser, Einrichtung am Gerät. **Empfohlen, wenn du nicht programmieren möchtest.** | [Gadget OS einrichten](gadget-os.md) |
+| **Wetterstation — aus Quellcode erstellen** | Bearbeite das Beispielprogramm und passe es an. Richte VS Code, Git und PlatformIO ein, konfiguriere das Projekt und übertrage es. | [Entwicklungsumgebung einrichten](development-environment.md), danach dem [Wetterstationsprojekt](weather-station.md) folgen |
+
+Dies sind alternative Anwendungen, keine aufeinanderfolgenden Einrichtungsschritte.
+
 ## FPC-Steckverbinder bedienen {#operating-the-fpc-connectors}
 
 Die Steckverbinder für die beiden FPC-Kabel (Display und Touchmodul) sind ohne Erfahrung etwas schwierig zu bedienen.
