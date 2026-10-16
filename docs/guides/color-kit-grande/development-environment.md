@@ -1,31 +1,58 @@
 # Development Environment
 
-We will be working with a **PlatformIO** (PIO) development environment in **Visual Studio Code** (VS Code).
-If you have never worked with PlatformIO, please install it as per their [installation instructions](https://docs.platformio.org/en/latest/integration/ide/vscode.html#installation).
+This page prepares your computer to configure and upload the [Weather Station project](weather-station.md). You only need to do this setup once.
+
+You will install three tools: **Visual Studio Code** (VS Code), the editor; **Git**, which downloads a required project library; and **PlatformIO IDE**, the VS Code extension that builds and uploads the firmware. Keep your computer connected to the internet during setup.
 
 ## Installation Steps
 
-0. [Download](https://code.visualstudio.com/) and install official Microsoft Visual Studio Code. PlatformIO IDE is built on top of it
-1. Open VSCode Package Manager
-2. Search for the official platformio ide extension
-3. Install PlatformIO IDE.
+### 1. Install Visual Studio Code
 
-![../../img/how-tos/platformio-install.png](../../img/how-tos/platformio-install.png)
+1. Download the desktop version of [Visual Studio Code](https://code.visualstudio.com/) for your operating system.
+2. Install it and open it.
 
-### Install Git
+### 2. Install Git {#install-git}
 
-The Weather Station project contains a library dependency that PlatformIO downloads from a Git repository. You therefore need a working Git client even if you downloaded the project itself as a ZIP file.
+Git is required even if you download the Weather Station project as a ZIP file. PlatformIO uses it to download a library needed by the project.
 
-1. Download and install Git from [git-scm.com/install](https://git-scm.com/install/).
-2. Completely restart Visual Studio Code after the installation.
-3. Open a terminal and run `git --version` to verify that Git is available.
+1. Follow the [Git installation instructions](https://git-scm.com/install/) for your operating system. If Git is already installed, go straight to the check below.
+2. After installation, quit VS Code completely and open it again.
+3. In VS Code, select **Terminal > New Terminal**. In the terminal panel that opens, type the following command and press Enter:
 
-If PlatformIO displays `Please install git client from https://git-scm.com/download`, Git is either not installed or is not available on the system `PATH`.
+    ```text
+    git --version
+    ```
 
-Now please look at their [quick-start guide](https://docs.platformio.org/en/latest/integration/ide/vscode.html#quick-start):
+You should see a response starting with `git version`, followed by a version number. If the command is not found or not recognized, finish installing Git and restart VS Code before continuing. See the [Git troubleshooting instructions](troubleshooting.md#software-problems) if needed.
 
-[![](../../img/how-tos/platformio-quickstart.png)](https://docs.platformio.org/en/latest/integration/ide/vscode.html#quick-start)
+### 3. Install PlatformIO IDE
+
+1. In VS Code, open **View > Extensions**. You can also use **Ctrl+Shift+X** on Windows/Linux or **Cmd+Shift+X** on macOS.
+2. Search for **PlatformIO IDE** and select the extension published by **PlatformIO**.
+3. Click **Install**. Wait for the extension and its initial setup to finish; this can take several minutes. Follow any prompt to restart or reload VS Code.
+4. Click the **PlatformIO** icon in the left sidebar, then open **Home** under **Quick Access**.
+
+![PlatformIO IDE in the VS Code Extensions view](../../img/how-tos/platformio-install.png)
+
+!!! note "Linux setup"
+
+    PlatformIO also requires the `python3-venv` package on Linux. See the [official installation instructions](https://docs.platformio.org/en/latest/integration/ide/vscode.html#installation) for this requirement and further setup help.
+
+## Ready to continue?
+
+You are ready when:
+
+- `git --version` prints a version number in the VS Code terminal.
+- PlatformIO Home opens without an installation error.
+
+Continue with **[Weather Station Project](weather-station.md#obtain-the-code)** to download and open the existing project. You do not need to create a new PlatformIO project or complete the Blink tutorial.
+
+## If setup does not work
+
+- **PlatformIO is missing from the sidebar:** Open **View > Extensions** and check that PlatformIO IDE is installed and enabled. Let setup finish, then restart VS Code.
+- **PlatformIO reports an installation error:** Note the exact message and consult the [PlatformIO installation guide](https://docs.platformio.org/en/latest/integration/ide/vscode.html#installation). If you remain stuck, [contact support](troubleshooting.md#contact-support) with your operating system and the error message or a screenshot.
+- **PlatformIO asks you to install Git:** Follow [Install Git](#install-git) above and check the command in a newly opened VS Code terminal.
 
 ## Video Tutorial
 
-See the [Video Tutorials](video-tutorials.md) page for an instructional video on setting up the development environment.
+If you prefer a video, see [Video Tutorials](video-tutorials.md) for a walkthrough of the development environment setup.
