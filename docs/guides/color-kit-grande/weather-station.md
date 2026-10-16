@@ -1,6 +1,10 @@
 # Weather Station Project
 
-With all the soldering done we will turn to the Weather Station Touch project.
+After completing the [assembly test](assembly.md) and [development environment setup](development-environment.md), you can install the Weather Station Touch project.
+
+!!! important "Two uploads are required"
+
+    Installing the Weather Station requires **both** the filesystem (which contains the icons) **and** the firmware (the program). Follow [Upload 1 of 2](#upload-the-file-system-to-device), then [Upload 2 of 2](#upload-code-to-device). Uploading the firmware alone does not install the icons.
 
 ## Obtain the code
 
@@ -19,33 +23,49 @@ Hence, there are two options to download the code:
 
 ## Configuration & customization
 
-Open the `src/settings.h` file and adjust the two handful of configuration parameters in the "User settings" section at the top.
-They are all documented _inside_ the file directly.
-Everything should be self-explanatory.
-Most importantly you will need to set the OpenWeatherMap API key ([how to get key](../../how-tos/openweathermap-key.md)).
+Open `src/settings.h` and follow the comments in the "User settings" section at the top to configure your station. Enter your OpenWeatherMap API key ([how to get a key](../../how-tos/openweathermap-key.md)) and save your changes before uploading.
 
-## Upload the file system to device
+## Upload 1 of 2: Filesystem and icons {#upload-the-file-system-to-device}
 
-- Hit the PlatformIO icon on the navigation bar on the left side (alien face).
-- Select the ==Platform== > ==Upload Filesystem Image== task.
-You only need to do this once if it succeeds.
-Pay attention to the output in the VS Code console that opens.
-If it reports any errors like e.g. if it cannot connect to the board or if stops midway, then repeat the process.
+**Required for the first installation.** This upload installs the files used by the Weather Station, including the weather icons.
 
-![../../img/how-tos/platformio-filesystem.png](../../img/how-tos/platformio-filesystem.png)
+1. Connect the kit to your computer with a USB data cable.
+2. Click the **PlatformIO** icon in the left sidebar.
+3. Select ==Platform== > ==Upload Filesystem Image== in the project tasks.
+4. Wait for the task to finish and check the terminal output for **SUCCESS**. If it fails, follow the [upload troubleshooting guidance](troubleshooting.md#hardware-problems), then retry. Do not continue until this upload succeeds.
 
-## Upload code to device
+![Upload the filesystem and icons with PlatformIO](../../img/how-tos/platformio-filesystem.png)
 
-- Select the ==General== > ==Upload and Monitor== task.
-You do this **every time you change code or configuration**. 
+After a successful upload, **continue with Upload 2 of 2 below**. The filesystem upload does not install the Weather Station program.
 
-![../../img/how-tos/platformio-task-upload.png](../../img/how-tos/platformio-task-upload.png)
+You normally only need to repeat this step if the filesystem files change, the flash is erased, or the icons are missing.
 
-Alternatively you can also use the quick buttons from the footer:
+## Upload 2 of 2: Firmware {#upload-code-to-device}
 
-![../../img/how-tos/platformio-upload.png](../../img/how-tos/platformio-upload.png)
+**Required for the first installation and whenever you change code or configuration.** This upload installs the Weather Station program and your saved settings.
 
-!!! note
+1. Confirm that [Upload 1 of 2: Filesystem and icons](#upload-the-file-system-to-device) completed successfully.
+2. In the PlatformIO project tasks, select ==General== > ==Upload and Monitor==.
+3. Wait for the upload to finish and check the terminal output for **SUCCESS**. The serial monitor then opens to show messages from the device. If the upload fails, use the [troubleshooting guide](troubleshooting.md#hardware-problems) before retrying.
 
-    Should the upload fail, please ensure your system has the necessary drivers for the CH9102 USB to serial converter installed.
-    The best place for details and instructions is over at [Adafruit](https://learn.adafruit.com/how-to-install-drivers-for-wch-usb-to-serial-chips-ch9102f-ch9102).
+![Upload the firmware and open the serial monitor with PlatformIO](../../img/how-tos/platformio-task-upload.png)
+
+The upload shortcut in the bottom status bar uploads **firmware only**. It does not replace **Upload Filesystem Image** in step 1.
+
+![PlatformIO shortcuts in the status bar](../../img/how-tos/platformio-upload.png)
+
+!!! note "USB driver"
+
+    If your computer cannot communicate with the kit, check that the CH9102 USB-to-serial driver is installed. See [Adafruit’s driver instructions](https://learn.adafruit.com/how-to-install-drivers-for-wch-usb-to-serial-chips-ch9102f-ch9102) and the [upload troubleshooting guidance](troubleshooting.md#hardware-problems).
+
+## Check the result
+
+After both uploads succeed, let the station start and load its weather data. Check that it displays weather information **and icons**.
+
+!!! warning "Text appears, but the weather icons are missing?"
+
+    The icons are stored in the filesystem, separately from the firmware. Return to [Upload 1 of 2: Filesystem and icons](#upload-the-file-system-to-device) and make sure **Upload Filesystem Image** completes successfully. Uploading only the firmware again will not install the missing icons. See [Troubleshooting: missing icons](troubleshooting.md#missing-icons) if the problem remains.
+
+    ![Weather Station displaying text and readings without weather icons](../../img/guides/color-kit-grande/trouble2_ckg_no_icons.jpeg){ width="240" }
+
+    *Example: weather readings are visible, but the icons are missing. Click the image to enlarge it.*
