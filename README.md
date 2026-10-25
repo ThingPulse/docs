@@ -28,6 +28,55 @@ MkDocs supports hot-reloading changes. The `includes` folder is explicitly watch
 so changes to shared instructions also rebuild the pages that include them.
 
 
+## Product PDFs
+
+PDF builds use [mkdocs-exporter](https://adrienbrignon.github.io/mkdocs-exporter/)
+and its Chromium browser. Install the additional dependencies once:
+
+```sh
+python -m pip install -r requirements-pdf.txt
+python -m playwright install chromium --with-deps
+```
+
+Build the English Color Kit Grande manual:
+
+```sh
+python scripts/build_pdfs.py
+```
+
+The result is `output/pdf/color-kit-grande.pdf`. It contains the ten current
+Color Kit Grande chapters in navigation order and the OpenWeatherMap API-key
+instructions as an appendix. It excludes the old single-page guide, German
+duplicates, other products, and general site pages. The chapter allowlist is in
+`mkdocs.pdf.yml`; update it when adding a Grande chapter. Video embeds become
+clickable links, and all tabs are expanded for print. Links to documentation
+pages open the online documentation; videos and external resources still need
+an internet connection.
+
+The same build command can also export the other products listed in the website
+navigation, including matching hardware specifications where available:
+
+```sh
+python scripts/build_pdfs.py --product wifi-color-display-kit
+python scripts/build_pdfs.py --all
+python scripts/build_pdfs.py --help
+```
+
+These optional manuals use each product's guide (including its shared Markdown
+includes); linked external documents are not bundled. PDF exports currently use
+English source pages. The bilingual website build is unchanged.
+
+Deployment builds the Grande PDF into `site/downloads/color-kit-grande.pdf`
+after the normal website build. For a local export, use the default output
+directory above; temporary HTML and chapter PDFs are automatically removed.
+Generated PDFs are ignored by Git. To inspect the intermediate HTML manually,
+run `mkdocs build -f mkdocs.pdf.yml` (outputs to `site-pdf/`).
+
+Run the PDF scoping and print-conversion regression checks with
+`python -m unittest discover -s scripts -p 'test_*.py'`. When changing the print
+styles or exporter version, also render the Grande PDF and check the assembly
+steps and long troubleshooting sections for missing content or clipping.
+
 ## Translations
 
 English is the source language and keeps its existing URLs. German pages are

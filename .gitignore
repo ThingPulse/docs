@@ -1,4 +1,7 @@
 .idea/
 site/
+site-pdf/
+output/
+__pycache__/
 *.iml
 **.DS_STORE

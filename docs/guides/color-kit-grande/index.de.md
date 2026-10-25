@@ -1,5 +1,7 @@
 # ESP32 Color Kit Grande
 
+[Vollständige Anleitung als PDF herunterladen (Englisch)](https://docs.thingpulse.com/downloads/color-kit-grande.pdf){ .pdf-download }
+
 So baust du das [ThingPulse ESP32 WiFi Color Display Kit Grande](https://thingpulse.com/product/esp32-wifi-color-display-kit-grande/) zusammen und richtest es ein.
 
 ## Software auswählen

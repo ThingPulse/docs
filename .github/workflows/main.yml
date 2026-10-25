@@ -12,9 +12,13 @@ jobs:
         with:
           python-version: '3.10'
           cache: 'pip' # caching pip dependencies
-      - run: pip install -r requirements.txt
+      - run: pip install -r requirements-pdf.txt
+      - name: Install PDF browser
+        run: python -m playwright install chromium --with-deps
       - name: MkDocs
         run: mkdocs build --clean
+      - name: Color Kit Grande PDF
+        run: python scripts/build_pdfs.py --output-dir site/downloads
       - name: rsync deployment
         uses: easingthemes/ssh-deploy@main
         env:

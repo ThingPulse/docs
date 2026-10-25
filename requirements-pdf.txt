@@ -1,0 +1,2 @@
+-r requirements.txt
+mkdocs-exporter==6.2.0

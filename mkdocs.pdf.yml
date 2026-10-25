@@ -1,0 +1,36 @@
+INHERIT: mkdocs.yml
+
+# This build is intentionally English-only. The website still builds both languages.
+site_name: ThingPulse product documentation
+site_dir: site-pdf
+exclude_docs: |
+  **/*.de.md
+theme:
+  font: false
+extra:
+  analytics: null
+hooks:
+  - scripts/pdf_hooks.py
+plugins:
+  - exporter:
+      formats:
+        pdf:
+          explicit: true
+          concurrency: 2
+          stylesheets:
+            - resources/pdf.scss
+          aggregator:
+            enabled: true
+            output: color-kit-grande.pdf
+nav:
+  - Overview: guides/color-kit-grande/index.md
+  - Video Tutorials: guides/color-kit-grande/video-tutorials.md
+  - Assembly: guides/color-kit-grande/assembly.md
+  - Gadget OS Setup: guides/color-kit-grande/gadget-os.md
+  - Development Environment: guides/color-kit-grande/development-environment.md
+  - Weather Station Project: guides/color-kit-grande/weather-station.md
+  - Troubleshooting: guides/color-kit-grande/troubleshooting.md
+  - Replacement Parts: guides/color-kit-grande/replacement-parts.md
+  - Writing Your Own Application: guides/color-kit-grande/writing-own-application.md
+  - Battery & Enclosure: guides/color-kit-grande/battery-enclosure.md
+  - Appendix - OpenWeatherMap API key: how-tos/openweathermap-key.md
