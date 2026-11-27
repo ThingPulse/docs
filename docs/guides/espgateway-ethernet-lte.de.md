@@ -109,10 +109,35 @@ Die folgenden Sicherheitshinweise sind ein Vorschlag zur Prüfung anhand der abs
 2. Trenne die USB-Stromversorgung, entferne die Gehäuseschrauben und öffne das Gehäuse, um den Nano-SIM-Steckplatz zu erreichen. Setze die Nano-SIM ein, schliesse das Gehäuse und befestige die Schrauben wieder, bevor du die Stromversorgung anschliesst. Verbinde die mitgelieferte externe WLAN-Antenne mit dem zugehörigen Anschluss. Die LTE-Folienantenne ist werkseitig im Gehäuse eingebaut. **OFFEN:** Anschlussbild, SIM-Ausrichtung und Öffnen/Verriegeln des Kartenhalters.
 3. Verbinde Ethernet, falls der dokumentierte Selbsttest oder deine Anwendung dies erfordert. **OFFEN:** Kabelanforderungen und PoE-Beschränkungen.
 4. Stelle Gerät und Antennen unter Einhaltung der oben angegebenen Montage- und HF-Abstände auf.
-5. Versorge das Gerät wie oben angegeben über USB-C. Öffne die [ThingPulse-Seite zum Flashen und Selbsttest](https://iot-flasher.thingpulse.com/device/espgateway-ethernet-lte), befolge die dortigen Verbindungsanweisungen und starte den Selbsttest auf der Seite. Der Test startet nicht automatisch beim Einschalten. Die Erfolgs-/Fehlerergebnisse erscheinen auf der Webseite. **OFFEN:** unterstützter Browser, USB-Datenverbindung/Stromversorgung, genaue Testvoraussetzungen und Dauer.
+5. Befolge die [Anleitung zum Flashen und Selbsttest im Browser](#self-test).
 6. Entwickle ESP32-Anwendungsfirmware, die mit deinen WLAN-/BLE-Geräten kommuniziert und Daten über die LTE-Baugruppe überträgt. **OFFEN:** dokumentierte Entwicklungsumgebung, Boardkonfiguration, Pinzuordnung und Programmierverfahren.
 7. Installiere deine Anwendungsfirmware gemäss dokumentiertem Programmierverfahren. **OFFEN:** genaue Befehle/Werkzeuge, Flash-Einstellungen und Wiederherstellungsdatei der Selbsttest-Firmware.
 8. Konfiguriere Mobilfunkanbieter/APN, Backend-Endpunkt und Authentifizierung in deiner Anwendung. Lege bei MQTT Broker, Topics und Zugangsdaten fest und prüfe den Empfang der Sensordaten. Diese Einstellungen hängen von deiner Anwendung ab; eine werkseitige Konfigurationsoberfläche ist nicht dokumentiert.
+
+## Flashen und Selbsttest im Browser {#self-test}
+
+Beim Flashen ersetzt die Selbsttest-Firmware die aktuelle Anwendungsfirmware. Bewahre vorher eine Kopie deiner Anwendung auf.
+
+1. Schliesse die mitgelieferte externe WLAN-Antenne an. Verbinde das Gateway für die Ethernet-Prüfung mit einem Ethernet-Netzwerk mit DHCP. Setze für den optionalen Mobilfunk-Datentest bei getrennter Stromversorgung eine aktive Daten-SIM ein und schliesse das Gehäuse wieder. Die LTE-Antenne ist intern.
+2. Verbinde das Gateway über ein USB-Datenkabel mit dem Computer und stelle die vorgegebene Versorgung mit 5 V DC / 2 A sicher. Ein reines Ladekabel überträgt keine Flash- oder Testbefehle. **OFFEN:** USB-/Stromversorgungsanordnung und unterstützten Browser für die endgültige Anleitung prüfen.
+3. Öffne den [ThingPulse ESPGateway Ethernet LTE Flasher](https://iot-flasher.thingpulse.com/device/espgateway-ethernet-lte) und befolge die Verbindungs- und Flash-Anweisungen.
+4. Löse nach dem Flashen den Selbsttest auf der Seite aus. Er startet nicht automatisch beim Einschalten. Lies die Erfolgs-/Fehlerergebnisse auf der Seite ab.
+5. Der übliche Test dauert nach dem beobachteten Ablauf wenige Sekunden. Netzregistrierung oder Zeitüberschreitungen können den Mobilfunktest deutlich verlängern. Jeder Durchlauf endet und wartet auf eine neue Anforderung; keine automatische Wiederholung.
+
+### Prüfumfang
+
+Diese Beschreibung bezieht sich auf den geprüften Quellcode der Testsuite `espgateway-ethernet-a7670g/6` (Protokoll 2). **OFFEN:** Abgleich mit der vom Browser verteilten Firmware und den auf der Seite angebotenen Testmodi.
+
+| Test | Umfang |
+| --- | --- |
+| Hardware | ESP32-Speicher-/Chipinformationen, Modemkommunikation, Identität und Status |
+| Ethernet | Initialisierung, Verbindung, IP-Adresse, ausgehandelte Geschwindigkeit und Duplex; kein dauerhafter Anwendungsdatenverkehr |
+| Optionaler Mobilfunk-Datentest | SIM-Bereitschaft, LTE-Registrierung, Paketdatenanbindung und echte HTTP-GET-Anfrage über das Modem; Erfolg erfordert HTTP 204 ohne Antwortinhalt |
+| WLAN / BLE | Kein ausdrücklicher WLAN-Verbindungs-/Datentest und kein BLE-Test; WLAN-Initialisierung und MAC-Adresse belegen keine Funkverbindung |
+
+Der Standard-Hardwaretest belegt **keinen** LTE-Internetzugang. Der optionale Mobilfunktest benötigt den APN des SIM-Anbieters und eine Test-URL mit HTTP-204-Antwort. `Test Set: cellular` zusammen mit `Cellular Internet Request: OK` kennzeichnet eine erfolgreiche Mobilfunkanfrage. Ein erfolgreicher Durchlauf beendet den HTTP-Dienst und deaktiviert den Test-Datenkontext.
+
+Bewahre Ergebnisse zusammen mit der Hardwareversion auf. Dieser Quellcode gibt Testsuite, Build-Datum/-Zeit und Firmware-ELF-SHA256 zur Identifikation aus. Veröffentliche keine SIM-Kennungen oder anderen privaten Angaben aus dem Bericht.
 
 ## Fehlerbehebung {#troubleshooting}
 

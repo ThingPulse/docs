@@ -109,10 +109,35 @@ The following safety text is proposed for review against the final product risk 
 2. Disconnect USB power, remove the enclosure screws and open the enclosure to access the nano-SIM slot. Insert the nano-SIM, then close the enclosure and refit the screws before reconnecting power. Connect the supplied external Wi-Fi antenna to its designated connector. The LTE foil antenna is factory-installed inside the enclosure. **PENDING:** connector diagram, SIM orientation and holder opening/locking procedure.
 3. Connect Ethernet if required by the documented self-test or your application. Do not use Ethernet as a power source. **PENDING:** cable requirements.
 4. Position the device and antennas using the mounting clearances and RF separation specified above.
-5. Supply USB-C power as specified above. Open the [ThingPulse flashing and self-test page](https://iot-flasher.thingpulse.com/device/espgateway-ethernet-lte), follow its connection instructions and start the self-test from the page. The test does not start automatically at power-on. Read the pass/fail results on the web page. **PENDING:** supported browser, USB data-connection/power arrangement, detailed test prerequisites and duration.
+5. Follow the [browser flashing and self-test instructions](#self-test).
 6. Develop application firmware for the ESP32 that communicates with your Wi-Fi/BLE devices and transfers data through the LTE assembly. **PENDING:** documented development environment, board configuration, pin assignments and programming procedure.
 7. Install your application firmware using the documented programming procedure. **PENDING:** exact commands/tools, flashing settings and self-test recovery image.
 8. In your application, configure the carrier/APN, backend endpoint and authentication. For an MQTT application, configure broker, topics and credentials, then verify that sensor readings arrive. These settings are application-defined; no factory configuration interface is documented.
+
+## Browser flashing and self-test {#self-test}
+
+Flashing installs the self-test firmware in place of the current application firmware. Keep a copy of your application before proceeding.
+
+1. Connect the supplied external Wi-Fi antenna. For the Ethernet checks, connect the gateway to an Ethernet network with DHCP. For the optional cellular data test, install an active data SIM with power disconnected, then close the enclosure. The LTE antenna is internal.
+2. Connect the gateway to the computer using a USB data cable and provide the specified 5 V DC / 2 A power capability. A charge-only cable cannot carry the flashing or test commands. **PENDING:** validate the computer USB/power arrangement and supported browser for the final instructions.
+3. Open the [ThingPulse ESPGateway Ethernet LTE flasher](https://iot-flasher.thingpulse.com/device/espgateway-ethernet-lte) and follow its connection and flashing instructions.
+4. After flashing, trigger the self-test from the page. It does not start automatically at power-on. Read the pass/fail results on the page.
+5. The usual test takes a few seconds according to the observed workflow. Cellular registration or timeouts can make the cellular test substantially longer. Each run finishes and waits for another request; it does not repeat automatically.
+
+### What the self-test checks
+
+The following describes reviewed test-suite source `espgateway-ethernet-a7670g/6` (protocol 2). **PENDING:** confirm that the browser distributes this build and which test modes its interface exposes.
+
+| Test | Coverage |
+| --- | --- |
+| Hardware checks | ESP32 memory/chip information, modem communication, identity and status |
+| Ethernet | Initialization, link, IP address, negotiated speed and duplex; no sustained application traffic test |
+| Optional cellular data test | SIM readiness, LTE registration, packet attachment and a real HTTP GET through the modem; success requires HTTP 204 with an empty response body |
+| Wi-Fi / BLE | No explicit Wi-Fi connection/traffic or BLE test; initializing Wi-Fi and reporting its MAC address does not verify wireless connectivity |
+
+The default hardware test does **not** prove LTE internet access. For the optional cellular test, the firmware requires the SIM provider's APN and a test URL returning HTTP 204. A result containing `Test Set: cellular` and `Cellular Internet Request: OK` identifies a successful cellular request. A successful run closes its HTTP service and deactivates the test data context.
+
+Keep the test results with the device's hardware revision. This source reports the test-suite identifier, build date/time and firmware ELF SHA256, which help identify the tested build. Do not publish SIM identifiers or other private details from the report.
 
 ## Troubleshooting {#troubleshooting}
 
