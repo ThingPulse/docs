@@ -5,6 +5,8 @@
 !!! warning "Vorläufige Anleitung — Entwurf zur technischen Prüfung"
     Version 0.11, 9. November 2026. Technische Daten, Bedienung und regulatorische Angaben müssen für die Serienhardware und -firmware bestätigt werden. **OFFEN** kennzeichnet Informationen, die vor der Auslieferung mit einem verkauften Produkt ergänzt werden müssen. Dieser Entwurf bestätigt weder eine FCC-Zulassung noch die EU-Konformität.
 
+> FCC-SDoC-Prüfumfang: Nur Produktidentifikation, Betrieb/Prüfkonfiguration und anwendbare FCC-Angaben sind Einreichungspunkte. Allgemeine offene Produktdetails sind keine SDoC-Anforderungen, sofern Intertek sie nicht ausdrücklich verlangt. Funkmodul-Integrationsbedingungen werden separat geprüft.
+
 ## Produktidentifikation {#product-identification}
 
 Diese Anleitung gilt für das ThingPulse ESPGateway Ethernet LTE. Vergleiche vor der Installation das Modell und die Hardwareversion auf deinem Gerät mit dieser Anleitung.
@@ -21,7 +23,6 @@ Diese Anleitung gilt für das ThingPulse ESPGateway Ethernet LTE. Vergleiche vor
 | Datumsaufdruck der Platine | `2026/08/30` — bestätigte Hardwareversionskennung des an Intertek gelieferten Geräts |
 | Hardware und mitgelieferte Firmware | Hardwareversion `2026/08/30`; ausschliesslich Selbsttest-Firmware; **OFFEN** — Version der Selbsttest-Firmware |
 | Hersteller (juristische Person und vollständige Postadresse) | ThingPulse GmbH, c/o Daniel Eichhorn, Bachtelweg 4, 8052 Zurich, Switzerland |
-| EU-Importeur / verantwortlicher Wirtschaftsakteur, falls erforderlich | **OFFEN** — Name und postalische Kontaktdaten |
 | US-Verantwortlicher, falls erforderlich | **OFFEN** — US-Unternehmen, Adresse, Telefon oder Internetkontakt |
 | Produktsupport | [ThingPulse-Support](../support.md) |
 | Anleitung | <https://docs.thingpulse.com/guides/espgateway-ethernet-lte/> |
@@ -113,16 +114,6 @@ Die folgenden Sicherheitshinweise sind ein Vorschlag zur Prüfung anhand der abs
 7. Installiere deine Anwendungsfirmware gemäss dokumentiertem Programmierverfahren. **OFFEN:** genaue Befehle/Werkzeuge, Flash-Einstellungen und Wiederherstellungsdatei der Selbsttest-Firmware.
 8. Konfiguriere Mobilfunkanbieter/APN, Backend-Endpunkt und Authentifizierung in deiner Anwendung. Lege bei MQTT Broker, Topics und Zugangsdaten fest und prüfe den Empfang der Sensordaten. Diese Einstellungen hängen von deiner Anwendung ab; eine werkseitige Konfigurationsoberfläche ist nicht dokumentiert.
 
-## Firmware, Sicherheit und Zurücksetzen {#firmware}
-
-ThingPulse liefert Selbsttest-Firmware. Nutzer entwickeln, installieren und pflegen die Firmware ihrer eigenen Anwendung, einschliesslich WLAN-/BLE-Kommunikation, LTE-Verbindung und Backend-Anbindung. Eine fertige Anwendung, automatische Gateway-Funktion oder Web-Konfigurationsoberfläche gehört nicht zum angegebenen Lieferumfang.
-
-Anwendungsentwickler sollten geschützte Zugangsdaten, authentifizierte Backend-Verbindungen, geeignete Transportverschlüsselung, Fehlerbehandlung und ein wartbares Update-/Wiederherstellungsverfahren umsetzen. Gespeicherte oder übertragene Daten, Rücksetzverhalten und Datenlöschung hängen von der Anwendung ab; dokumentiere dies für deren Nutzer.
-
-**Von ThingPulse noch OFFEN:** Selbsttest-Quellcode/Download und Version, Programmier- und Wiederherstellungsanleitung, Bootverhalten, Daten-/Netzwerkverhalten des Selbsttests, Kontakt für Schwachstellenmeldungen und Supportumfang/-zeitraum für die gelieferten Komponenten und Selbsttest-Firmware. Der GPIO4-Taster hat in der mitgelieferten Selbsttest-Firmware keine Funktion, auch keine Reset- oder Werkseinstellungsfunktion. In eigener Anwendungsfirmware hängt seine Funktion von der jeweiligen Anwendung ab.
-
-Verwende in deiner Anwendungsfirmware die dokumentierten Antennen, Regionseinstellungen und Funkgrenzen. Kläre mit Intertek, welche nutzerprogrammierbaren Einstellungen und WLAN-/BLE-/LTE-Kombinationen die Bewertung abdeckt; die Lieferung mit Selbsttest-Firmware belegt nicht die Abdeckung jeder Nutzeranwendung.
-
 ## Fehlerbehebung {#troubleshooting}
 
 | Symptom | Erste Prüfung |
@@ -140,14 +131,6 @@ Die LED-Bedeutungen sind anwendungsspezifisch; beachte die Dokumentation deines 
 ### Vereinigte Staaten {#united-states}
 
 **OFFEN — dieser Entwurf enthält keine Konformitätszusage.** Endgültige FCC-Kennzeichnung für Gerät/Module, anwendbaren Part-15-Betriebshinweis, Änderungshinweis, Störschutzhinweis für die geprüfte Klasse A oder B, gegebenenfalls US-Verantwortlichen und freigegebene HF-Expositions-/Installationshinweise ergänzen. Die Bewertung muss auch die LTE-Zulassung für lizenzierte Funkdienste und gleichzeitigen Sendebetrieb abdecken.
-
-### Europäische Union {#european-union}
-
-**OFFEN — keine Erklärung ausgestellt.** Unterzeichnete EU-Konformitätserklärung oder vereinfachte Erklärung mit funktionierender URL zur vollständigen unterzeichneten Erklärung ergänzen. Nutzungsbeschränkungen, freigegebene Frequenzbänder und maximale Sendeleistungen angeben. Erforderliche Sprachfassungen für die Zielländer mitliefern.
-
-### Entsorgung {#disposal}
-
-Sammle Elektro- und Elektronikgeräte getrennt vom Hausmüll. Nutze geeignete örtliche Sammel- oder Rücknahmestellen. **OFFEN:** Geltende Rücknahmeinformationen des Herstellers ergänzen und endgültige WEEE-Kennzeichnung bestätigen.
 
 ## Dokumentversion {#document-revision}
 

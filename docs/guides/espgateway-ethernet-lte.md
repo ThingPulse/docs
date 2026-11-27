@@ -5,6 +5,8 @@
 !!! warning "Pre-release manual — draft for technical review"
     Revision 0.11, 9 November 2026. Product specifications, operating instructions and regulatory statements are awaiting confirmation for the production hardware and firmware. **PENDING** identifies information that must be completed before this manual accompanies a sold product. This draft does not establish FCC authorization or EU conformity.
 
+> FCC SDoC review scope: Only product identification, operation/test configuration and applicable FCC information are submission blockers. General product-detail placeholders below are not SDoC requirements unless Intertek specifically requests them. Radio-module integration conditions are reviewed separately.
+
 ## Product identification {#product-identification}
 
 This manual covers the ThingPulse ESPGateway Ethernet LTE. Match the model and hardware revision on your device to this manual before installation.
@@ -21,7 +23,6 @@ This manual covers the ThingPulse ESPGateway Ethernet LTE. Match the model and h
 | PCB date marking | `2026/08/30` — confirmed hardware revision marking of the unit supplied to Intertek |
 | Hardware and supplied firmware versions | Hardware revision `2026/08/30`; self-test firmware only; **PENDING** — self-test firmware version |
 | Manufacturer (legal entity and full postal address) | ThingPulse GmbH, c/o Daniel Eichhorn, Bachtelweg 4, 8052 Zurich, Switzerland |
-| EU importer / responsible economic operator, where applicable | **PENDING** — name and postal contact details |
 | US responsible party, where applicable | **PENDING** — US legal entity, address, telephone or internet contact |
 | Product support | [ThingPulse support](../support.md) |
 | Manual | <https://docs.thingpulse.com/guides/espgateway-ethernet-lte/> |
@@ -113,16 +114,6 @@ The following safety text is proposed for review against the final product risk 
 7. Install your application firmware using the documented programming procedure. **PENDING:** exact commands/tools, flashing settings and self-test recovery image.
 8. In your application, configure the carrier/APN, backend endpoint and authentication. For an MQTT application, configure broker, topics and credentials, then verify that sensor readings arrive. These settings are application-defined; no factory configuration interface is documented.
 
-## Firmware, security and reset {#firmware}
-
-ThingPulse supplies self-test firmware. Users develop, install and maintain the firmware for their own application, including Wi-Fi/BLE communication, LTE connectivity and backend integration. A ready-made application, automatic gateway behavior or a configuration web interface is not included in the stated delivery scope.
-
-Application developers should implement credential protection, authenticated backend connections, suitable transport encryption, error handling and a maintainable update/recovery process. Stored or transmitted data, reset behavior and data deletion depend on the application; document these for its users.
-
-**PENDING from ThingPulse:** self-test source/download and version, programming and recovery instructions, boot behavior, self-test data/network behavior, vulnerability-reporting contact and support scope/period for the supplied components and self-test firmware. The GPIO4 button has no function in the supplied self-test firmware, including no reset or factory-reset action. Its behavior in user application firmware depends on that application.
-
-Use the documented antennas, regional settings and radio limits in application firmware. Confirm with Intertek which user-programmable settings and Wi-Fi/BLE/LTE combinations the assessment covers; supplying self-test firmware does not by itself establish coverage for every user application.
-
 ## Troubleshooting {#troubleshooting}
 
 | Symptom | Initial check |
@@ -140,14 +131,6 @@ LED meanings are application-specific; consult the documentation supplied by you
 ### United States {#united-states}
 
 **PENDING — no compliance claim in this draft.** Insert the final host/module FCC identification, applicable Part 15 operating statement, changes/modifications notice, Class A or Class B interference notice as determined by testing, US responsible-party information where required, and approved RF exposure/installation text. LTE licensed-service authorization and simultaneous transmission must also be covered by the assessment.
-
-### European Union {#european-union}
-
-**PENDING — no declaration issued.** Insert the signed EU declaration of conformity or the simplified declaration and working URL of the full signed declaration. Identify applicable usage restrictions, approved frequency bands and maximum transmit powers. Provide the required destination-country language versions with the product.
-
-### Disposal {#disposal}
-
-Collect electrical and electronic equipment separately from household waste. Use an appropriate local collection or take-back service. **PENDING:** provide the manufacturer's applicable take-back information and confirm the final WEEE marking.
 
 ## Document revision {#document-revision}
 
