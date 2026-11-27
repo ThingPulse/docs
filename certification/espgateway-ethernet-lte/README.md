@@ -2,7 +2,7 @@
 
 Revision 0.7 • 12 October 2026 • Owner: ThingPulse • Status: draft, not approved for production
 
-This pack prepares the documentation review; it is not a test report, equipment authorization or signed declaration. The repository previously contained only a heading and image for this product. The user subsequently supplied a three-sheet schematic and confirmed enclosure, external 2.4 GHz Wi-Fi antenna, internal LTE foil antenna and USB-C power. The manufacturer is now confirmed as ThingPulse GmbH, c/o Daniel Eichhorn, Bachtelweg 4, 8052 Zurich, Switzerland. No final BOM, module grants, rated input current or test reports were available. Specifications from other ESPGateway models have deliberately not been reused.
+This pack prepares the documentation review; it is not a test report, equipment authorization or signed declaration. The repository previously contained only a heading and image for this product. The user subsequently supplied a three-sheet schematic and confirmed enclosure, external 2.4 GHz Wi-Fi antenna, internal LTE foil antenna and USB-C power. The manufacturer is now confirmed as ThingPulse GmbH, c/o Daniel Eichhorn, Bachtelweg 4, 8052 Zurich, Switzerland. The user specified 5 V DC, 2 A input on 8 November 2026. No final BOM, module grants or test reports were available. Specifications from other ESPGateway models have deliberately not been reused.
 
 ## Documents
 
@@ -18,8 +18,8 @@ Internal review documents live outside `docs/` and therefore outside the public 
 
 | Item | Proposed treatment | Evidence / decision required |
 | --- | --- | --- |
-| Product name and model | Print the product name and one stable model identifier; add serial or batch traceability. Use identical identifiers in manual, test reports and declarations. | Box designation ESPGateway Ethernet LTE and GTIN-13 `7649998893091` are now recorded. User confirms GTIN is also the SKU, with no separate sale SKU. Use product name plus SKU/GTIN throughout; confirm hardware revision and serial/batch scheme. GTIN is not a unit serial. RED Article 10(6). |
-| Rated voltage | Reserve label space for input voltage/range, AC/DC and rated current; connector/polarity where applicable. | Engineering supplies measured/design rating and intended supply; Intertek confirms marking under the chosen safety standard. Do not assume USB-C means a particular rating. |
+| Product name and model | Print the product name and one stable model identifier. No device serial or production batch number is assigned. Use identical identifiers in manual, test reports and declarations. | Box designation ESPGateway Ethernet LTE and GTIN-13 `7649998893091` are now recorded. User confirms GTIN is also the SKU, with no separate sale SKU. Use product name plus SKU/GTIN throughout; Intertek sample hardware revision is `2026/08/30`; the user confirms no serial or batch numbering. GTIN is not a unit serial. RED Article 10(6). |
+| Rated voltage | Reserve label space for input voltage/range, AC/DC and rated current; connector/polarity where applicable. | User-specified rating, 8 November 2026: 5 V DC, 2 A via USB-C. Adapter/cable not supplied. Intertek reviews the marking; no measurement result is claimed. |
 | Manufacturer name/address | Use the legal manufacturer's name/trade name and full postal contact address, preferably on the device. | RED Article 10(7); alternative placement is conditional, not a space-saving default. Confirmed by the user: ThingPulse GmbH, c/o Daniel Eichhorn, Bachtelweg 4, 8052 Zurich, Switzerland. |
 | US responsible party | For SDoC, supply the US-based responsible party's name, address and telephone or internet contact in the manual or separate compliance sheet. It is not automatically a device-label field. | 47 CFR 2.1077. Intertek must distinguish this role from any US agent required for a certification application. |
 | Country of origin | Existing box states `Hardware Made in China`; use China as the documented origin claim and retain supporting manufacturing evidence. | US import marking is a customs requirement, distinct from FCC/CE. Confirm with the importer; a Swiss design/company address does not establish Swiss origin. |
@@ -36,11 +36,11 @@ Items below are open or partially resolved as noted. Suggested owners are assign
 
 | Owner | Required input / deliverable | Why needed |
 | --- | --- | --- |
-| ThingPulse engineering | Final BOM, production PCB revision, enclosure drawing/photos and any regional variants; product name and SKU/GTIN confirmed; schematic rev. 1.0.3 and PCB marking `2026/08/30` received; map these to the production variant | Defines the assessed product |
-| ThingPulse engineering | Enclosed product confirmed, with external Wi-Fi/internal LTE antennas and USB-C power; PSU/cable inclusion and battery/PoE status still to confirm | Defines safety, test and manual scope |
-| ThingPulse engineering | Voltage/current rating, power connector, environment and mounting limits | Completes label and safety instructions |
+| ThingPulse engineering | Final BOM, production PCB revision, enclosure drawing/photos and any regional variants; product name and SKU/GTIN confirmed; schematic rev. 1.0.3 received; user confirms Intertek sample hardware revision marking `2026/08/30`; map the sample to the production BOM and later November mounting-hole variant | Defines the assessed product |
+| ThingPulse engineering | Enclosed product confirmed, with external Wi-Fi/internal LTE antennas and USB-C power; confirmed 8 November: no PSU or USB cable included, USB-C-only power, no battery/PoE | Defines safety, test and manual scope |
+| ThingPulse engineering | 5 V DC, 2 A via USB-C confirmed by user; environment and mounting limits remain open | Completes label and safety instructions |
 | Module suppliers / engineering | ESP32-WROVER-IE-N16R8 shown in schematic; LTE supplier selection now confirmed (see hardware evidence). Resolve shared-design U6 designation in the fitted-variant record; obtain fitted markings, board revision, FCC IDs, grants and OEM integration manuals | Establishes approval conditions and permitted host integration |
-| Antenna supplier / engineering | Antenna part numbers, types, gain by band, cable loss and connector; physical locations | Required for RF tests and exposure evaluation |
+| René / antenna suppliers | René sourced both antennas (user confirmed 8 November). Obtain part numbers, types, gain by band, cable loss and connector; physical locations | Required for RF tests and exposure evaluation |
 | Engineering / Intertek | Enabled bands, maximum powers, simultaneous transmission modes, separation distance and use restrictions | Completes the radio table and installation requirements |
 | ThingPulse firmware | Self-test-only delivery confirmed; obtain self-test version/coverage, self-test pass/fail indications, flashing/recovery, data behavior and support scope; application firmware and LED meanings are defined by its implementer | Makes the manual usable and defines tested software |
 | ThingPulse management | Manufacturer/address confirmed; remaining inputs: evidence supporting the box claim of China hardware origin, target countries and intended launch date | Completes identity and market scope |
@@ -63,7 +63,7 @@ For an EU sale by a non-EU manufacturer, resolve the EU economic-operator arrang
 
 ## Release and revision control
 
-Freeze hardware, firmware, antennas, power supply, cables and documentation together. Record the sample serial numbers and firmware hashes used by Intertek. Submit one numbered review pack with label location photos and actual-size artwork. Maintain a change log showing each change, affected documents, technical impact and Intertek disposition.
+Freeze hardware, firmware, antennas, power supply, cables and documentation together. Record Intertek's sample reference, sample photographs, hardware revision and firmware hashes. No manufacturer-assigned serial or production batch number is available. Submit one numbered review pack with label location photos and actual-size artwork. Maintain a change log showing each change, affected documents, technical impact and Intertek disposition.
 
 Ask Intertek to separate editorial corrections from changes that could affect test results: antennas, power, PCB/enclosure, radio settings, firmware behavior and supported operating modes. Retest requirements depend on impact; included review rounds, reissue charges and fees must be confirmed in the quotation. No assumption about free changes is made here.
 

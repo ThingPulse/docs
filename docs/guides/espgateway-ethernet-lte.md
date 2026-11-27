@@ -3,7 +3,7 @@
 ![ESPGateway Ethernet LTE](../img/guides/espgateway-ethernet-lte/espgateway-ethernet-lte.png)
 
 !!! warning "Pre-release manual — draft for technical review"
-    Revision 0.9, 12 October 2026. Product specifications, operating instructions and regulatory statements are awaiting confirmation for the production hardware and firmware. **PENDING** identifies information that must be completed before this manual accompanies a sold product. This draft does not establish FCC authorization or EU conformity.
+    Revision 0.11, 9 November 2026. Product specifications, operating instructions and regulatory statements are awaiting confirmation for the production hardware and firmware. **PENDING** identifies information that must be completed before this manual accompanies a sold product. This draft does not establish FCC authorization or EU conformity.
 
 ## Product identification {#product-identification}
 
@@ -17,8 +17,9 @@ This manual covers the ThingPulse ESPGateway Ethernet LTE. Match the model and h
 | SKU | `7649998893091` — the GTIN is used as the SKU; no separate SKU is assigned |
 | Hardware origin stated on box | China (`Hardware Made in China`) |
 | PCB marking | `THINGPULSE` — `ESP32 Ethernet Gateway with SIM760x and A7670x support` |
-| PCB date marking | `2026/08/30` — meaning as hardware revision/date identifier to be confirmed |
-| Hardware and supplied firmware versions | Self-test firmware only; **PENDING** — production hardware revision and self-test firmware version |
+| Device serial / production batch number | Not assigned |
+| PCB date marking | `2026/08/30` — confirmed hardware revision marking of the unit supplied to Intertek |
+| Hardware and supplied firmware versions | Hardware revision `2026/08/30`; self-test firmware only; **PENDING** — self-test firmware version |
 | Manufacturer (legal entity and full postal address) | ThingPulse GmbH, c/o Daniel Eichhorn, Bachtelweg 4, 8052 Zurich, Switzerland |
 | EU importer / responsible economic operator, where applicable | **PENDING** — name and postal contact details |
 | US responsible party, where applicable | **PENDING** — US legal entity, address, telephone or internet contact |
@@ -33,11 +34,15 @@ The ESPGateway Ethernet LTE is a programmable gateway for communicating with Wi-
 
 For example, your application could read temperature and humidity from a BLE sensor and publish those readings over LTE to an MQTT broker. This is an intended application example, not a function provided by the shipped self-test firmware.
 
-**PENDING:** intended installation environment, documented use limitations, exact self-test coverage and radio modes exercised by the shipped self-test. No suitability for emergency communications or safety-critical applications has been established.
+For indoor use, placed on a desk or shelf or mounted to a wall using the enclosure mounting holes.
 
-The device is supplied with an enclosure, an external 2.4 GHz Wi-Fi antenna and an internal foil LTE antenna. Power is supplied through a USB-C connector. The box lists one ESPGateway Ethernet and one A7670G (Global) LTE module. This contents description does not specify whether the LTE assembly is preinstalled; installation status and user setup steps remain to be confirmed.
+**PENDING:** documented use limitations, exact self-test coverage and radio modes exercised by the shipped self-test. No suitability for emergency communications or safety-critical applications has been established.
 
-**PENDING — remaining packing-list details:** antenna part numbers, cables, whether a USB power supply is included or required separately, SIM requirements and printed safety/quick-start insert. Accessories must match the configuration assessed for this model.
+The supplied hardware consists of the enclosure, gateway PCB, LTE module, internal LTE antenna and external 2.4 GHz Wi-Fi antenna. No USB power adapter or USB cable is included; both must be supplied separately. The November production order specifies factory installation of the LTE module and antenna.
+
+USB-C is the only power source. Battery power and Power over Ethernet (PoE) are not supported.
+
+**PENDING — remaining packing-list details:** antenna part numbers, SIM requirements and printed safety/quick-start insert. Accessories must match the configuration assessed for this model.
 
 ## Technical specifications {#technical-specifications}
 
@@ -45,21 +50,21 @@ Component designations come from schematic revision 1.0.3, dated 2026-08-30, exc
 
 | Parameter | Known information and remaining confirmation |
 | --- | --- |
-| Power input | USB-C; **PENDING** — final rated input voltage/range and current. The connector alone does not establish a power rating. |
-| External power supply and cable | **PENDING** — required output rating, safety characteristics and approved cable limits |
-| Ethernet | RJ45 (J1, HR911105A), LAN8720A-CP-TR controller (U1). No PoE power-input circuit is shown; **PENDING** — production confirmation and supported rates. |
-| LTE assembly | [AND-Global BK-A7670G](https://www.and-global.com/list_23/662.html), listed with SIMCom A7670G-LLSE (LTE Cat 1). **PENDING** — board revision, fitted module marking and approval documents. |
-| Wi-Fi / Bluetooth module | ESP32-WROVER-IE-N16R8 (U3); **PENDING** — production part confirmation and enabled firmware modes. |
+| Power input | 5 V DC, 2 A via USB-C only; no battery or PoE power. |
+| External power supply and cable | Not included; use a 5 V DC USB power supply capable of at least 2 A. **PENDING** — safety characteristics and approved cable limits |
+| Ethernet | RJ45 (J1, HR911105A), LAN8720A-CP-TR controller (U1). PoE power is not supported; **PENDING** — supported data rates. |
+| LTE assembly | [AND-Global BK-A7670G](https://www.and-global.com/list_23/662.html), listed with SIMCom A7670G-LLSE (LTE Cat 1). Photographed assembly: SIMCom A7670G, P/N S2-10AZT-Z33CL, carrier marked BKP-7670 V3; FCC ID marking 2AJYU-8BAE003. **PENDING** — reconcile LLSE supplier designation with fitted part number, production-variant coverage and review approval documents. The user confirms the photographed modules and antennas match the Intertek sample. |
+| Wi-Fi / Bluetooth module | ESP32-WROVER-IE photographed; FCC ID marking 2AC7Z-ESP32WROVERE. Schematic specifies ESP32-WROVER-IE-N16R8 (U3). **PENDING** — full ordering-suffix/production-sample match, grant review and enabled firmware modes. |
 | USB-to-UART bridge | CH9102F (U5), connected to the USB-C data lines |
-| Indicators and controls | Four WS2812E-V5 LEDs (LED1–LED4); LED colours, patterns and meanings are defined by the firmware implementer. Power switch SW1 and a button wired to GPIO4; **PENDING** — button function in shipped self-test firmware. |
-| SIM | **PENDING** — type, orientation, insertion/removal procedure and carrier requirements |
-| Operating / storage environment | **PENDING** — temperature, humidity, altitude, indoor/outdoor use and ingress protection |
-| Dimensions and mounting | **PENDING** — enclosure dimensions, orientation and clearances |
+| Indicators and controls | Four WS2812E-V5 LEDs (LED1–LED4); LED colours, patterns and meanings are defined by the firmware implementer. Power switch SW1 and a button wired to GPIO4. The button has no function in the shipped self-test firmware. |
+| SIM | Nano-SIM; remove the enclosure screws to access the internal slot with power disconnected. **PENDING** — card orientation, holder operation and carrier requirements |
+| Operating / storage environment | Indoor use. **PENDING** — finished-gateway operating/storage temperature, humidity, altitude and ingress protection |
+| Dimensions and mounting | Desk/shelf placement or wall mounting using the enclosure mounting holes. **PENDING** — enclosure dimensions, mounting hardware, orientation and clearances |
 | Expansion interfaces | Two 10-pin, 2.54 mm headers (X1/X3) shown; **PENDING** — enclosure accessibility, electrical limits and supported accessories. |
 
 ### Radio bands and antennas {#radio-bands}
 
-The supplier identifies the fitted modem type as A7670G-LLSE. The following are **module capabilities**, based on [SIMCom’s A7670G-LLSE datasheet, version 2021.11](https://datasheet.lcsc.com/datasheet/pdf/a6ff746802142b3caed58b61817fe57c.pdf?productCode=C21264512), not a declaration of the gateway’s approved operating bands.
+The supplier identifies the modem type as A7670G-LLSE. The photographed module is marked A7670G, P/N S2-10AZT-Z33CL, without the LLSE suffix; that variant mapping remains unverified. Until resolved, the following table is not a confirmed band list for the photographed device. The following are **module capabilities**, based on [SIMCom’s A7670G-LLSE datasheet, version 2021.11](https://datasheet.lcsc.com/datasheet/pdf/a6ff746802142b3caed58b61817fe57c.pdf?productCode=C21264512), not a declaration of the gateway’s approved operating bands.
 
 | Cellular mode | Module-supported bands / nominal band designations |
 | --- | --- |
@@ -79,7 +84,7 @@ The gateway uses an internal foil cellular antenna and an external 2.4 GHz Wi-Fi
 | Regional restrictions and simultaneous transmission | **PENDING** — establish permitted countries, radio combinations and installation restrictions |
 | RF exposure and antenna-to-person separation | **PENDING** — use final assessment and authorization conditions; no generic separation distance is specified |
 
-The LLSE datasheet does not specify RF output power. No value from a different A7670G hardware revision has been substituted. Module supply-voltage and temperature limits are also not finished-gateway ratings; the USB-C input rating and enclosure operating limits remain to be confirmed.
+The LLSE datasheet does not specify RF output power. No value from a different A7670G hardware revision has been substituted. Module supply-voltage and temperature limits are also not finished-gateway ratings; the specified USB-C input rating is 5 V DC, 2 A; enclosure operating limits remain to be confirmed.
 
 ## Safety and installation {#safety}
 
@@ -93,17 +98,17 @@ The following safety text is proposed for review against the final product risk 
 - Install antennas according to the approved placement and separation instructions. Do not substitute antennas or change radio settings beyond the documented limits.
 - Disconnect power before cleaning; use a dry cloth. Keep small parts away from children.
 
-**PENDING before release:** add product-specific electrical, thermal, mechanical, ESD and RF exposure precautions; confirm accessible ports, mounting, power disconnection and whether users may open the enclosure. Add battery instructions only if a battery is fitted or supported.
+**PENDING before release:** add product-specific electrical, thermal, mechanical, ESD and RF exposure precautions; confirm accessible ports, mounting and power disconnection. Users open the enclosure by removing screws to install the nano-SIM; the final illustrated procedure remains to be completed.
 
 ## First-time setup {#setup}
 
 **Draft sequence — validate on the production sample before use.**
 
 1. Check the model, package contents and required power rating.
-2. With power disconnected, install the required SIM and connect the supplied external Wi-Fi antenna to its designated connector. The LTE foil antenna is internal; it is not an external antenna connection step. **PENDING:** connector diagram, SIM access/orientation and confirmation of factory-installed LTE antenna placement.
-3. Connect Ethernet if required by the documented self-test or your application. **PENDING:** cable requirements and PoE restrictions.
+2. Disconnect USB power, remove the enclosure screws and open the enclosure to access the nano-SIM slot. Insert the nano-SIM, then close the enclosure and refit the screws before reconnecting power. Connect the supplied external Wi-Fi antenna to its designated connector. The LTE foil antenna is factory-installed inside the enclosure. **PENDING:** connector diagram, SIM orientation and holder opening/locking procedure.
+3. Connect Ethernet if required by the documented self-test or your application. Do not use Ethernet as a power source. **PENDING:** cable requirements.
 4. Position the device and antennas using the mounting clearances and RF separation specified above.
-5. Connect the specified power supply to USB-C and follow the self-test instructions. **PENDING:** self-test procedure, startup time and self-test-specific pass/fail indications.
+5. Supply USB-C power as specified above. Open the [ThingPulse flashing and self-test page](https://iot-flasher.thingpulse.com/device/espgateway-ethernet-lte), follow its connection instructions and start the self-test from the page. The test does not start automatically at power-on. Read the pass/fail results on the web page. **PENDING:** supported browser, USB data-connection/power arrangement, detailed test prerequisites and duration.
 6. Develop application firmware for the ESP32 that communicates with your Wi-Fi/BLE devices and transfers data through the LTE assembly. **PENDING:** documented development environment, board configuration, pin assignments and programming procedure.
 7. Install your application firmware using the documented programming procedure. **PENDING:** exact commands/tools, flashing settings and self-test recovery image.
 8. In your application, configure the carrier/APN, backend endpoint and authentication. For an MQTT application, configure broker, topics and credentials, then verify that sensor readings arrive. These settings are application-defined; no factory configuration interface is documented.
@@ -114,7 +119,7 @@ ThingPulse supplies self-test firmware. Users develop, install and maintain the 
 
 Application developers should implement credential protection, authenticated backend connections, suitable transport encryption, error handling and a maintainable update/recovery process. Stored or transmitted data, reset behavior and data deletion depend on the application; document these for its users.
 
-**PENDING from ThingPulse:** self-test source/download and version, programming and recovery instructions, boot/button behavior, self-test data/network behavior, vulnerability-reporting contact and support scope/period for the supplied components and self-test firmware. A factory-reset function must not be assumed.
+**PENDING from ThingPulse:** self-test source/download and version, programming and recovery instructions, boot behavior, self-test data/network behavior, vulnerability-reporting contact and support scope/period for the supplied components and self-test firmware. The GPIO4 button has no function in the supplied self-test firmware, including no reset or factory-reset action. Its behavior in user application firmware depends on that application.
 
 Use the documented antennas, regional settings and radio limits in application firmware. Confirm with Intertek which user-programmable settings and Wi-Fi/BLE/LTE combinations the assessment covers; supplying self-test firmware does not by itself establish coverage for every user application.
 
@@ -128,7 +133,7 @@ Use the documented antennas, regional settings and radio limits in application f
 | LTE connection fails | With power disconnected, check SIM installation and the external antenna connection; check subscription, coverage and APN. Contact support for suspected internal LTE antenna faults. |
 | Repeated restart or loss of connection | Check power supply suitability and environmental limits; contact support if the problem persists. |
 
-LED meanings are application-specific; consult the documentation supplied by your firmware implementer. **PENDING:** document the shipped self-test’s pass/fail indications and recovery instructions. When contacting support, provide model, hardware/firmware revision and fault description. Do not post SIM credentials or network passwords publicly.
+LED meanings are application-specific; consult the documentation supplied by your firmware implementer. Start the self-test from the ThingPulse flashing and self-test page linked above; pass/fail results appear on that page. **PENDING:** recovery instructions. When contacting support, provide model, hardware/firmware revision and fault description. Do not post SIM credentials or network passwords publicly.
 
 ## Regulatory information {#regulatory}
 

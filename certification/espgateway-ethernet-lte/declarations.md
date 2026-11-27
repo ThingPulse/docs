@@ -6,7 +6,7 @@ Do not distribute these templates as compliance statements. Complete them from t
 
 ## EU declaration of conformity — Annex VI working template
 
-1. **Radio equipment:** ESPGateway Ethernet LTE, SKU/GTIN 7649998893091, hardware [REVISION], [BATCH/SERIAL IDENTIFICATION OR APPLICABLE RANGE]. Declaration reference [REFERENCE].
+1. **Radio equipment:** ESPGateway Ethernet LTE, SKU/GTIN 7649998893091, hardware [REVISION / VARIANTS COVERED BY FINAL DECLARATION]. No device serial or production batch numbers are assigned. Declaration reference [REFERENCE].
 2. **Manufacturer:** ThingPulse GmbH, c/o Daniel Eichhorn, Bachtelweg 4, 8052 Zurich, Switzerland. Authorised representative, if applicable: [NAME, ADDRESS, MANDATE].
 3. This declaration of conformity is issued under the sole responsibility of the manufacturer.
 4. **Object of the declaration:** [UNAMBIGUOUS PRODUCT DESCRIPTION, VARIANTS, IDENTIFICATION AND COLOUR IMAGE IF NEEDED; FIRMWARE VERSION/CONFIGURATION WHERE RELEVANT].

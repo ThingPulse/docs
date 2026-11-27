@@ -1,6 +1,6 @@
 # Label and accompanying information — copy draft
 
-Revision 0.6 • 12 October 2026 • NOT FOR PRINTING
+Revision 0.7 • 8 November 2026 • NOT FOR PRINTING
 
 Square brackets are unresolved fields or artwork instructions. This is a content/layout specification, not dimensioned production artwork. Final label dimensions, enclosure area and material are unknown.
 
@@ -27,7 +27,7 @@ The FCC logo is not an FCC ID or proof of authorization. Its voluntary use under
 
 ## Existing PCB marking
 
-The supplied image shows `THINGPULSE`, `2026/08/30`, and `ESP32 Ethernet Gateway with SIM760x and A7670x support`. Preserve this wording in the hardware record. Confirm whether the date is intended as a revision identifier; do not substitute it for a serial number or manufacture date without confirmation. The box product designation is known and GTIN `7649998893091` is the confirmed SKU; no separate SKU is used.
+The supplied image shows `THINGPULSE`, `2026/08/30`, and `ESP32 Ethernet Gateway with SIM760x and A7670x support`. Preserve this wording in the hardware record. The user confirmed `2026/08/30` as the revision marking of the unit supplied to Intertek on 8 November 2026. It is not a unit serial number or a confirmed manufacturing date. The box product designation is known and GTIN `7649998893091` is the confirmed SKU; no separate SKU is used.
 
 ## Device label: base content
 
@@ -35,10 +35,9 @@ The supplied image shows `THINGPULSE`, `2026/08/30`, and `ESP32 Ethernet Gateway
 ThingPulse
 ESPGateway Ethernet LTE
 SKU / GTIN: 7649998893091
-HW: [REVISION]
-Input (USB-C): [VOLTAGE/RANGE] [DC/AC SYMBOL] [RATED CURRENT]
+HW: 2026/08/30
+Input (USB-C): 5 V DC, 2 A
 [POLARITY / CONNECTOR IDENTIFICATION, IF APPLICABLE]
-S/N or batch: [IDENTIFIER]
 Manufacturer: ThingPulse GmbH
 c/o Daniel Eichhorn
 Bachtelweg 4
@@ -75,7 +74,7 @@ Do not add an Intertek/ETL mark without separate authorization. Do not use a dec
 
 ## Packaging proof checklist
 
-Include product/model, manufacturer/contact, verified origin, CE and applicable traceability/market-contact information. Retain product GTIN-13 `7649998893091`; keep unit serial/batch identification separate. Resolve WEEE marking, any radio restriction pictogram/text and importer information. Match the actual contents and accessory part numbers. Add the readable manual URL and optional QR. Include the Part 15 statement here if using the permitted small-device placement route above.
+Include product/model, manufacturer/contact, verified origin, CE and applicable traceability/market-contact information. Retain product GTIN-13 `7649998893091`; no unit serial or production batch number is assigned, as confirmed by the user on 8 November 2026. Resolve WEEE marking, any radio restriction pictogram/text and importer information. Match the actual contents and accessory part numbers. Add the readable manual URL and optional QR. Include the Part 15 statement here if using the permitted small-device placement route above.
 
 The manufacturer/importer should review destination-market obligations and approve the printed languages. See [EU compliance responsibilities](https://europa.eu/youreurope/business/product-rules-compliance/general-product-compliance/index_en.htm) and [WEEE label guidance](https://europa.eu/youreurope/business/product-rules-compliance/recycling-waste-management/weee-label/index_en.htm).
 
@@ -86,19 +85,29 @@ ESPGateway Ethernet LTE — SKU / GTIN 7649998893091
 Quick start and safety • Revision [REVISION / DATE]
 
 Read before connecting power. Keep these instructions.
+USB power adapter and USB cable are not included.
+Power through USB-C only; no battery or PoE power.
 Ships with self-test firmware only. Write and install your own
 application firmware for Wi-Fi/BLE-to-LTE backend communication.
-Use only [POWER SUPPLY REQUIREMENTS] and [APPROVED ANTENNAS].
+Use a 5 V DC USB power supply capable of at least 2 A
+and [APPROVED ANTENNAS].
+For indoor use on a desk/shelf or wall-mounted using the enclosure holes.
 Use within [ENVIRONMENT LIMITS]. Maintain [VERIFIED RF SEPARATION]
 and [MOUNTING / VENTILATION CLEARANCES].
 
-1. With power disconnected, insert [SIM TYPE / ORIENTATION].
+1. Disconnect USB power. Remove the enclosure screws and open
+   the enclosure. Insert a nano-SIM [ORIENTATION / HOLDER PROCEDURE].
+   Close the enclosure and refit the screws before reconnecting power.
 2. Attach the external 2.4 GHz Wi-Fi antenna [PART NUMBER]
    to [IDENTIFIED CONNECTOR]. The LTE foil antenna is internal.
 3. Connect [ETHERNET / CABLE REQUIREMENTS].
-4. Connect USB-C power [REQUIRED SUPPLY RATING].
+4. Connect USB-C power (5 V DC, 2 A).
    Application LED meanings are defined by the firmware implementer.
-5. Follow [SELF-TEST PROCEDURE AND PASS/FAIL INDICATIONS].
+5. Open https://iot-flasher.thingpulse.com/device/espgateway-ethernet-lte
+   Follow the page connection instructions and start the self-test
+   from the page. Read the pass/fail results on the web page.
+   The self-test does not start automatically at power-on.
+   The PCB button has no function in the supplied self-test firmware.
 6. Develop and install your application using [PROGRAMMING GUIDE].
 7. Configure APN, backend and credentials in your application.
 
@@ -120,3 +129,18 @@ Support: https://docs.thingpulse.com/support/
 ```
 
 Resolve the actual printed/online split with Intertek; enlarge the insert if necessary. Translate the approved text for each destination market. This draft is not ready to print.
+
+## Confirmed box contents — 8 November 2026
+
+Enclosure, gateway PCB, LTE module, LTE antenna and Wi-Fi antenna. No USB cable or power adapter is included. Update the packaging contents artwork accordingly. USB-C is the only power source; no battery or PoE support. The user specified the input rating as 5 V DC, 2 A on 8 November 2026. Adapter safety characteristics and cable limits remain open.
+
+## Module identifiers transcribed from photographs — 8 November 2026
+
+Candidate host-label text for Intertek review, the user confirms that the photographed modules and antennas match the Intertek sample. Final production-variant coverage and grant/OEM integration conditions remain to be checked:
+
+```text
+Contains FCC ID: 2AC7Z-ESP32WROVERE
+Contains FCC ID: 2AJYU-8BAE003
+```
+
+These are the photographed module identifiers, not an assigned host FCC ID. Transcription alone does not establish the authorization route or final required label wording.

@@ -3,7 +3,7 @@
 ![ESPGateway Ethernet LTE](../img/guides/espgateway-ethernet-lte/espgateway-ethernet-lte.png)
 
 !!! warning "Vorläufige Anleitung — Entwurf zur technischen Prüfung"
-    Version 0.9, 12. Oktober 2026. Technische Daten, Bedienung und regulatorische Angaben müssen für die Serienhardware und -firmware bestätigt werden. **OFFEN** kennzeichnet Informationen, die vor der Auslieferung mit einem verkauften Produkt ergänzt werden müssen. Dieser Entwurf bestätigt weder eine FCC-Zulassung noch die EU-Konformität.
+    Version 0.11, 9. November 2026. Technische Daten, Bedienung und regulatorische Angaben müssen für die Serienhardware und -firmware bestätigt werden. **OFFEN** kennzeichnet Informationen, die vor der Auslieferung mit einem verkauften Produkt ergänzt werden müssen. Dieser Entwurf bestätigt weder eine FCC-Zulassung noch die EU-Konformität.
 
 ## Produktidentifikation {#product-identification}
 
@@ -17,8 +17,9 @@ Diese Anleitung gilt für das ThingPulse ESPGateway Ethernet LTE. Vergleiche vor
 | SKU | `7649998893091` — die GTIN wird als SKU verwendet; es gibt keine separate SKU |
 | Hardwareherkunft laut Verpackung | China (`Hardware Made in China`) |
 | Platinenbeschriftung | `THINGPULSE` — `ESP32 Ethernet Gateway with SIM760x and A7670x support` |
-| Datumsaufdruck der Platine | `2026/08/30` — Bedeutung als Hardwareversions-/Datumskennung noch zu bestätigen |
-| Hardware und mitgelieferte Firmware | Ausschliesslich Selbsttest-Firmware; **OFFEN** — Serienhardwareversion und Version der Selbsttest-Firmware |
+| Geräteseriennummer / Produktionschargennummer | Nicht vergeben |
+| Datumsaufdruck der Platine | `2026/08/30` — bestätigte Hardwareversionskennung des an Intertek gelieferten Geräts |
+| Hardware und mitgelieferte Firmware | Hardwareversion `2026/08/30`; ausschliesslich Selbsttest-Firmware; **OFFEN** — Version der Selbsttest-Firmware |
 | Hersteller (juristische Person und vollständige Postadresse) | ThingPulse GmbH, c/o Daniel Eichhorn, Bachtelweg 4, 8052 Zurich, Switzerland |
 | EU-Importeur / verantwortlicher Wirtschaftsakteur, falls erforderlich | **OFFEN** — Name und postalische Kontaktdaten |
 | US-Verantwortlicher, falls erforderlich | **OFFEN** — US-Unternehmen, Adresse, Telefon oder Internetkontakt |
@@ -33,11 +34,15 @@ Das ESPGateway Ethernet LTE ist ein programmierbares Gateway zur Kommunikation m
 
 Deine Anwendung könnte beispielsweise Temperatur und Luftfeuchtigkeit eines BLE-Sensors auslesen und die Messwerte über LTE an einen MQTT-Broker senden. Dies ist ein Beispiel für die vorgesehene Nutzung, keine Funktion der ausgelieferten Selbsttest-Firmware.
 
-**OFFEN:** vorgesehene Installationsumgebung, dokumentierte Nutzungsgrenzen, genauer Selbsttestumfang und dabei verwendete Funkmodi. Eine Eignung für Notfallkommunikation oder sicherheitskritische Anwendungen wurde nicht festgestellt.
+Für Innenräume vorgesehen; Aufstellung auf Tisch oder Regal oder Wandmontage über die Befestigungslöcher im Gehäuse.
 
-Das Gerät wird mit Gehäuse, einer externen 2,4-GHz-WLAN-Antenne und einer internen LTE-Folienantenne geliefert. Die Stromversorgung erfolgt über einen USB-C-Anschluss. Die Verpackung nennt ein ESPGateway Ethernet und ein A7670G-(Global)-LTE-Modul. Diese Inhaltsangabe sagt nicht aus, ob die LTE-Baugruppe vorinstalliert ist; Einbauzustand und Schritte zur Inbetriebnahme müssen noch bestätigt werden.
+**OFFEN:** dokumentierte Nutzungsgrenzen, genauer Selbsttestumfang und dabei verwendete Funkmodi. Eine Eignung für Notfallkommunikation oder sicherheitskritische Anwendungen wurde nicht festgestellt.
 
-**OFFEN — weitere Angaben zur Packliste:** Antennenteilenummern, Kabel, USB-Netzteil (mitgeliefert oder separat erforderlich), SIM-Anforderungen und gedruckte Sicherheits-/Kurzanleitung. Das Zubehör muss der bewerteten Konfiguration entsprechen.
+Zum Lieferumfang gehören Gehäuse, Gateway-Platine, LTE-Modul, interne LTE-Antenne und externe 2,4-GHz-WLAN-Antenne. USB-Netzteil und USB-Kabel sind nicht enthalten und müssen separat bereitgestellt werden. Der Produktionsauftrag vom November sieht den werkseitigen Einbau von LTE-Modul und LTE-Antenne vor.
+
+Die Stromversorgung erfolgt ausschliesslich über USB-C. Batteriebetrieb und Stromversorgung über Ethernet (PoE) werden nicht unterstützt.
+
+**OFFEN — weitere Angaben zur Packliste:** Antennenteilenummern, SIM-Anforderungen und gedruckte Sicherheits-/Kurzanleitung. Das Zubehör muss der bewerteten Konfiguration entsprechen.
 
 ## Technische Daten {#technical-specifications}
 
@@ -45,21 +50,21 @@ Die Bauteilbezeichnungen stammen aus Schaltplanrevision 1.0.3 vom 2026-08-30, au
 
 | Parameter | Bekannte Angaben und offene Bestätigungen |
 | --- | --- |
-| Stromversorgung | USB-C; **OFFEN** — endgültige Eingangsnennspannung/-bereich und Nennstrom. Der Anschluss allein legt die Leistungsdaten nicht fest. |
-| Externes Netzteil und Kabel | **OFFEN** — erforderliche Ausgangswerte, Sicherheitsmerkmale und zulässige Kabelgrenzen |
-| Ethernet | RJ45 (J1, HR911105A), LAN8720A-CP-TR-Controller (U1). Keine PoE-Eingangsschaltung dargestellt; **OFFEN** — Bestätigung für das Seriengerät und unterstützte Übertragungsraten. |
-| LTE-Baugruppe | [AND-Global BK-A7670G](https://www.and-global.com/list_23/662.html), laut Angebot mit SIMCom A7670G-LLSE (LTE Cat 1). **OFFEN** — Platinenrevision, Beschriftung des bestückten Moduls und Zulassungsunterlagen. |
-| WLAN-/Bluetooth-Modul | ESP32-WROVER-IE-N16R8 (U3); **OFFEN** — Bestätigung des Serienbauteils und aktivierte Firmwaremodi. |
+| Stromversorgung | 5 V DC, 2 A ausschliesslich über USB-C; kein Batterie- oder PoE-Betrieb. |
+| Externes Netzteil und Kabel | Nicht enthalten; USB-Netzteil mit 5 V DC und mindestens 2 A Ausgangsstrom verwenden. **OFFEN** — Sicherheitsmerkmale und zulässige Kabelgrenzen |
+| Ethernet | RJ45 (J1, HR911105A), LAN8720A-CP-TR-Controller (U1). Keine Stromversorgung über PoE; **OFFEN** — unterstützte Übertragungsraten. |
+| LTE-Baugruppe | [AND-Global BK-A7670G](https://www.and-global.com/list_23/662.html), laut Angebot mit SIMCom A7670G-LLSE (LTE Cat 1). Fotografierte Baugruppe: SIMCom A7670G, P/N S2-10AZT-Z33CL, Trägerplatine BKP-7670 V3; FCC-ID-Aufdruck 2AJYU-8BAE003. **OFFEN** — LLSE-Lieferantenangabe mit bestückter Teilenummer abgleichen, Abdeckung der Serienvariante und Prüfung der Zulassungsunterlagen. Laut Nutzer entsprechen die fotografierten Module und Antennen dem Intertek-Prüfmuster. |
+| WLAN-/Bluetooth-Modul | ESP32-WROVER-IE fotografiert; FCC-ID-Aufdruck 2AC7Z-ESP32WROVERE. Schaltplan: ESP32-WROVER-IE-N16R8 (U3). **OFFEN** — vollständiger Bestellcode/Zuordnung zum Serien- und Prüfmuster, Prüfung der Zulassung und aktivierte Firmwaremodi. |
 | USB-UART-Brücke | CH9102F (U5), mit den USB-C-Datenleitungen verbunden |
-| Anzeigen und Bedienelemente | Vier WS2812E-V5-LEDs (LED1–LED4); Farben, Muster und Bedeutungen der LEDs werden vom Firmwareentwickler festgelegt. Netzschalter SW1 und ein Taster an GPIO4; **OFFEN** — Tasterfunktion der ausgelieferten Selbsttest-Firmware. |
-| SIM | **OFFEN** — Typ, Ausrichtung, Einsetzen/Entnehmen und Mobilfunkanbieter-Anforderungen |
-| Betriebs-/Lagerbedingungen | **OFFEN** — Temperatur, Feuchtigkeit, Höhe, Innen-/Ausseneinsatz und Schutzart |
-| Abmessungen und Montage | **OFFEN** — Gehäuseabmessungen, Ausrichtung und Abstände |
+| Anzeigen und Bedienelemente | Vier WS2812E-V5-LEDs (LED1–LED4); Farben, Muster und Bedeutungen der LEDs werden vom Firmwareentwickler festgelegt. Netzschalter SW1 und ein Taster an GPIO4. Der Taster hat in der ausgelieferten Selbsttest-Firmware keine Funktion. |
+| SIM | Nano-SIM; bei getrennter Stromversorgung die Gehäuseschrauben entfernen, um den internen Steckplatz zu erreichen. **OFFEN** — Kartenausrichtung, Bedienung des Halters und Mobilfunkanbieter-Anforderungen |
+| Betriebs-/Lagerbedingungen | Einsatz in Innenräumen. **OFFEN** — Betriebs-/Lagertemperatur des vollständigen Gateways, Feuchtigkeit, Höhe und Schutzart |
+| Abmessungen und Montage | Aufstellung auf Tisch/Regal oder Wandmontage über die Befestigungslöcher im Gehäuse. **OFFEN** — Gehäuseabmessungen, Befestigungsmaterial, Ausrichtung und Abstände |
 | Erweiterungsschnittstellen | Zwei 10-polige Stiftleisten mit 2,54 mm Raster (X1/X3) dargestellt; **OFFEN** — Zugänglichkeit im Gehäuse, elektrische Grenzen und unterstütztes Zubehör. |
 
 ### Frequenzbänder und Antennen {#radio-bands}
 
-Der Lieferant bezeichnet den Modemtyp als A7670G-LLSE. Die folgenden **Modulfähigkeiten** stammen aus dem [SIMCom-Datenblatt A7670G-LLSE, Version 2021.11](https://datasheet.lcsc.com/datasheet/pdf/a6ff746802142b3caed58b61817fe57c.pdf?productCode=C21264512); sie erklären nicht die zugelassenen Betriebsbänder des Gateways.
+Der Lieferant bezeichnet den Modemtyp als A7670G-LLSE. Das fotografierte Modul trägt jedoch nur A7670G und P/N S2-10AZT-Z33CL; die Zuordnung zur LLSE-Variante ist noch offen. Die folgende Tabelle ist bis dahin keine bestätigte Bandliste des fotografierten Geräts. Die folgenden **Modulfähigkeiten** stammen aus dem [SIMCom-Datenblatt A7670G-LLSE, Version 2021.11](https://datasheet.lcsc.com/datasheet/pdf/a6ff746802142b3caed58b61817fe57c.pdf?productCode=C21264512); sie erklären nicht die zugelassenen Betriebsbänder des Gateways.
 
 | Mobilfunkmodus | Vom Modul unterstützte Bänder / nominelle Bandbezeichnungen |
 | --- | --- |
@@ -79,7 +84,7 @@ Das Gateway verwendet eine interne Mobilfunk-Folienantenne und eine externe 2,4-
 | Regionale Beschränkungen und gleichzeitiger Sendebetrieb | **OFFEN** — zulässige Länder, Funkkombinationen und Installationsbeschränkungen bestimmen |
 | HF-Exposition und Abstand zwischen Antennen und Personen | **OFFEN** — abschliessende Bewertung und Zulassungsbedingungen verwenden; kein pauschaler Mindestabstand angegeben |
 
-Das LLSE-Datenblatt nennt keine HF-Ausgangsleistung. Es wurde kein Wert einer anderen A7670G-Hardwarerevision übernommen. Auch Versorgungsspannungs- und Temperaturgrenzen des Moduls sind keine Nenndaten des fertigen Gateways; USB-C-Eingangsnenndaten und Betriebsgrenzen im Gehäuse müssen noch bestätigt werden.
+Das LLSE-Datenblatt nennt keine HF-Ausgangsleistung. Es wurde kein Wert einer anderen A7670G-Hardwarerevision übernommen. Auch Versorgungsspannungs- und Temperaturgrenzen des Moduls sind keine Nenndaten des fertigen Gateways; die festgelegten USB-C-Eingangsnenndaten sind 5 V DC, 2 A; die Betriebsgrenzen im Gehäuse müssen noch bestätigt werden.
 
 ## Sicherheit und Installation {#safety}
 
@@ -100,10 +105,10 @@ Die folgenden Sicherheitshinweise sind ein Vorschlag zur Prüfung anhand der abs
 **Vorläufiger Ablauf — vor Verwendung am Serienmuster prüfen.**
 
 1. Prüfe Modell, Lieferumfang und erforderliche Stromversorgung.
-2. Setze bei getrennter Stromversorgung die erforderliche SIM ein und verbinde die mitgelieferte externe WLAN-Antenne mit dem zugehörigen Anschluss. Die LTE-Folienantenne befindet sich im Inneren; ihr Anschluss gehört nicht zum externen Antennenanschluss. **OFFEN:** Anschlussbild, SIM-Zugang/-Ausrichtung und Bestätigung der werkseitigen LTE-Antennenplatzierung.
+2. Trenne die USB-Stromversorgung, entferne die Gehäuseschrauben und öffne das Gehäuse, um den Nano-SIM-Steckplatz zu erreichen. Setze die Nano-SIM ein, schliesse das Gehäuse und befestige die Schrauben wieder, bevor du die Stromversorgung anschliesst. Verbinde die mitgelieferte externe WLAN-Antenne mit dem zugehörigen Anschluss. Die LTE-Folienantenne ist werkseitig im Gehäuse eingebaut. **OFFEN:** Anschlussbild, SIM-Ausrichtung und Öffnen/Verriegeln des Kartenhalters.
 3. Verbinde Ethernet, falls der dokumentierte Selbsttest oder deine Anwendung dies erfordert. **OFFEN:** Kabelanforderungen und PoE-Beschränkungen.
 4. Stelle Gerät und Antennen unter Einhaltung der oben angegebenen Montage- und HF-Abstände auf.
-5. Schliesse das vorgegebene Netzteil an USB-C an und befolge die Selbsttest-Anleitung. **OFFEN:** Testablauf, Startdauer und selbsttestspezifische Erfolgs-/Fehleranzeigen.
+5. Versorge das Gerät wie oben angegeben über USB-C. Öffne die [ThingPulse-Seite zum Flashen und Selbsttest](https://iot-flasher.thingpulse.com/device/espgateway-ethernet-lte), befolge die dortigen Verbindungsanweisungen und starte den Selbsttest auf der Seite. Der Test startet nicht automatisch beim Einschalten. Die Erfolgs-/Fehlerergebnisse erscheinen auf der Webseite. **OFFEN:** unterstützter Browser, USB-Datenverbindung/Stromversorgung, genaue Testvoraussetzungen und Dauer.
 6. Entwickle ESP32-Anwendungsfirmware, die mit deinen WLAN-/BLE-Geräten kommuniziert und Daten über die LTE-Baugruppe überträgt. **OFFEN:** dokumentierte Entwicklungsumgebung, Boardkonfiguration, Pinzuordnung und Programmierverfahren.
 7. Installiere deine Anwendungsfirmware gemäss dokumentiertem Programmierverfahren. **OFFEN:** genaue Befehle/Werkzeuge, Flash-Einstellungen und Wiederherstellungsdatei der Selbsttest-Firmware.
 8. Konfiguriere Mobilfunkanbieter/APN, Backend-Endpunkt und Authentifizierung in deiner Anwendung. Lege bei MQTT Broker, Topics und Zugangsdaten fest und prüfe den Empfang der Sensordaten. Diese Einstellungen hängen von deiner Anwendung ab; eine werkseitige Konfigurationsoberfläche ist nicht dokumentiert.
@@ -114,7 +119,7 @@ ThingPulse liefert Selbsttest-Firmware. Nutzer entwickeln, installieren und pfle
 
 Anwendungsentwickler sollten geschützte Zugangsdaten, authentifizierte Backend-Verbindungen, geeignete Transportverschlüsselung, Fehlerbehandlung und ein wartbares Update-/Wiederherstellungsverfahren umsetzen. Gespeicherte oder übertragene Daten, Rücksetzverhalten und Datenlöschung hängen von der Anwendung ab; dokumentiere dies für deren Nutzer.
 
-**Von ThingPulse noch OFFEN:** Selbsttest-Quellcode/Download und Version, Programmier- und Wiederherstellungsanleitung, Boot-/Tasterverhalten, Daten-/Netzwerkverhalten des Selbsttests, Kontakt für Schwachstellenmeldungen und Supportumfang/-zeitraum für die gelieferten Komponenten und Selbsttest-Firmware. Eine Funktion zum Zurücksetzen auf Werkseinstellungen darf nicht vorausgesetzt werden.
+**Von ThingPulse noch OFFEN:** Selbsttest-Quellcode/Download und Version, Programmier- und Wiederherstellungsanleitung, Bootverhalten, Daten-/Netzwerkverhalten des Selbsttests, Kontakt für Schwachstellenmeldungen und Supportumfang/-zeitraum für die gelieferten Komponenten und Selbsttest-Firmware. Der GPIO4-Taster hat in der mitgelieferten Selbsttest-Firmware keine Funktion, auch keine Reset- oder Werkseinstellungsfunktion. In eigener Anwendungsfirmware hängt seine Funktion von der jeweiligen Anwendung ab.
 
 Verwende in deiner Anwendungsfirmware die dokumentierten Antennen, Regionseinstellungen und Funkgrenzen. Kläre mit Intertek, welche nutzerprogrammierbaren Einstellungen und WLAN-/BLE-/LTE-Kombinationen die Bewertung abdeckt; die Lieferung mit Selbsttest-Firmware belegt nicht die Abdeckung jeder Nutzeranwendung.
 
@@ -128,7 +133,7 @@ Verwende in deiner Anwendungsfirmware die dokumentierten Antennen, Regionseinste
 | LTE-Verbindung fehlt | Prüfe SIM und externen Antennenanschluss bei getrennter Stromversorgung; prüfe Abonnement, Netzabdeckung und APN. Kontaktiere bei vermuteten Fehlern der internen LTE-Antenne den Support. |
 | Wiederholte Neustarts oder Verbindungsabbrüche | Prüfe Eignung der Stromversorgung und Umgebungsbedingungen; kontaktiere bei anhaltenden Problemen den Support. |
 
-Die LED-Bedeutungen sind anwendungsspezifisch; beachte die Dokumentation deines Firmwareentwicklers. **OFFEN:** Erfolgs-/Fehleranzeigen des ausgelieferten Selbsttests und Wiederherstellungsanleitung ergänzen. Nenne dem Support Modell, Hardware-/Firmwareversion und Fehlerbeschreibung. Veröffentliche keine SIM-Zugangsdaten oder Netzwerkpasswörter.
+Die LED-Bedeutungen sind anwendungsspezifisch; beachte die Dokumentation deines Firmwareentwicklers. Starte den Selbsttest über die oben verlinkte ThingPulse-Seite; die Erfolgs-/Fehlerergebnisse erscheinen dort. **OFFEN:** Wiederherstellungsanleitung ergänzen. Nenne dem Support Modell, Hardware-/Firmwareversion und Fehlerbeschreibung. Veröffentliche keine SIM-Zugangsdaten oder Netzwerkpasswörter.
 
 ## Regulatorische Informationen {#regulatory}
 
